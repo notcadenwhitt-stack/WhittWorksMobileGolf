@@ -130,10 +130,11 @@ video {
   padding-inline: var(--space-3);
 }
 
-/* Header + nav */
+/* Header + nav — white, so blue stays an accent rather than a wash */
 .site-header {
-  background: var(--navy-900);
-  color: var(--white);
+  background: var(--white);
+  color: var(--navy-900);
+  border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -151,7 +152,7 @@ video {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  color: var(--white);
+  color: var(--navy-900);
   text-decoration: none;
   font-weight: 700;
   font-size: var(--step-1);
@@ -162,8 +163,8 @@ video {
 .nav-toggle {
   display: none;
   background: transparent;
-  color: var(--white);
-  border: 2px solid var(--white);
+  color: var(--navy-900);
+  border: 2px solid var(--navy-900);
   border-radius: var(--radius);
   padding: 0.45rem 0.8rem;
   font: inherit;
@@ -177,7 +178,7 @@ video {
 }
 
 .nav-links a {
-  color: var(--white);
+  color: var(--navy-800);
   text-decoration: none;
   padding: 0.35rem 0.15rem;
   border-bottom: 2px solid transparent;
@@ -185,8 +186,8 @@ video {
 
 .nav-links a:hover,
 .nav-links a[aria-current="page"] {
-  border-bottom-color: var(--blue-100);
-  color: var(--white);
+  border-bottom-color: var(--blue-600);
+  color: var(--navy-900);
 }
 
 @media (max-width: 47.9rem) {
@@ -198,25 +199,27 @@ video {
     inset: 4.25rem 0 auto 0;
     flex-direction: column;
     gap: 0;
-    background: var(--navy-900);
+    background: var(--white);
     padding: var(--space-2) var(--space-3) var(--space-3);
-    border-top: 1px solid var(--navy-800);
+    border-top: 1px solid var(--line);
+    box-shadow: var(--shadow);
   }
 
   .nav-links.is-open { display: flex; }
 
   .nav-links a {
     padding: 0.75rem 0;
-    border-bottom: 1px solid var(--navy-800);
+    border-bottom: 1px solid var(--line);
   }
 }
 
-/* Hero */
+/* Hero — real golf photography with a legibility overlay, not a color wash */
 .hero {
   background:
-    linear-gradient(160deg, var(--navy-950) 0%, var(--navy-900) 55%, var(--blue-700) 130%);
+    linear-gradient(rgba(8, 28, 51, 0.45), rgba(8, 28, 51, 0.62)),
+    url("../assets/img/hero-golf.jpg") center 30% / cover no-repeat;
   color: var(--white);
-  padding-block: var(--space-5);
+  padding-block: clamp(5rem, 14vw, 9rem);
 }
 
 .hero h1 {
