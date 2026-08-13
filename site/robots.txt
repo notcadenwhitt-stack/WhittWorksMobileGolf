@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Uncomment at go-live once the domain exists:
+# Sitemap: https://DOMAIN-TBD/sitemap.xml

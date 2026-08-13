@@ -1,0 +1,5 @@
+.DS_Store
+*.log
+data/
+submissions/
+node_modules/
