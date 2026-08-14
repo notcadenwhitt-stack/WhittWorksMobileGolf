@@ -685,15 +685,159 @@ textarea[aria-invalid="true"] {
 
 /* Footer */
 .site-footer {
-  background: var(--navy-950);
+  background:
+    linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 100%);
   color: var(--blue-100);
-  padding-block: var(--space-4);
+  padding-block: var(--space-5) var(--space-3);
+  border-top: 3px solid var(--blue-600);
   /* No top margin: a transparent strip here lets the fixed hero video
      show through between the last section and the footer. */
 }
 
-.site-footer a,
-.site-footer button.linklike {
+.site-footer a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Top band: brand block beside the link columns */
+.foot-top {
+  display: grid;
+  grid-template-columns: minmax(16rem, 1.3fr) minmax(0, 2fr);
+  gap: var(--space-5);
+  padding-bottom: var(--space-4);
+}
+
+.foot-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: "Antonio", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: var(--step-1);
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.foot-logo svg { flex: none; }
+.foot-logo:hover { text-decoration: none; }
+
+.foot-blurb {
+  margin-top: var(--space-2);
+  max-width: 34ch;
+  color: var(--blue-100);
+  font-size: var(--step--1);
+  line-height: 1.65;
+}
+
+.foot-area {
+  margin: 0;
+  font-size: var(--step--1);
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+
+.foot-area span {
+  color: var(--blue-600);
+  margin-right: 0.4rem;
+}
+
+/* Link columns */
+.foot-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  gap: var(--space-4) var(--space-3);
+}
+
+.site-footer h2 {
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: var(--space-2);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(220, 234, 247, 0.22);
+}
+
+.site-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-footer li { margin-bottom: 0.55rem; }
+
+.foot-col a,
+.foot-col button.linklike {
+  font-size: var(--step--1);
+  color: var(--blue-100);
+}
+
+.foot-col a:hover,
+.foot-col button.linklike:hover {
+  color: var(--white);
+}
+
+.foot-cta p {
+  font-size: var(--step--1);
+  color: var(--blue-100);
+  max-width: 26ch;
+  margin-bottom: var(--space-2);
+  line-height: 1.6;
+}
+
+.foot-cta .btn {
+  padding: 0.6rem 1.2rem;
+  font-size: var(--step--1);
+}
+
+/* .site-footer a sets white; the solid button needs its dark label back */
+.foot-cta .btn-primary,
+.foot-cta .btn-primary:hover {
+  color: var(--navy-900);
+}
+
+.foot-cta .btn:hover { text-decoration: none; }
+
+/* Bottom band */
+.foot-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-3);
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(220, 234, 247, 0.18);
+}
+
+.foot-legal,
+.foot-built {
+  margin: 0;
+  font-size: var(--step--1);
+  color: rgba(220, 234, 247, 0.72);
+}
+
+.foot-built { letter-spacing: 0.02em; }
+
+@media (max-width: 47.9rem) {
+  .foot-top {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .foot-bottom { justify-content: flex-start; }
+}
+
+button.linklike {
   color: var(--white);
 }
 
