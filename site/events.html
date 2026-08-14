@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="has-page-hero">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -37,7 +37,7 @@
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primaryNav">Menu</button>
       <nav id="primaryNav" class="nav-links" aria-label="Main">
         <a href="index.html">Home</a>
-        <a href="events.html">Events</a>
+        <a href="events.html" aria-current="page">Events</a>
         <a href="faq.html">FAQ</a>
         <a href="about.html">About</a>
         <a href="quote.html">Get a Quote</a>
@@ -46,25 +46,68 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="section">
+    <section class="page-hero">
+      <img class="page-hero-img" src="assets/img/events-hero.jpg" alt=""
+           width="1800" height="1012" decoding="async" fetchpriority="high">
+      <div class="page-hero-scrim" aria-hidden="true"></div>
       <div class="wrap">
+        <p class="eyebrow">Statewide, indoors or out</p>
         <h1>Events we serve</h1>
         <p class="lead-in">If people gather there, a golf simulator fits right in. Indoors or outdoors, day or night, anywhere in Alabama.</p>
+        <a class="btn btn-primary" href="quote.html">Get a quote</a>
+      </div>
+    </section>
 
-        <h2 class="visually-hidden">Event types</h2>
-        <div class="grid-3">
-          <div class="card">
+    <section class="section">
+      <div class="wrap">
+        <h2 class="visually-hidden">The events we book most</h2>
+
+        <div class="feature">
+          <div class="feature-media">
+            <img class="feature-photo" src="assets/img/event-corporate.jpg" alt=""
+                 width="1100" height="733" loading="lazy" decoding="async">
+          </div>
+          <div class="feature-copy">
             <h3>Corporate &amp; team building</h3>
             <p>Product launches, client days, holiday parties, and trade show booths. Branded leaderboards give visitors a reason to stop and stay.</p>
+            <p>We arrive about an hour before your start time and set up out of the way, then an attendant runs every swing so nobody on your team has to staff it. Ballrooms, warehouse bays, and parking lots all work.</p>
+            <p class="feature-for"><strong>Popular for:</strong> Client entertainment, holiday parties, sales kickoffs, trade show booths</p>
           </div>
-          <div class="card">
-            <h3>Private parties</h3>
-            <p>Birthdays, graduations, bachelor and bachelorette parties, and family reunions. Whatever the occasion, we bring the entertainment to it.</p>
+        </div>
+
+        <div class="feature is-flipped">
+          <div class="feature-media">
+            <img class="feature-photo" src="assets/img/event-fundraiser.jpg" alt=""
+                 width="1100" height="733" loading="lazy" decoding="async">
           </div>
-          <div class="card">
+          <div class="feature-copy">
             <h3>Fundraisers &amp; galas</h3>
             <p>Closest-to-the-pin and long-drive contests raise real dollars for your cause, with an attendant handling every swing.</p>
+            <p>Contest formats move a line far faster than full rounds, so a crowd cycles through in the window you actually have. Set your own entry price and run as many rounds as the night allows.</p>
+            <p class="feature-for"><strong>Popular for:</strong> Charity galas, booster drives, church and civic fundraisers</p>
           </div>
+        </div>
+
+        <div class="feature">
+          <div class="feature-media">
+            <img class="feature-photo" src="assets/img/event-private.jpg" alt=""
+                 width="1100" height="733" loading="lazy" decoding="async">
+          </div>
+          <div class="feature-copy">
+            <h3>Private parties</h3>
+            <p>Birthdays, graduations, bachelor and bachelorette parties, and family reunions. Whatever the occasion, we bring the entertainment to it.</p>
+            <p>Guests walk up and start swinging within minutes, no lesson required. The simulator runs settings built for total beginners right next to modes serious players respect, so a first-timer and a scratch golfer end up on the same leaderboard.</p>
+            <p class="feature-for"><strong>Popular for:</strong> Birthdays, graduations, reunions, backyard parties</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-sand">
+      <div class="wrap">
+        <p class="eyebrow">Also a good fit</p>
+        <h2>Anywhere else people gather</h2>
+        <div class="grid-3 mt-3">
           <div class="card">
             <h3>Weddings &amp; receptions</h3>
             <p>Give guests something to do between the ceremony and the first dance. We set it up, we run it, you enjoy the reception.</p>
@@ -78,8 +121,54 @@
             <p>Booster events, athletic banquets, and program fundraisers that give supporters something worth lining up for.</p>
           </div>
         </div>
+      </div>
+    </section>
 
-        <p class="mt-3"><a class="btn btn-solid" href="quote.html">Get a quote for your event</a></p>
+    <section class="section spec-band">
+      <div class="wrap">
+        <p class="eyebrow">The practical part</p>
+        <h2>What every booking includes</h2>
+        <p class="lead-in">The four things every venue asks about first.</p>
+
+        <dl class="spec-grid">
+          <div class="spec">
+            <dt>Space needed</dt>
+            <dd>About 15 &times; 14 &times; 11 ft
+              <span class="spec-note">Garages, ballrooms, gyms, parking lots, and backyards all work.</span>
+            </dd>
+          </div>
+          <div class="spec">
+            <dt>Power</dt>
+            <dd>One standard outlet
+              <span class="spec-note">Within about 100 feet. We bring the heavy-duty cord and run it ourselves.</span>
+            </dd>
+          </div>
+          <div class="spec">
+            <dt>Setup &amp; teardown</dt>
+            <dd>About an hour each way
+              <span class="spec-note">We arrive early and are packed out within an hour of the last swing.</span>
+            </dd>
+          </div>
+          <div class="spec">
+            <dt>On-site staff</dt>
+            <dd>An attendant, every event
+              <span class="spec-note">Runs the simulator from the first swing to the last, included with every booking.</span>
+            </dd>
+          </div>
+        </dl>
+
+        <p><a href="faq.html">More detail in the FAQ</a>, including weather plans and how far we travel.</p>
+      </div>
+    </section>
+
+    <section class="section cta-band">
+      <img class="cta-band-img" src="assets/img/events-cta.jpg" alt=""
+           width="1800" height="600" loading="lazy" decoding="async">
+      <div class="cta-band-scrim" aria-hidden="true"></div>
+      <div class="wrap">
+        <h2>Tell us about your date</h2>
+        <p>Send the date, the city, and a rough guest count. We reply by email with availability and pricing, usually within one business day.</p>
+        <p class="mt-3"><a class="btn btn-primary" href="quote.html">Get a quote for your event</a></p>
       </div>
     </section>
   </main>

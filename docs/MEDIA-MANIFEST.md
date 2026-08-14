@@ -25,6 +25,22 @@ Pixabay license: free for commercial use, no attribution required, modification 
 
 More rows land here from the media research brief (background video loops still pending; no video was added in the gallery image pass).
 
+## Events page derivatives (added 2026-08-14)
+
+Cropped and recompressed from the stock library originals for the events page redesign. The licence follows the source file, and every source below is Pexels or Pixabay, both of which permit modification. Crops, a horizontal flip, and re-encoding are the only changes.
+
+| File | Slot | Derived from | Author | Library | Licence | Attribution required |
+|---|---|---|---|---|---|---|
+| site/assets/img/events-hero.jpg | Events page hero band | golfer-fairway.jpg | Mikhail Nilov | Pexels | Pexels License | No |
+| site/assets/img/event-corporate.jpg | Events, "Corporate & team building" | golfer-swing-blue-sky.jpg | Patrick Case | Pexels | Pexels License | No |
+| site/assets/img/event-fundraiser.jpg | Events, "Fundraisers & galas" | putting-green-hole-detail.jpg | Kindel Media | Pexels | Pexels License | No |
+| site/assets/img/event-private.jpg | Events, "Private parties" | golfer-swing-fairway-woman.jpg | criticalimagery | Pexels | Pexels License | No |
+| site/assets/img/events-cta.jpg | Events, closing call-to-action band | golf-ball-turf-macro.jpg (flipped horizontally) | Kindel Media | Pexels | Pexels License | No |
+
+These are atmosphere, not portfolio. Each one shows generic golf, carries an empty `alt` so assistive tech skips it, and sits under a heading describing what the business offers. None is captioned or framed as a Southern Drive Golf Co event, and none shows a venue, facility, or crowd that could be read as our own work. That line is what separates them from the gallery below.
+
+Deliberately still unused: `event-venue-aerial-sunset.jpg` is a recognisable Topgolf venue, and `indoor-golf-simulator-bay.jpg` / `indoor-screen-golf-facility.jpg` are other companies' built simulator rooms, which is not what this business sets up. Using any of the three would misrepresent the service. `event-guests-celebrating.jpg` is the shakiest of the rest: an office party photograph placed under a corporate heading reads as a client event we ran.
+
 ## Parked: licensed stock library
 
-The gallery page was removed on 2026-08-13 until real event photographs exist. Showing stock images of other people's events implies a track record the business does not yet have. The eleven licensed images the gallery used are preserved in `docs/stock-library/`, with their licences unchanged, and can be restored at any time. Their rows above remain accurate as to source and licence; only the file location changed.
+The gallery page was removed on 2026-08-13 until real event photographs exist. Showing stock images of other people's events implies a track record the business does not yet have. The eleven licensed images the gallery used are preserved in `docs/stock-library/`, with their licences unchanged, and can be restored at any time. Their rows above remain accurate as to source and licence; only the file location changed. Five of the eleven now also serve as sources for the events page derivatives listed above.
