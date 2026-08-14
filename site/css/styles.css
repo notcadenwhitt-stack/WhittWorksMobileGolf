@@ -418,6 +418,9 @@ main > .section-sand { background-color: var(--sand-100); }
     left: 50%;
     width: 100vh;
     height: 100vw;
+    /* The global img/video cap would otherwise clamp this to the
+       container width and leave the still showing around the edges */
+    max-width: none;
     transform: translate(-50%, -50%) rotate(90deg);
   }
 
@@ -492,14 +495,25 @@ main > .section-sand { background-color: var(--sand-100); }
 
 .hero h1 .line-lead {
   display: block;
-  font-size: clamp(3.6rem, 0.6rem + 10.2vw, 10.5rem);
+  font-size: clamp(3.6rem, 0.85rem + 14.3vw, 14.7rem);
 }
 
 .hero h1 .line-follow {
   display: block;
   margin-top: 0.22em; /* breathing room between the two lines */
-  font-size: clamp(2.7rem, 0.45rem + 7.5vw, 7.75rem);
+  font-size: clamp(2.7rem, 0.63rem + 10.5vw, 10.85rem);
   opacity: 0.93;
+}
+
+/* Phones keep the pre-increase scale: the 40% bump is for wide screens */
+@media (max-width: 47.9rem) {
+  .hero h1 .line-lead {
+    font-size: clamp(3.6rem, 0.6rem + 10.2vw, 10.5rem);
+  }
+
+  .hero h1 .line-follow {
+    font-size: clamp(2.7rem, 0.45rem + 7.5vw, 7.75rem);
+  }
 }
 
 .hero .cta-row {
