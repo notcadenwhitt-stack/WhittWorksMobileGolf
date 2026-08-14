@@ -17,19 +17,58 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 5 | Projector | **BenQ AK700ST** 4K laser short throw, 4,000 lm | $2,899 | [PlayBetter](https://www.playbetter.com/products/benq-ak700st-golf-simulator-projector) |
 | 6 | Computer | **Already owned:** RTX 3060 Ti, Ryzen 5 5600G, 16 GB DDR4 | $0 | see notes |
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
-| 8 | Hitting mat | SIGPRO Softy Lite 4'x5' (shipping included) | $790 | [365golfdesign.com](https://365golfdesign.com/product/sigpro-softy-lite-4x5-hitting-mat/) |
-| 9 | Landing turf | Landing Pad Turf 13'4" x 10' | $670 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
-| 10 | Power | Jackery Explorer 2000 v2, indoor-safe, 2.6–4 hrs | $899 | [jackery.com](https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station) |
+| 8 | Hitting mat | GoSports Elite 5'x5' octagon, 15 mm, 6 teeing positions | $200 | [Walmart](https://www.walmart.com/ip/1717799245) |
+| 9 | Landing turf | Landing Pad Turf 10'1" x 5' | $290 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
+| 10 | Power | Jackery Explorer 2000 v2 x2, indoor-safe, near-silent | $1,798 | [jackery.com](https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station) |
 | 11 | Cabling | J-Tech wireless HDMI kit + 50 ft wired backup | $221 | [jtechdigital.com](https://www.jtechdigital.com/products/wireless-hdmi-extender-1080p-wireless-hdmi-extender-kit-200ft) |
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
 | 15 | Transport case | Padded bin or hard case for the tower | ~$60 | see notes |
-| | **Total** | | **$12,545** | |
+| | **Total** | | **$12,474** | |
 
 **Recurring: $200/yr** (Bushnell Silver). No other required subscription.
 
 ---
+
+## Power: two batteries, no gas
+
+**Requirement: silent, no fumes, and enough to run everything including the desktop.** Battery only. Gas generators are outdoor-only for carbon monoxide reasons anyway, which rules them out for indoor bookings.
+
+**What you have to feed** (estimates; verify with a Kill A Watt meter once the gear lands):
+
+| Load | Draw |
+|---|---|
+| Enclosure blower, continuous | 250–400 W |
+| BenQ AK700ST projector | 280–400 W |
+| Desktop, RTX 3060 Ti | 280–400 W |
+| **Total** | **810–1,200 W** |
+
+**Why two Jackery Explorer 2000 v2 rather than one big unit:**
+
+| | 2x Jackery 2000 v2 | 1x EcoFlow Delta Pro 3 |
+|---|---|---|
+| Capacity | 4,084 Wh | 4,096 Wh |
+| Price | **$1,798** | $3,699 |
+| Weight | 39.5 lb each, 79 lb total | **115 lb in one piece** |
+| One-person carry | Yes, one at a time | No, it ships with wheels because it isn't carryable |
+| Redundancy | A failure costs you half your power | A failure ends the event |
+
+Same capacity, **half the price, and you can actually lift it.** EcoFlow fits the Delta Pro 3 with a wheel-and-handle system precisely because 115 lb is not a one-person carry, and you will be loading this into a vehicle alone at 7am.
+
+**Runtime with two units at 4,084 Wh (about 3,760 Wh usable after inverter loss):**
+
+| Load | Runtime |
+|---|---|
+| 810 W (best case) | ~4.6 hrs |
+| 1,000 W (likely) | ~3.8 hrs |
+| 1,200 W (worst case) | ~3.1 hrs |
+
+That covers the 2-hour Party package with a wide margin and reaches most of a 4-hour Event package. Full-day corporate bookings should assume shore power, which venues of that size have.
+
+**How to run them:** split the loads rather than daisy-chaining. Put the blower on one unit and the projector plus PC on the other. That halves each unit's draw, keeps both inverters well inside their limits, and means a single failure leaves you partially running instead of dark.
+
+**If you want to spend less at launch:** buy one now ($899) and require shore power for anything over two hours, then add the second when off-grid bookings justify it. Same eventual cost, later. That brings the build to **$11,575**.
 
 ## About the enclosure line
 
@@ -105,6 +144,9 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 | Bushnell Launch Pro $2,999 | Garmin Approach R50 $4,999 | What WeGo Golf runs. Matching your priciest competitor's hardware spend while charging a fifth of their rate is backwards. |
 | Owned RTX 3060 Ti desktop | Buying a laptop, ~$750 | The desktop already meets 1080p Ultra spec. A laptop would only buy easier transport and longer battery runtime. |
 | No peak roof | Peak roof, +$500 | Water runoff and headroom, neither needed for event-day work. |
+| GoSports mat $200 | SIGPRO Softy Lite $790 | Better feel, but guests hit a handful of shots each, not a range session. The octagon's 6 teeing positions serve left and right handers without moving the mat, which matters more at an event. |
+| Landing turf 10'x5' $290 | 13'4" x 10' $670 | Less coverage, but also less to haul and lay out at every setup. |
+| 2x Jackery $1,798 | EcoFlow Delta Pro 3 $3,699 | Same capacity, twice the price, and 115 lb in a single piece you cannot carry alone. |
 | Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 ## Sources
