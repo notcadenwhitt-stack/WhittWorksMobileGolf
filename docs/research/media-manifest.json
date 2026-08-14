@@ -1,0 +1,232 @@
+{
+  "summary": "Compiled a 19-asset licensed media manifest for the mobile golf simulator rental site across all four requested free-commercial libraries (Pexels, Pixabay, Unsplash, Coverr). All four platform licenses were verified live this session: Pexels License, Pixabay Content License, Unsplash License, and Coverr License each explicitly permit commercial use with no attribution required (sources below). True \"golf simulator screen\" imagery is genuinely scarce as warned \u2014 only one Pexels shot (an actual indoor bay with a projected course) and one literal Pixabay \"screen golf\" facility photo exist; the rest of that slot is filled with the closest available indoor/virtual-course and premium indoor-putting shots, which is the honest state of the libraries today. Party/corporate atmosphere leans on a real Topgolf aerial venue shot plus two generic-but-premium office celebration photos since golf-specific corporate-event stock is essentially nonexistent on these libraries. Background videos mix three verified Pexels MP4s (swing, ball-drop, putting close-up) with two native Coverr golf clips (aerial course, friends golfing) \u2014 note Coverr's download links are dynamically signed behind an in-page \"Download\" button rather than static file URLs, so the page_url is also listed as the fetch point for those two.",
+  "findings": [
+    {
+      "slot": "hero",
+      "description": "Golfer mid-swing, front-lit blue sky behind the swing arc \u2014 strong hero crop, matches blue-leaning brand.",
+      "page_url": "https://www.pexels.com/photo/man-in-gray-polo-shirt-and-pants-playing-golf-3554344/",
+      "direct_download_url": "https://images.pexels.com/photos/3554344/pexels-photo-3554344.jpeg?cs=srgb&dl=pexels-case-originals-3554344.jpg&fm=jpg",
+      "author": "Patrick Case",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "hero",
+      "description": "Golfer swinging against a dramatic, moody cloud-filled sky \u2014 high drama, good for a dark hero overlay.",
+      "page_url": "https://www.pexels.com/photo/clouds-in-sky-over-golfer-6256591/",
+      "direct_download_url": "https://images.pexels.com/photos/6256591/pexels-photo-6256591.jpeg?cs=srgb&dl=pexels-cottonbro-6256591.jpg&fm=jpg",
+      "author": "cottonbro studio",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "hero",
+      "description": "Silhouette of a golfer mid-swing against a bright sky \u2014 graphic, high-contrast hero option.",
+      "page_url": "https://www.pexels.com/photo/man-playing-golf-12597289/",
+      "direct_download_url": "https://images.pexels.com/photos/12597289/pexels-photo-12597289.jpeg?cs=srgb&dl=pexels-juanico-12597289.jpg&fm=jpg",
+      "author": "juanico",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "hero",
+      "description": "Female golfer mid-swing on a lush green course \u2014 adds gender diversity to the hero rotation.",
+      "page_url": "https://www.pexels.com/photo/female-golfer-swinging-club-on-lush-green-course-35376215/",
+      "direct_download_url": "https://images.pexels.com/photos/35376215/pexels-photo-35376215.jpeg?cs=srgb&dl=pexels-criticalimagery-35376215.jpg&fm=jpg",
+      "author": "criticalimagery",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "simulator/indoor-golf",
+      "description": "Actual indoor golf simulator bay with a projected, realistic course scene on the screen \u2014 the single best true 'golf simulator' shot found on any of the four libraries. Located in Mississauga, Canada.",
+      "page_url": "https://www.pexels.com/photo/indoor-golf-simulator-room-in-mississauga-31212256/",
+      "direct_download_url": "https://images.pexels.com/photos/31212256/pexels-photo-31212256.jpeg?cs=srgb&dl=pexels-swingzone-swingzone-2150575315-31212256.jpg&fm=jpg",
+      "author": "SwingZone",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "simulator/indoor-golf",
+      "description": "Indoor putting setup with a virtual golf-course display visible in the background \u2014 screen-golf adjacent, reinforces the tech/simulator angle.",
+      "page_url": "https://www.pexels.com/photo/indoor-golf-practice-area-with-virtual-course-34690703/",
+      "direct_download_url": "https://images.pexels.com/photos/34690703/pexels-photo-34690703.jpeg?cs=srgb&dl=pexels-chiputt-golf-2156691835-34690703.jpg&fm=jpg",
+      "author": "Chiputt Golf",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "simulator/indoor-golf",
+      "description": "Literal 'screen golf' facility photo \u2014 a golfer at an indoor screen-golf bay, the exact search term the brief called out as rare. Confirmed genuine 'Free for use under Pixabay Content License.'",
+      "page_url": "https://pixabay.com/photos/screen-golf-golf-putting-2265263/",
+      "direct_download_url": "https://cdn.pixabay.com/photo/2017/04/27/11/26/screen-golf-2265263_1280.jpg",
+      "author": "inseng0",
+      "library": "Pixabay",
+      "license": "Pixabay Content License",
+      "attribution_required": false
+    },
+    {
+      "slot": "simulator/indoor-golf",
+      "description": "Premium indoor putting green setup, clean modern studio aesthetic \u2014 closest Unsplash equivalent to an indoor golf bay (no literal simulator-screen shot exists on Unsplash for this query).",
+      "page_url": "https://unsplash.com/photos/golf-putting-green-with-putter-and-ball-indoors--oMufmc5JjI",
+      "direct_download_url": "https://images.unsplash.com/photo-1763032859297-6f245877e074?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0",
+      "author": "Chiputt Golf (@chiputt_golf)",
+      "library": "Unsplash",
+      "license": "Unsplash License",
+      "attribution_required": false
+    },
+    {
+      "slot": "party/corporate-atmosphere",
+      "description": "Aerial sunset shot of a real Topgolf-style recreational golf entertainment venue in San Jose \u2014 the most directly on-brand 'party golf venue' atmosphere shot available on any of the four libraries.",
+      "page_url": "https://www.pexels.com/photo/aerial-view-of-san-jose-topgolf-venue-united-states-10286719/",
+      "direct_download_url": "https://images.pexels.com/photos/10286719/pexels-photo-10286719.jpeg?cs=srgb&dl=pexels-trae-collins-88956582-10286719.jpg&fm=jpg",
+      "author": "Trae Collins",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "party/corporate-atmosphere",
+      "description": "Colleagues celebrating indoors with champagne, festive/upscale mood \u2014 generic corporate-party stand-in (no golf-specific corporate event stock exists in these libraries).",
+      "page_url": "https://www.pexels.com/photo/friend-celebrating-at-the-office-6405769/",
+      "direct_download_url": "https://images.pexels.com/photos/6405769/pexels-photo-6405769.jpeg?cs=srgb&dl=pexels-pavel-danilyuk-6405769.jpg&fm=jpg",
+      "author": "Pavel Danilyuk",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "party/corporate-atmosphere",
+      "description": "Happy office workers celebrating with party favors in a lively indoor setting \u2014 energetic group-event mood for a testimonials/events section.",
+      "page_url": "https://www.pexels.com/photo/fun-office-party-with-colleagues-celebrating-36713386/",
+      "direct_download_url": "https://images.pexels.com/photos/36713386/pexels-photo-36713386.jpeg?cs=srgb&dl=pexels-silverkblack-36713386.jpg&fm=jpg",
+      "author": "Vitaly Gariev",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "putting-green/ball-closeup/turf",
+      "description": "Golf putter and ball resting at the lip of the hole on a manicured green \u2014 classic putting-green close-up.",
+      "page_url": "https://www.pexels.com/photo/a-golf-putter-and-ball-near-the-green-hole-6573259/",
+      "direct_download_url": "https://images.pexels.com/photos/6573259/pexels-photo-6573259.jpeg?cs=srgb&dl=pexels-kindelmedia-6573259.jpg&fm=jpg",
+      "author": "Kindel Media",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "putting-green/ball-closeup/turf",
+      "description": "Six white golf balls arranged in tight macro close-up on a dark surface \u2014 strong graphic texture shot for section dividers.",
+      "page_url": "https://www.pexels.com/photo/white-golf-balls-in-close-up-shot-6573695/",
+      "direct_download_url": "https://images.pexels.com/photos/6573695/pexels-photo-6573695.jpeg?cs=srgb&dl=pexels-kindelmedia-6573695.jpg&fm=jpg",
+      "author": "Kindel Media",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "putting-green/ball-closeup/turf",
+      "description": "Dimpled golf ball macro shot on artificial turf against a dark background \u2014 doubles as a turf-texture and simulator-adjacent detail shot.",
+      "page_url": "https://www.pexels.com/photo/a-golf-ball-on-the-artificial-turf-grass-6573709/",
+      "direct_download_url": "https://images.pexels.com/photos/6573709/pexels-photo-6573709.jpeg?cs=srgb&dl=pexels-kindelmedia-6573709.jpg&fm=jpg",
+      "author": "Kindel Media",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "putting-green/ball-closeup/turf",
+      "description": "Close-up of a ball on premium artificial putting turf indoors \u2014 clean, well-lit turf texture matching indoor-simulator flooring.",
+      "page_url": "https://www.pexels.com/photo/indoor-golf-practice-with-putting-mat-and-golf-ball-34725662/",
+      "direct_download_url": "https://images.pexels.com/photos/34725662/pexels-photo-34725662.jpeg?cs=srgb&dl=pexels-chiputt-golf-2156691835-34725662.jpg&fm=jpg",
+      "author": "Chiputt Golf",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "background-video",
+      "description": "Golfer executing a full practice swing on a sunny course \u2014 usable as a swing-loop background (not explicitly slow-mo, but smooth cinematic pacing works for a hero loop).",
+      "page_url": "https://www.pexels.com/video/man-playing-golf-6541964/",
+      "direct_download_url": "https://www.pexels.com/download/video/6541964/",
+      "author": "Kampus Production",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "background-video",
+      "description": "Close-up of golf balls falling/pouring into a basket indoors \u2014 exact match for a 'ball drop' background loop.",
+      "page_url": "https://www.pexels.com/video/golf-balls-falling-in-the-basket-6573543/",
+      "direct_download_url": "https://www.pexels.com/download/video/6573543/",
+      "author": "Kindel Media",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "background-video",
+      "description": "Close-up of a golfer setting up to putt on a manicured green \u2014 exact match for a 'putting' background loop.",
+      "page_url": "https://www.pexels.com/video/close-up-of-golfer-preparing-to-putt-33511635/",
+      "direct_download_url": "https://www.pexels.com/download/video/33511635/",
+      "author": "Asai Villarreal",
+      "library": "Pexels",
+      "license": "Pexels License",
+      "attribution_required": false
+    },
+    {
+      "slot": "background-video",
+      "description": "Aerial 14-second clip of friends golfing together on a course \u2014 native Coverr video (not an iStock affiliate link), good establishing/atmosphere loop. Coverr serves the MP4 via a signed link behind the in-page Download button rather than a static URL, so direct_download_url points to the page where that button lives.",
+      "page_url": "https://coverr.co/videos/friends-playing-golf-j5zleitypw",
+      "direct_download_url": "https://coverr.co/videos/friends-playing-golf-j5zleitypw",
+      "author": "Not credited on page (Coverr native upload)",
+      "library": "Coverr",
+      "license": "Coverr License (Free Commercial Rights)",
+      "attribution_required": false
+    }
+  ],
+  "sources": [
+    "https://www.pexels.com/license/",
+    "https://pixabay.com/service/license-summary/",
+    "https://unsplash.com/license",
+    "https://coverr.co/license",
+    "https://www.pexels.com/search/golf%20swing/",
+    "https://www.pexels.com/search/golf%20simulator/",
+    "https://www.pexels.com/search/golf%20bay/",
+    "https://www.pexels.com/search/screen%20golf/",
+    "https://pixabay.com/images/search/indoor%20golf%20screen/",
+    "https://unsplash.com/s/photos/golf-simulator",
+    "https://www.pexels.com/search/corporate%20party/",
+    "https://www.pexels.com/search/putting%20green/",
+    "https://www.pexels.com/search/golf%20ball%20close%20up/",
+    "https://www.pexels.com/search/videos/golf%20swing%20slow%20motion/",
+    "https://www.pexels.com/search/videos/golf%20ball/",
+    "https://coverr.co/stock-video-footage/golf",
+    "https://www.pexels.com/photo/man-in-gray-polo-shirt-and-pants-playing-golf-3554344/",
+    "https://www.pexels.com/photo/clouds-in-sky-over-golfer-6256591/",
+    "https://www.pexels.com/photo/man-playing-golf-12597289/",
+    "https://www.pexels.com/photo/female-golfer-swinging-club-on-lush-green-course-35376215/",
+    "https://www.pexels.com/photo/indoor-golf-simulator-room-in-mississauga-31212256/",
+    "https://www.pexels.com/photo/indoor-golf-practice-area-with-virtual-course-34690703/",
+    "https://pixabay.com/photos/screen-golf-golf-putting-2265263/",
+    "https://unsplash.com/photos/golf-putting-green-with-putter-and-ball-indoors--oMufmc5JjI",
+    "https://www.pexels.com/photo/aerial-view-of-san-jose-topgolf-venue-united-states-10286719/",
+    "https://www.pexels.com/photo/friend-celebrating-at-the-office-6405769/",
+    "https://www.pexels.com/photo/fun-office-party-with-colleagues-celebrating-36713386/",
+    "https://www.pexels.com/photo/a-golf-putter-and-ball-near-the-green-hole-6573259/",
+    "https://www.pexels.com/photo/white-golf-balls-in-close-up-shot-6573695/",
+    "https://www.pexels.com/photo/a-golf-ball-on-the-artificial-turf-grass-6573709/",
+    "https://www.pexels.com/photo/indoor-golf-practice-with-putting-mat-and-golf-ball-34725662/",
+    "https://www.pexels.com/video/man-playing-golf-6541964/",
+    "https://www.pexels.com/video/golf-balls-falling-in-the-basket-6573543/",
+    "https://www.pexels.com/video/close-up-of-golfer-preparing-to-putt-33511635/",
+    "https://coverr.co/videos/friends-playing-golf-j5zleitypw"
+  ]
+}

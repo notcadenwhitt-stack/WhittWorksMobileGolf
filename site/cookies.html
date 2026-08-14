@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
 
-  <title>Cookie Policy — Blue Fairway Golf</title>
+  <title>Cookie Policy | Blue Fairway Golf</title>
   <meta name="description" content="Exactly which cookies this site sets, what PostHog analytics stores with your consent, and how to change your choice at any time.">
   <link rel="canonical" href="https://DOMAIN-TBD/cookies.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://DOMAIN-TBD/cookies.html">
-  <meta property="og:title" content="Cookie Policy — Blue Fairway Golf">
+  <meta property="og:title" content="Cookie Policy | Blue Fairway Golf">
   <meta property="og:description" content="Exactly which cookies this site sets, what PostHog analytics stores with your consent, and how to change your choice at any time.">
   <meta property="og:image" content="https://DOMAIN-TBD/assets/img/og-image.jpg">
   <meta property="og:image:alt" content="A golfer swings inside a lit inflatable golf simulator at an evening event">
@@ -48,12 +49,67 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="section">
       <div class="wrap legal-body">
         <h1>Cookie Policy</h1>
         <p><strong>Last updated:</strong> August 13, 2026</p>
-        <p>Full cookie details are being finalized and will appear here before this site goes live.</p>
+
+        <h2>What cookies are</h2>
+        <p>Cookies and localStorage are small pieces of data a website stores in your browser. Cookies get sent back to the server with each request; localStorage stays in the browser and is read only by scripts on the site that set it. Both let a site remember something between visits, like a choice you made or an anonymous ID.</p>
+
+        <h2>What this site stores</h2>
+        <p>Once you make a choice on the consent banner, this site stores two localStorage entries so it can remember that decision. If you never respond to the banner, nothing is stored at all. It sets PostHog's analytics cookie and localStorage entries only if you click Accept on the consent banner. If you decline, or never respond, PostHog never loads and none of its entries get created.</p>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Set by</th>
+                <th scope="col">Purpose</th>
+                <th scope="col">Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>bfg-consent</td>
+                <td>localStorage</td>
+                <td>This site (after you choose)</td>
+                <td>Remembers whether you accepted or declined analytics</td>
+                <td>Until you clear it or change your choice</td>
+              </tr>
+              <tr>
+                <td>bfg-consent-at</td>
+                <td>localStorage</td>
+                <td>This site (after you choose)</td>
+                <td>Records the date and time of your consent choice</td>
+                <td>Until you clear it or change your choice</td>
+              </tr>
+              <tr>
+                <td>ph_&lt;project-id&gt;_posthog</td>
+                <td>Cookie</td>
+                <td>PostHog (only after you accept)</td>
+                <td>Stores an anonymous distinct ID and session ID so repeat visits can be recognized</td>
+                <td>365 days</td>
+              </tr>
+              <tr>
+                <td>ph_&lt;project-id&gt;_posthog</td>
+                <td>localStorage</td>
+                <td>PostHog (only after you accept)</td>
+                <td>Stores feature flag state, session data, and analytics configuration</td>
+                <td>Until you clear them or decline analytics; declining deletes PostHog's stored entries</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We don't use advertising or retargeting cookies, and we don't allow other companies to set cookies on this site for their own purposes.</p>
+
+        <h2>How to change your choice</h2>
+        <p>You can accept or decline analytics at any time using the "Cookie preferences" button in the footer of every page. Declining stops PostHog from loading on future visits and deletes any entries it stored earlier.</p>
+        <p>You can also control cookies and localStorage directly through your browser settings, which let you block, clear, or get notified about site storage. Blocking storage entirely may affect how the consent banner remembers your choice, since that itself relies on localStorage.</p>
       </div>
     </section>
   </main>

@@ -1,0 +1,120 @@
+{
+  "summary": "Read posthog.com/docs directly (getting-started/install, libraries/js/persistence, libraries/js/config, privacy/data-collection, product-analytics/capture-events, activity, api, api/queries, pricing) as of 2026-08-13. PostHog's current official static-HTML install is a single vanilla-JS loader snippet placed before </head>, loading array.js from a CDN derived from api_host. US Cloud values: api_host `https://us.i.posthog.com` (public/ingestion), ui_host/private-API host `https://us.posthog.com`. The officially recommended consent pattern is explicit: always load the snippet, initialize with `opt_out_capturing_by_default: true`, and call `posthog.opt_in_capturing()` / `posthog.opt_out_capturing()` from the CMP's consent-change callback \u2014 PostHog's docs explicitly warn against gating the script tag itself behind consent. An alternative fully-cookieless path (`cookieless_mode: \"on_reject\"`) needs no opt-in/opt-out wiring at all. Custom events use `posthog.capture('event_name', {props})`. Default persistence is `localStorage+cookie`, with the cookie named `ph_<project_api_key>_posthog` (365-day expiry); `persistence: 'memory'` or `disable_persistence: true` avoid storage entirely pre-consent. Verification is via the dashboard's Activity tab (Live view) or the private Query API (`POST {ui_host}/api/projects/:id/query/` with a personal API key, Bearer auth) or the raw public capture endpoint. Free tier on Product Analytics is 1,000,000 events/month free, with generous free tiers on 12 other products, no credit card required, 1 project / 1-year retention on the free plan.",
+  "findings": [
+    {
+      "topic": "HTML install snippet (exact, current)",
+      "detail": "Official 'JS snippet' install for plain HTML sites, shown on the Install PostHog doc page under the 'JS snippet' tab. Paste into <head> (or right before </body>) of every page. Replace <ph_project_token> with the real project API key (starts with phc_). The `defaults: '2026-05-30'` line pins current SDK default behaviors (a PostHog-specific versioned-defaults mechanism, not a real date value to change).",
+      "code_or_values": "<script>\n    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(\".\");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement(\"script\")).type=\"text/javascript\",p.crossOrigin=\"anonymous\",p.async=!0,p.src=s.api_host.replace(\".i.posthog.com\",\"-assets.i.posthog.com\")+\"/static/array.js\",p.onerror=function(){p=null},(r=t.getElementsByTagName(\"script\")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a=\"posthog\",u.people=u.people||[],u.toString=function(t){var e=\"posthog\";return\"posthog\"!==a&&(e+=\".\"+a),t||(e+=\" (stub)\"),e},u.people.toString=function(){return u.toString(1)+\".people (stub)\"},o=\"init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagResult isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug\".split(\" \"),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);\n    posthog.init('<ph_project_token>', {\n        api_host: 'https://us.i.posthog.com',\n        defaults: '2026-05-30',\n    })\n</script>",
+      "url": "https://posthog.com/docs/getting-started/install"
+    },
+    {
+      "topic": "CDN script URL actually loaded by the snippet",
+      "detail": "The loader function derives the real asset URL from api_host at runtime: it replaces \".i.posthog.com\" with \"-assets.i.posthog.com\" and appends \"/static/array.js\". For the US Cloud api_host `https://us.i.posthog.com`, this resolves to a concrete, fetchable CDN URL. This is dynamic (not a hardcoded <script src>) so it self-adjusts for EU Cloud or self-hosted api_host values too.",
+      "code_or_values": "https://us-assets.i.posthog.com/static/array.js",
+      "url": "https://posthog.com/docs/getting-started/install"
+    },
+    {
+      "topic": "US Cloud api_host (public/ingestion endpoint)",
+      "detail": "Used as the `api_host` value inside posthog.init(). Public POST-only endpoints (event capture, feature flags) live here and require no auth beyond the project token.",
+      "code_or_values": "https://us.i.posthog.com",
+      "url": "https://posthog.com/docs/api"
+    },
+    {
+      "topic": "US Cloud ui_host / private API host",
+      "detail": "PostHog's docs state private GET/POST/PATCH/DELETE endpoints (querying, personal-API-key auth) live on a separate domain from the ingestion host. The `ui_host` init option exists specifically to point PostHog's own generated links (e.g. session replay/toolbar links) at the correct app URL, needed only when proxying api_host. For a direct (non-proxied) US Cloud install you generally don't need to set ui_host explicitly, but if you do, this is the value.",
+      "code_or_values": "https://us.posthog.com  (ui_host config key: string, default undefined, e.g. `ui_host: 'https://us.posthog.com'`)",
+      "url": "https://posthog.com/docs/libraries/js/config"
+    },
+    {
+      "topic": "EU Cloud equivalents (for contrast/reference only)",
+      "detail": "Not requested as primary but confirmed on the same API overview page: EU Cloud public endpoint and private/app endpoint.",
+      "code_or_values": "api_host: https://eu.i.posthog.com | private/app host: https://eu.posthog.com",
+      "url": "https://posthog.com/docs/api"
+    },
+    {
+      "topic": "Consent gating \u2014 official recommended pattern",
+      "detail": "PostHog's docs explicitly warn: do NOT wrap/gate the <script> loader itself behind a consent-management-platform (CMP) rule, because then PostHog can't count visitors who dismiss the banner and can't react to a later consent change. Always load posthog-js unconditionally; control capturing via the SDK's own opt-in/opt-out API. Recommended flow: (1) init with opt_out_capturing_by_default: true so nothing is captured pre-consent; (2) on consent-accept, call posthog.opt_in_capturing(); (3) on consent-deny/withdraw, call posthog.opt_out_capturing(); wire both into whatever consent-change callback the CMP (OneTrust, Cookiebot, Osano, Usercentrics, or a custom banner) exposes.",
+      "code_or_values": "posthog.init('<ph_project_token>', {\n    api_host: 'https://us.i.posthog.com',\n    defaults: '2026-05-30',\n    opt_out_capturing_by_default: true,\n})\nfunction onConsentChange(hasConsented) {\n    if (hasConsented) {\n        posthog.opt_in_capturing()\n    } else {\n        posthog.opt_out_capturing()\n    }\n}",
+      "url": "https://posthog.com/docs/privacy/data-collection"
+    },
+    {
+      "topic": "Opt-out state persistence control",
+      "detail": "Where the opt-out flag itself is stored (separate from event data) can be controlled independently.",
+      "code_or_values": "posthog.init('<ph_project_token>', { opt_out_capturing_persistence_type: 'local_storage' }) // or 'cookies'",
+      "url": "https://posthog.com/docs/privacy/data-collection"
+    },
+    {
+      "topic": "Alternative: cookieless tracking mode (no opt-in/opt-out code needed)",
+      "detail": "Docs present this as an alternative to the opt_in/opt_out wiring: with cookieless_mode: 'on_reject', PostHog never stores cookies/localStorage until the user opts in, no events are captured pre-consent, and rejected/undecided users are still counted anonymously via a privacy-preserving server-side hash \u2014 all without you writing opt_in_capturing()/opt_out_capturing() calls. Requires enabling 'Cookieless server hash mode' in PostHog project settings (Project Settings > Web analytics) first. cookieless_mode: 'always' is the fully-cookieless variant with no banner needed at all (but you should avoid identify() calls in that mode).",
+      "code_or_values": "posthog.init('<ph_project_token>', { api_host: 'https://us.i.posthog.com', cookieless_mode: 'on_reject' })  // or 'always'",
+      "url": "https://posthog.com/docs/privacy/data-collection"
+    },
+    {
+      "topic": "Persistence options (for pre-consent/privacy-safe operation)",
+      "detail": "Full list of `persistence` config values. 'memory' persists nothing beyond the page view \u2014 a common choice if you want the script loaded but non-persistent before consent, combined with dynamic switching via posthog.set_config() once the user answers the consent prompt.",
+      "code_or_values": "persistence: 'localStorage+cookie' (default) | 'cookie' | 'localStorage' | 'sessionStorage' | 'memory'\n\n// Dynamic switch example from docs:\nconst handleCookieConsent = (consent) => {\n  posthog.set_config({ persistence: consent === 'yes' ? 'localStorage+cookie' : 'memory' });\n  localStorage.setItem('cookie_consent', consent);\n};",
+      "url": "https://posthog.com/docs/libraries/js/persistence"
+    },
+    {
+      "topic": "Custom event capture for quote-form interactions",
+      "detail": "Standard capture() call. Docs recommend '[object] [verb]' naming (e.g. 'quote_form submitted'). Properties object is optional and freeform.",
+      "code_or_values": "posthog.capture('quote_form_submitted', {\n    equipment_tier: 'standard',\n    lead_source: 'organic'\n});\n\n// simplest form:\nposthog.capture('user_signed_up');",
+      "url": "https://posthog.com/docs/product-analytics/capture-events"
+    },
+    {
+      "topic": "Cookies/localStorage keys PostHog sets (for cookie policy table)",
+      "detail": "PostHog stores: distinct_id, session ID & device ID, active/enabled feature flags, any registered 'super properties', and some SDK config flags (e.g. whether session recording is enabled). With the default persistence mode ('localStorage+cookie'), only the distinct_id and session ID go in an actual browser cookie; everything else goes to localStorage. The cookie name pattern and default lifetime are fixed.",
+      "code_or_values": "Cookie name pattern: ph_<project_api_key>_posthog  |  Expiry: 365 days  |  Purpose: stores distinct_id + session ID (cross-subdomain identity)\n\nlocalStorage keys use the same ph_<project_api_key>_posthog prefix and hold the bulk of the state (feature flags, super properties, config flags) under the 'localStorage+cookie' default persistence.\n\nOptional: `cookie_persisted_properties: [...]` config lets you explicitly whitelist additional custom properties (e.g. signup_source) to also live in the cross-subdomain cookie via posthog.register().",
+      "url": "https://posthog.com/docs/libraries/js/persistence"
+    },
+    {
+      "topic": "Disabling all storage (pre-consent safest mode)",
+      "detail": "If you don't want PostHog to write anything to the browser at all (e.g. before consent, or for anonymous-only tracking), disable_persistence is the hard switch \u2014 disables cookies, sessionStorage, and localStorage together. Caveat: you then must call posthog.identify() on every load or each refresh looks like a new user.",
+      "code_or_values": "posthog.init('<ph_project_token>', { disable_persistence: true })",
+      "url": "https://posthog.com/docs/libraries/js/persistence"
+    },
+    {
+      "topic": "Verifying events arrive \u2014 dashboard Activity/Live view",
+      "detail": "PostHog's dashboard has an 'Activity' tab with multiple views, including a 'Live' view that shows a real-time feed of events as they're captured plus a count of currently active users; can be filtered to a single event name or paused. No API key needed for this, just log into the PostHog project UI. A companion terminal tool, `posthog-live`, streams live events to your CLI (installed via a GitHub release binary, then authenticates through the browser).",
+      "code_or_values": "Dashboard path: Activity tab -> 'Live' view (filterable by event, pausable)\n\nCLI install (macOS Apple Silicon):\ncurl -L https://github.com/PostHog/posthog/releases/download/posthog-live-latest/posthog-live-darwin-arm64 -o posthog-live && chmod +x posthog-live\n./posthog-live --event-type \"$pageview,$autocapture\" --distinct-id \"user_123\"",
+      "url": "https://posthog.com/docs/activity"
+    },
+    {
+      "topic": "Verifying events arrive \u2014 Query API with a personal API key",
+      "detail": "For programmatic verification, POST a HogQL query to the project's private query endpoint on the ui_host (app) domain, authenticated with a personal API key (created under user settings, needs 'Query Read' permission) as a Bearer token. Note this endpoint is rate-limited (2400/hour) and not intended as a bulk export mechanism \u2014 fine for a one-off 'did my event land' check.",
+      "code_or_values": "curl \\\n  -H 'Content-Type: application/json' \\\n  -H \"Authorization: Bearer $POSTHOG_PERSONAL_API_KEY\" \\\n  https://us.posthog.com/api/projects/:project_id/query/ \\\n  -d '{\n        \"query\": {\n          \"kind\": \"HogQLQuery\",\n          \"query\": \"select event, timestamp, properties from events where event = '\\''quote_form_submitted'\\'' order by timestamp desc limit 10\"\n        }\n      }'\n\nProject ID: https://us.posthog.com/settings/project#variables\nPersonal API key: https://us.posthog.com/settings/user-api-keys#personal-api-keys",
+      "url": "https://posthog.com/docs/api/queries"
+    },
+    {
+      "topic": "Raw capture endpoint (alternate verification / non-JS ingestion)",
+      "detail": "The same public endpoint the SDK's array.js uses under the hood; useful to know for debugging network calls in devtools or sending events without JS. Uses the project token, not a personal API key, and needs no auth.",
+      "code_or_values": "POST https://us.i.posthog.com/i/v0/e/\nContent-Type: application/json\n{\n    \"token\": \"<ph_project_token>\",\n    \"event\": \"event_name\",\n    \"properties\": { \"distinct_id\": \"distinct_id_of_your_user\" },\n    \"timestamp\": \"[optional ISO 8601]\"\n}",
+      "url": "https://posthog.com/docs/getting-started/install"
+    },
+    {
+      "topic": "Free tier limits (current, from posthog.com/pricing)",
+      "detail": "Two plans: Free (no card required, 1 project, 1-year data retention, community support) and pay-as-you-go Paid ($0/mo base, 6 projects, 7-year retention, email support) where every product carries its own free monthly tier that resets monthly and you pay only for overage. No per-seat charges either way. Product Analytics (what a quote-form/event-tracking build would use) free tier: first 1,000,000 events/month free.",
+      "code_or_values": "Product analytics: first 1,000,000 events/mo FREE, then $0.00005/event (1,000,001-2,000,000), decreasing further at higher volume tiers down to $0.000009/event above 250M.\nSession replay: first 5,000 recordings/mo free.\nFeature flags & Experiments: first 1,000,000 requests/mo free.\nSurveys: first 1,500 responses/mo free.\nError tracking: first 100,000 exceptions/mo free.\nAll prices USD, current as of this pricing page fetch (2026-08-13).",
+      "url": "https://posthog.com/pricing"
+    },
+    {
+      "topic": "Autocapture (already-on by default, relevant to consent scope)",
+      "detail": "Out of the box (before any custom capture calls), the snippet also autocaptures pageviews, pageleaves, clicks, input changes, and form submissions on a/button/form/input/select/textarea/label elements. This is exactly what opt_out_capturing_by_default blocks until consent \u2014 relevant because a quote form's native <form> submission would otherwise be autocaptured pre-consent without the gating pattern above.",
+      "code_or_values": "posthog.init('<ph_project_token>', { api_host: 'https://us.i.posthog.com', autocapture: false }) // to fully disable if desired",
+      "url": "https://posthog.com/docs/privacy/data-collection"
+    }
+  ],
+  "sources": [
+    "https://posthog.com/docs/getting-started/install",
+    "https://posthog.com/docs/libraries/js/persistence",
+    "https://posthog.com/docs/libraries/js/config",
+    "https://posthog.com/docs/privacy/data-collection",
+    "https://posthog.com/docs/privacy/gdpr-compliance",
+    "https://posthog.com/docs/product-analytics/capture-events",
+    "https://posthog.com/docs/activity",
+    "https://posthog.com/docs/api",
+    "https://posthog.com/docs/api/queries",
+    "https://posthog.com/pricing",
+    "https://posthog.com/llms.txt"
+  ]
+}

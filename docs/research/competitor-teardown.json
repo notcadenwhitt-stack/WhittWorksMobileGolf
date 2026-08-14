@@ -1,0 +1,92 @@
+{
+  "summary": "Tore down four mobile golf simulator rental marketing sites: PopCaddie (Southern California), NextGen Event Co (NY/NJ/CT/PA), The Birdie Box Co (Marietta/Atlanta GA), and TEE'D UP (Central Texas/Austin). All four share a similar structural pattern: single-page or shallow-nav sites built around a \"bring the course to you\" hero, an event-category grid (corporate, private parties, weddings, fundraisers, trade shows), an FAQ block, a gallery, and a \"Get a Quote\"/\"Book Today\" CTA rather than an ecommerce checkout. Pricing transparency varies sharply: PopCaddie only exposes \"$1,000\" in its meta description (invisible to a normal visitor), TEE'D UP and The Birdie Box Co are fully quote-gated with no price shown anywhere, while NextGen Event Co is the outlier with real headline pricing (\"$295/hr\", a CTA badge reading \"$195/hr,\" and an FAQ-stated range of $295-$595/hr) plus name-brand client logos (Google, Coca-Cola, Salesforce, UBS) and named testimonials, none of which the other three sites have. None of the four sites showed a self-serve online booking/payment flow; all funnel to a lead-capture contact form instead.",
+  "findings": [
+    {
+      "business": "PopCaddie",
+      "url": "https://popcaddie.com",
+      "service_area": "Southern California (Temecula, Orange County, Huntington Beach, Newport Beach, Laguna Beach, Manhattan Beach, San Diego, Rancho Cucamonga, Riverside, Burbank, Anaheim, Long Beach, Pasadena, Thousand Oaks)",
+      "pages": [
+        "Single long-scroll homepage (no visible top nav bar); in-page anchor links only: 'Skip to content', 'Explore More', 'Book Today'; sections for gallery, FAQ, and quote request"
+      ],
+      "pricing_display": "Quote-only on the visible page. A '$1,000' starting price exists only in the page's meta description tag (title/description shown in search results and link previews), not in on-page visible copy. Source: https://popcaddie.com",
+      "booking_flow": "Single 'Book Today' CTA linking to a quote-request form; specific field list not enumerated on the page (form fields not itemized in fetched content)",
+      "trust_elements": "Photo gallery with 15+ event setups across SoCal locations; 6-question FAQ (event fit, skill level required, bring-your-own-clubs, package customization, how to book, setup requirements). No testimonials, no client logos, no review ratings/stars.",
+      "copy_angles": [
+        "Hyper-local geo-stacking: headline and body repeatedly name-check specific SoCal cities/neighborhoods (Temecula, Newport Beach, Pasadena, etc.) rather than just 'Southern California' once, likely for local SEO and to make out-of-towners feel specifically covered",
+        "'Bring the thrill of the course directly to your event' \u2014 leads with the convenience/delivery angle over the tech-spec angle",
+        "Skill-inclusivity framing baked into FAQ ('Is golf experience required?') to preempt the objection that non-golfers won't have fun"
+      ]
+    },
+    {
+      "business": "NextGen Event Co",
+      "url": "https://nextgeneventco.com/vr-golf-simulator-rental/",
+      "service_area": "Primary: New York, New Jersey, Connecticut, Pennsylvania. Secondary/expanded mentions: Maryland, Virginia, DC, North Carolina, South Carolina, Georgia, plus national convention venues (NYC Javits Center, Las Vegas Mandalay Bay, Orlando, Miami Beach)",
+      "pages": [
+        "About Us (with sub-pages: Reviews, Venue Experience, Join Our Team)",
+        "Event Types (Corporate, Experiential, Trade Shows, Universities, Non-Profit, Social)",
+        "Event Activations (Corporate Entertainment, Traffic Building, Podcasting, Headshots, Photo Booth, Games, Sports Simulators, Interactive Displays)",
+        "Resources",
+        "Blog",
+        "Contact"
+      ],
+      "pricing_display": "Real, prominent pricing shown in three separate places on the page, verified verbatim this session: (1) page headline/title text 'Golf Simulator Rental | Starting at $295/hr | Delivered to Event Site', (2) CTA button copy 'Check Availability- Pricing Starting at $195/hr!', (3) FAQ body text stating a range: 'can cost a range between $295hr- $595hr depending upon your location, time of service needed and features ordered.' Source: https://nextgeneventco.com/vr-golf-simulator-rental/",
+      "booking_flow": "Contact/quote form requesting: Name, Email, Event Date(s), Event Description, Services Required, Event Address, Budget",
+      "trust_elements": "Three named client testimonials with title and company (Maria Nelson, VP Development Manager @ Barnabas Health; Carolyn Whitman, Director of Marketing & Events @ iHeartRadio; Tiffany Stewart, Director of Events & Promotions @ Prudential); enterprise client logos displayed (Google, Coca-Cola, Salesforce, UBS); FAQ covering rental cost range, setup locations, multiplayer play, custom branding, and ideal event types; cross-sell grid of adjacent simulator rentals (pickleball, surfing, skiing, flight, soccer, VR escape rooms) signaling a broader full-service event vendor rather than a golf-only shop",
+      "copy_angles": [
+        "This is the only one of the 4 sites that leads with a concrete price in the H1/meta title itself instead of gating behind a quote form, and reinforces it in 3 places on one page. That price-forward transparency is a strong differentiator to consider stealing for a new entrant.",
+        "'Draw the crowds to your corporate event or trade show' / positions the simulator explicitly as a 'traffic building tool' for booth foot traffic, a B2B framing absent from the other three sites",
+        "'Compete against your boss or co-workers' \u2014 leaderboard/rivalry hook aimed at corporate/team-building bookers specifically"
+      ]
+    },
+    {
+      "business": "The Birdie Box Co.",
+      "url": "https://www.thebirdieboxco.com/",
+      "service_area": "Marietta, GA primary; also Atlanta, Smyrna, Kennesaw, Roswell, Alpharetta, Sandy Springs, Cobb County, Cherokee County; secondary location in Naples, FL",
+      "pages": [
+        "Home",
+        "Events (4 subcategories)",
+        "Products",
+        "FAQ",
+        "Contact Us",
+        "Blog"
+      ],
+      "pricing_display": "Quote-only. No dollar figures found anywhere on the page; all CTAs read 'GET A QUOTE' routing to a contact form/phone call.",
+      "booking_flow": "'GET A QUOTE' CTA buttons throughout the page link to a /contact form; direct phone call option also offered (678-792-6069) and direct email (chris@thebirdieboxco.com); specific form field list not itemized in fetched content",
+      "trust_elements": "Photo gallery of indoor/outdoor setups; comprehensive FAQ section; blog posts on corporate team engagement; no named testimonials, star ratings, or client logos found",
+      "copy_angles": [
+        "Tagline 'No travel. No tee times. Just golf, competition, and unforgettable fun.' is a tight three-beat rhythm that directly names the two biggest objections to going to a real golf course (travel, tee-time scarcity) and dismisses both in one line",
+        "Explicit niche-event list beyond generic 'parties/corporate' \u2014 names bachelor/bachelorette parties, rehearsals, breweries & bars as venue types, broadening the addressable event categories most competitors leave implicit",
+        "'Transforms any space into an interactive golf destination' \u2014 leans on the space-transformation framing rather than the equipment/tech framing"
+      ]
+    },
+    {
+      "business": "TEE'D UP",
+      "url": "https://www.teedup-golftx.com/",
+      "service_area": "Central Texas, Austin and surrounding areas",
+      "pages": [
+        "Home",
+        "About",
+        "Gallery",
+        "F.A.Q.",
+        "Blog",
+        "Contact"
+      ],
+      "pricing_display": "Quote-only. No dollar figures found on the page. Explicitly states a 2-hour minimum rental, bookable by the hour or full day, but withholds the actual rate.",
+      "booking_flow": "'Get A Quote' button linking to contact page; phone (817) 929-7003 and email Jack@teedup-golftx.com listed directly; specific form field list not itemized in fetched content",
+      "trust_elements": "Dedicated Gallery page; F.A.Q. section; blog with industry content; no testimonials, star ratings, or client logos found in fetched content",
+      "copy_angles": [
+        "'No golf skills required' positioned as a standalone accessibility hook rather than buried in FAQ, more prominent than PopCaddie's similar but FAQ-buried version",
+        "Naming a concrete minimum (2-hour minimum, hourly or full-day booking) without stating the actual rate is a middle-ground tactic worth studying: it sets a time-commitment expectation while still forcing a quote conversation for price",
+        "Owner-name email signature (Jack@teedup-golftx.com) signals small, personal/local operator rather than agency-run, which could be a trust lever for a new small operator to copy"
+      ]
+    }
+  ],
+  "sources": [
+    "https://popcaddie.com",
+    "https://nextgeneventco.com/vr-golf-simulator-rental/",
+    "https://www.thebirdieboxco.com/",
+    "https://www.teedup-golftx.com/",
+    "https://wego.golf/ (candidate reviewed via search only, not torn down)",
+    "https://dryvebox.com/ (candidate reviewed via search only, not torn down)"
+  ]
+}

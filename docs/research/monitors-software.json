@@ -1,0 +1,119 @@
+{
+  "summary": "Verified current US retail prices (Aug 13, 2026) for 7 golf launch monitors spanning the three budget bands, each with confirmed simulator-software compatibility and subscription costs. Value tier ($500-700): Garmin R10 ($499.99), Rapsodo MLM2PRO ($599.99), Voice Caddie SC4 Pro ($599.99, newcomer). Core/mid tier ($2000-3500): SkyTrak+ has been discontinued and replaced by SkyTrak ST MAX ($1,995 sale/$2,995 list), FlightScope Mevo+ is discontinued and replaced by Mevo Gen2 ($1,299 base), Uneekor EYE MINI Lite ($1,999 sale/$2,750 list). Premium tier ($3500-7000): Bushnell Launch Pro Circle B Edition ($2,999.99, below the $3500 floor but the standard premium camera-based option) plus GSPro/E6 Connect/Awesome Golf third-party software costs which recur across multiple monitors. Every monitor except FlightScope Mevo Gen2 and Voice Caddie SC4 Pro requires a paid annual subscription tier for full simulator/course access; the cheapest monitors (Garmin, Rapsodo, Voice Caddie) still need $199-300/yr in add-on software (E6 Connect, Awesome Golf, or GSPro) for a true simulator experience.",
+  "findings": [
+    {
+      "category": "monitor",
+      "product": "Garmin Approach R10",
+      "price_usd": 499.99,
+      "url": "https://www.pgatoursuperstore.com/approach-r10-portable-launch-monitor/1136623.html",
+      "software_compat": "Bundled: Garmin Golf app (basic free tier). Compatible add-on sim software: E6 Connect (TruGolf, sold separately), Awesome Golf (sold separately), TGC 2019 (sold separately). NOT compatible with GSPro.",
+      "subscription_notes": "MSRP $599.99, currently on sale $499.99 (also seen $499-549 elsewhere, confirms sale is broad). Garmin Golf app Premium content is $9.99/mo or $99/yr (30-day free trial) for green contours etc. To get a real simulator experience you must also buy E6 Connect ($300-600/yr or one-time engine license) or Awesome Golf ($159.99/yr or $14.99/mo). No GSPro support.",
+      "tier_fit": "value"
+    },
+    {
+      "category": "monitor",
+      "product": "Rapsodo MLM2PRO",
+      "price_usd": 599.99,
+      "url": "https://rapsodo.com/products/mlm2pro-mobile-launch-monitor-golf-simulator",
+      "software_compat": "Bundled Rapsodo app. Compatible with GSPro, E6 Connect/E6 Apex, and Awesome Golf for course play.",
+      "subscription_notes": "Regular price $699.99, currently discounted to $599.99. Includes 45-day free trial of Premium Membership. After trial, Premium Membership required for full simulator courses (30,000+ virtual courses), cloud storage, spin metrics, and video analysis: $199.99/yr, or 2-yr $329.99, or lifetime $599.99. Spin data requires RPT-branded balls (Titleist Pro V1 or Callaway Chrome Tour).",
+      "tier_fit": "value"
+    },
+    {
+      "category": "monitor",
+      "product": "Voice Caddie SC4 Pro",
+      "price_usd": 599.99,
+      "url": "https://voicecaddie.com/products/sc4-pro",
+      "software_compat": "Bundled E6 Connect (5 golf courses + 1 driving range included free, iOS/PC). Also free companion VoiceCaddie S app for practice tracking. No confirmed GSPro or Awesome Golf support.",
+      "subscription_notes": "2025-2026 newcomer. No required subscription \u2014 E6 Connect starter course pack included at no extra cost, described by vendor/reviewers as running 'without subscription fees.' Some retailers/coupons bring price to $499-549.",
+      "tier_fit": "value"
+    },
+    {
+      "category": "monitor",
+      "product": "SkyTrak+ (discontinued, replaced by SkyTrak ST MAX)",
+      "price_usd": 1995,
+      "url": "https://www.skytrakgolf.com/products/launch-monitor",
+      "software_compat": "Proprietary SkyTrak software (Shot History, Shot Optimizer, Practice Randomizer). Membership tiers add WGT by Topgolf and E6 Connect course packs. Not GSPro-native (SkyTrak uses its own ecosystem, though some players interface it with GSPro via third-party connector).",
+      "subscription_notes": "IMPORTANT: SkyTrak+ itself is discontinued/being phased out; SkyTrak ST MAX (same $2,995 list, currently $1,995 on sale, i.e. $1,000 off) is the direct successor as of late 2025. A certified pre-owned original SkyTrak (older/base model, not the '+') was separately seen for $695 promo \u2014 do not confuse with ST MAX. Membership plans (2026 restructure): Core (FS) $199.99/yr, Elite $399.99/yr; older 'Play and Improve' plan was $249.95/yr before consolidation.",
+      "tier_fit": "core"
+    },
+    {
+      "category": "monitor",
+      "product": "FlightScope Mevo+ (discontinued, replaced by Mevo Gen2)",
+      "price_usd": 1299,
+      "url": "https://flightscope.com/products/mevo-gen2",
+      "software_compat": "Bundled FS Golf Practice App and FS Skills Challenges App. Compatible with E6 Connect, Awesome Golf, and GSPro (PC).",
+      "subscription_notes": "Mevo+ is discontinued and no longer sold by FlightScope directly (some 3rd-party stock existed at deep discount ~$1,099 down from $2,299 list, unverified as current). Its replacement, Mevo Gen2, is $1,299 base and includes an 8-course E6 Connect bundle with LIFETIME ownership (no recurring fee for those courses). Additional E6 Connect 12-course pack upgrade is a one-time $250. Vendor states no required subscriptions/hidden fees for core functionality. Pro Package and Face Impact Location are optional one-time add-ons (bundle with both: $2,274 sale / $2,798 list).",
+      "tier_fit": "core"
+    },
+    {
+      "category": "monitor",
+      "product": "Uneekor EYE MINI Lite",
+      "price_usd": 1999,
+      "url": "https://shopindoorgolf.com/products/uneekor-eye-mini-lite-launch-monitor",
+      "software_compat": "Uneekor VIEW software platform: Refine/Refine+ course play (Pro package+), AI Trainer (Champion package, needs extra Swing Optix cameras), GameDay (Ultimate package). Free Player Package included with every unit for basic ball/club data with no fees.",
+      "subscription_notes": "List price $2,750, currently discounted to $1,999 (confirmed matching on both official uneekor.com and authorized dealer shopindoorgolf.com). Full simulator/course play requires paid tier: Pro Package $199/yr, Champion Package $399/yr, Ultimate Package $599/yr. New units include complimentary 3-month trial of Ultimate Package.",
+      "tier_fit": "core"
+    },
+    {
+      "category": "monitor",
+      "product": "Bushnell Launch Pro (Circle B Edition)",
+      "price_usd": 2999.99,
+      "url": "https://www.playbetter.com/products/bushnell-launch-pro-launch-monitor",
+      "software_compat": "FSX Play/FSX Pro (Foresight's own simulator software, via Silver/Gold tiers). GSPro compatible but sold as a separate paid add-on requiring active Gold subscription. No native E6 Connect/Awesome Golf mentioned.",
+      "subscription_notes": "Circle B Edition (current standard SKU, orange/black) is $2,999.99 (metal-case upgrade variant $3,129.99). Note: some retailers briefly listed a promotional Circle B price of $2,499 \u2014 playbetter's own live product page now shows $2,999.99, so treat $2,499 as a lapsed/regional promo, not current price. Silver subscription $199.99/yr (ball & club data, 5 courses, Pinseeker, FSX Pro). Gold subscription $499/yr (ball & club data, 25 courses, full FSX Play simulation). GSPro access is a further $250/yr add-on requiring active Gold. 14-day free trial of Gold included with new purchase. This monitor sits below the stated $3,500-7,000 premium band on hardware price alone, but total year-1 cost (device + Gold + GSPro) reaches ~$3,750, effectively landing it in the premium band once software is included.",
+      "tier_fit": "premium"
+    },
+    {
+      "category": "software",
+      "product": "GSPro (third-party simulator software, used by Rapsodo, Mevo Gen2, Bushnell add-on)",
+      "price_usd": 250,
+      "url": "https://northcourse.golf/articles/gspro-cost",
+      "software_compat": "Compatible launch monitors: Rapsodo MLM2PRO, FlightScope Mevo Gen2, Bushnell Launch Pro (via Gold sub), Uneekor line. NOT compatible with Garmin R10.",
+      "subscription_notes": "$250/year annual license, no perpetual/one-time option. Includes free access to a ~2,000-course community library while subscription is active; access lost if it lapses. Relevant as a shared software-budget line item since several monitors route through GSPro rather than a bundled proprietary app.",
+      "tier_fit": "core"
+    },
+    {
+      "category": "software",
+      "product": "E6 Connect / E6 by TruGolf (third-party simulator software, used by Garmin, Rapsodo, Mevo Gen2, Voice Caddie)",
+      "price_usd": 300,
+      "url": "https://trugolf.com/pages/e6-connect",
+      "software_compat": "Compatible with Garmin R10, Rapsodo MLM2PRO, FlightScope Mevo Gen2 (bundle included), Voice Caddie SC4 Pro (bundle included).",
+      "subscription_notes": "E6 Connect (legacy, business/multi-bay oriented): Basic $300/yr, Expanded $600/yr. Newer E6 by TruGolf (2026, consumer-oriented): Play tier $300/yr, Improve tier $150/yr add-on. Engine can be purchased once with no subscription, but content/course access is then limited to whatever ships with the engine.",
+      "tier_fit": "core"
+    },
+    {
+      "category": "software",
+      "product": "Awesome Golf (third-party simulator software, used by Garmin, Rapsodo, Mevo Gen2)",
+      "price_usd": 159.99,
+      "url": "https://www.awesome-golf.com/pricing/",
+      "software_compat": "Compatible with Garmin R10, Rapsodo MLM2PRO, FlightScope Mevo Gen2. License is tied to the launch monitor, not the OS device, so it travels across Windows/Mac/ChromeOS/iOS/Android on the same monitor.",
+      "subscription_notes": "Annual plan $159.99/yr; monthly $14.99/mo; lifetime license $349.99 one-time. 14-day free trial for new users, no commitment required to start trial.",
+      "tier_fit": "value"
+    }
+  ],
+  "sources": [
+    "https://www.pgatoursuperstore.com/approach-r10-portable-launch-monitor/1136623.html",
+    "https://www.dickssportinggoods.com/p/garmin-approach-r10-golf-launch-monitor-21gmnupprchr10lnctch/21gmnupprchr10lnctch",
+    "https://rapsodo.com/products/mlm2pro-mobile-launch-monitor-golf-simulator",
+    "https://rapsodo.com/pages/rapsodo-golf-mlm2pro-premium-membership",
+    "https://voicecaddie.com/products/sc4-pro",
+    "https://breakingeighty.com/voice-caddie-sc4-pro",
+    "https://www.skytrakgolf.com/products/launch-monitor",
+    "https://www.skytrakgolf.com/collections/deals",
+    "https://topshelfgolf.com/blogs/golf/skytrak-membership-plans-basic-essential-core-elite-2026",
+    "https://flightscope.com/products/mevo-gen2",
+    "https://flightscope.com/products/mevo-gen2-with-face-impact-location",
+    "https://flightscope.com/blogs/news/flightscope-releases-mevo-gen2-the-most-complete-launch-monitor-and-simulator-on-the-market-and-its-under-1-200",
+    "https://shopindoorgolf.com/products/uneekor-eye-mini-lite-launch-monitor",
+    "https://uneekor.com/golf-launch-monitors/eye-mini-lite",
+    "https://www.playbetter.com/products/bushnell-launch-pro-launch-monitor",
+    "https://www.bushnellgolf.com/products/launch-monitors/launch-pro/",
+    "https://www.playbetter.com/blogs/golf-simulator-reviews/bushnell-launch-pro-circle-b-edition-review",
+    "https://northcourse.golf/articles/gspro-cost",
+    "https://trugolf.com/pages/e6-connect",
+    "https://trugolf.com/products/e6-play-subscription",
+    "https://www.awesome-golf.com/pricing/",
+    "https://www.garmin.com/en-US/p/850633/"
+  ]
+}

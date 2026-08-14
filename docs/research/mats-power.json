@@ -1,0 +1,259 @@
+{
+  "summary": "Verified current US prices (fetched live this session, URLs included) across three hitting-mat tiers, putting/landing turf, battery power stations, and quiet gas inverter generators for a mobile golf sim rental business. Budget mats run $99.99-$349 (GoSports Elite line, SIGPRO hitting strips, Fiberbuilt Hourglass kit). Mid-tier Fiberbuilt Performance Turf tee boxes and SIGPRO Softy Lite run $399-$790. Premium SIGPRO Softy, TrueStrike, and Fiberbuilt Player Preferred run $999.99-$1,599. Landing/putting turf strips range $289.99 (small landing pad) to $1,000+ (full putting turf). For power: EcoFlow Delta 3 ($629, 1024Wh) and Jackery 2000 v2 ($899, 2042Wh) are the quiet/indoor-safe battery options, giving roughly 1.3-4 hours at a 400-800W simulator+blower draw depending on unit and load - fine for most indoor bookings but tight for long outdoor days. Honda EU2200i ($1,199 MSRP) and Harbor Freight's Predator 3500 ($749.97) are gas-only, outdoor-only, ~48-57dBA quiet-class generators with 3-11 hour tank runtimes, better suited to all-day outdoor events where CO risk and noise rules don't apply. EcoFlow Delta 2 appears discontinued on EcoFlow's own site (redirects to Delta 3) so no live price could be verified for it; Delta 3 is the current equivalent-capacity replacement.",
+  "findings": [
+    {
+      "category": "hitting_mat_budget",
+      "product": "GoSports Elite Golf Hitting Mat 5'x3' (5mm)",
+      "price_usd": 99.99,
+      "url": "https://www.walmart.com/ip/GoSports-Golf-Hitting-Mat-ELITE-5-x-5-Size-15mm-Artificial-Turf-Mat-for-Indoor-Outdoor-Practice/1717799245",
+      "capacity_or_size": "5ft x 3ft, 5mm foam backing",
+      "runtime_or_specs": "~150,000 shot commercial-grade turf rating per brand claim; smallest/cheapest size in the Elite line",
+      "tier_fit": "budget (low end, under the $150-350 band)"
+    },
+    {
+      "category": "hitting_mat_budget",
+      "product": "GoSports Elite Golf Hitting Mat 5'x4' (15mm)",
+      "price_usd": 127.49,
+      "url": "https://www.walmart.com/ip/GoSports-Golf-Hitting-Mat-ELITE-5-x-5-Size-15mm-Artificial-Turf-Mat-for-Indoor-Outdoor-Practice/1717799245",
+      "capacity_or_size": "5ft x 4ft, 15mm foam backing",
+      "runtime_or_specs": "was $149.99, currently on sale; 3 rubber tees included",
+      "tier_fit": "budget"
+    },
+    {
+      "category": "hitting_mat_budget",
+      "product": "GoSports Elite Golf Hitting Mat 5'x5' (15mm, octagonal)",
+      "price_usd": 199.99,
+      "url": "https://www.walmart.com/ip/GoSports-Golf-Hitting-Mat-ELITE-5-x-5-Size-15mm-Artificial-Turf-Mat-for-Indoor-Outdoor-Practice/1717799245",
+      "capacity_or_size": "5ft x 5ft octagon, 15mm foam backing",
+      "runtime_or_specs": "6 teeing positions (both handedness), listed out of stock at time of check but price still shown",
+      "tier_fit": "budget (top end, matches ~$150-350 band well)"
+    },
+    {
+      "category": "hitting_mat_budget",
+      "product": "SIGPRO Softy LITE Hitting Strip",
+      "price_usd": 219.99,
+      "url": "https://indoorgolfoutlet.com/products/sigpro-softy-lite-hitting-strip",
+      "capacity_or_size": "hitting strip (compact insert, not full mat)",
+      "runtime_or_specs": "marked down from $274.99; softer/lighter version of the Softy line",
+      "tier_fit": "budget"
+    },
+    {
+      "category": "hitting_mat_budget",
+      "product": "SIGPRO Softy Hitting Strip",
+      "price_usd": 249.99,
+      "url": "https://shopindoorgolf.com/products/sigpro-softy-hitting-strip",
+      "capacity_or_size": "28in x 12in x 2.5in strip, 4 lb",
+      "runtime_or_specs": "soft foam insert insert-strip, not a full stance mat; replaceable insert design",
+      "tier_fit": "budget (upper end)"
+    },
+    {
+      "category": "hitting_mat_budget",
+      "product": "Fiberbuilt Performance Turf Series Hourglass Golf Mat Kit 5'x3'",
+      "price_usd": 349,
+      "url": "https://fiberbuiltgolf.com/collections/performance-turf-series",
+      "capacity_or_size": "5ft x 3ft full hitting/stance mat kit",
+      "runtime_or_specs": "launch-monitor-tested turf; top of budget band, closest budget option to a full-size mat",
+      "tier_fit": "budget (ceiling of $150-350 range)"
+    },
+    {
+      "category": "hitting_mat_mid",
+      "product": "Fiberbuilt Performance Turf Series Tee Box - Square",
+      "price_usd": 399,
+      "url": "https://fiberbuiltgolf.com/collections/performance-turf-series",
+      "capacity_or_size": "square tee box mat (dimensions not listed on collection page)",
+      "runtime_or_specs": "sale price, regular $499.00",
+      "tier_fit": "mid ($400-800 band, at the floor)"
+    },
+    {
+      "category": "hitting_mat_mid",
+      "product": "Fiberbuilt Performance Turf Series Tee Box - Rectangle",
+      "price_usd": 569,
+      "url": "https://fiberbuiltgolf.com/collections/performance-turf-series",
+      "capacity_or_size": "rectangular tee box mat",
+      "runtime_or_specs": "sale price, regular $749.00",
+      "tier_fit": "mid"
+    },
+    {
+      "category": "hitting_mat_mid",
+      "product": "SIGPRO Softy Lite 4'x5' Hitting Mat",
+      "price_usd": 790,
+      "url": "https://365golfdesign.com/product/sigpro-softy-lite-4x5-hitting-mat/",
+      "capacity_or_size": "4ft x 5ft full mat",
+      "runtime_or_specs": "price includes shipping, ships in 5-7 days",
+      "tier_fit": "mid (upper end, near the $800 boundary)"
+    },
+    {
+      "category": "hitting_mat_premium",
+      "product": "SIGPRO Softy 4'x7' Hitting Mat",
+      "price_usd": 999.99,
+      "url": "https://golfsimdepot.com/products/sigpro-softy-4x7-hitting-mat",
+      "capacity_or_size": "4ft x 7ft full mat",
+      "runtime_or_specs": "commercial-grade, replaceable hitting strip design so worn strip can be swapped instead of whole mat",
+      "tier_fit": "premium"
+    },
+    {
+      "category": "hitting_mat_premium",
+      "product": "TrueStrike Single Golf Mat",
+      "price_usd": 1098,
+      "url": "https://www.intheholegolf.com/ts302-single/TrueStrike-Single-Golf-Mat.html",
+      "capacity_or_size": "51.18in x 77.17in (~4.3ft x 6.4ft)",
+      "runtime_or_specs": "8% off MSRP of $1,199.00; positioned for pros/driving ranges",
+      "tier_fit": "premium"
+    },
+    {
+      "category": "hitting_mat_premium",
+      "product": "Fiberbuilt Player Preferred Series Studio Mat, Single Hitting 7'x4'",
+      "price_usd": 1299,
+      "url": "https://fiberbuiltgolf.com/collections/player-preferred-series",
+      "capacity_or_size": "7ft x 4ft",
+      "runtime_or_specs": "launch-monitor-tested Pure Impact Turf; limited-time price",
+      "tier_fit": "premium"
+    },
+    {
+      "category": "hitting_mat_premium",
+      "product": "Fiberbuilt Player Preferred Series Studio Mat, Center Hitting 9'x4'",
+      "price_usd": 1599,
+      "url": "https://fiberbuiltgolf.com/collections/player-preferred-series",
+      "capacity_or_size": "9ft x 4ft",
+      "runtime_or_specs": "limited-time price; slightly above the $800-1500 target band but same product line",
+      "tier_fit": "premium (upper edge, ~$100 over stated $1500 ceiling)"
+    },
+    {
+      "category": "landing_turf",
+      "product": "Landing Pad Turf, 10'1\" x 5'",
+      "price_usd": 289.99,
+      "url": "https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure",
+      "capacity_or_size": "10ft1in wide x 5ft deep",
+      "runtime_or_specs": "smallest size in the line; larger 10'1\"x15' runs $989.99 (ships freight, $300 freight included)",
+      "tier_fit": "landing strip, entry size"
+    },
+    {
+      "category": "landing_turf",
+      "product": "Landing Pad Turf, 13'4\" x 10'",
+      "price_usd": 669.99,
+      "url": "https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure",
+      "capacity_or_size": "13ft4in wide x 10ft deep",
+      "runtime_or_specs": "mid-size, fits a standard mobile enclosure footprint",
+      "tier_fit": "landing strip, mid size"
+    },
+    {
+      "category": "putting_turf",
+      "product": "SkyTrak Putting Turf",
+      "price_usd": 599.99,
+      "url": "https://indoorgolfessentials.com/collections/putting-turf",
+      "capacity_or_size": "size not itemized on collection page",
+      "runtime_or_specs": "single fixed price (no range)",
+      "tier_fit": "putting turf, budget-mid"
+    },
+    {
+      "category": "putting_turf",
+      "product": "Landing Pad Mat for SIG8 Golf Simulator Enclosure",
+      "price_usd": 699.99,
+      "url": "https://indoorgolfessentials.com/collections/putting-turf",
+      "capacity_or_size": "sized for SIG8 enclosure",
+      "runtime_or_specs": "single fixed price",
+      "tier_fit": "landing/putting combo turf"
+    },
+    {
+      "category": "putting_turf",
+      "product": "EZTee Hybrid Hitting Turf",
+      "price_usd": 649,
+      "url": "https://indoorgolfessentials.com/collections/putting-turf",
+      "capacity_or_size": "range $649.00-$1,249.00 depending on size",
+      "runtime_or_specs": "hybrid stance/hitting turf, price scales with size",
+      "tier_fit": "putting/stance turf"
+    },
+    {
+      "category": "putting_turf",
+      "product": "Big Moss V2 Return Ramp",
+      "price_usd": 139,
+      "url": "https://indoorgolfessentials.com/collections/putting-turf",
+      "capacity_or_size": "accessory ramp, not full turf",
+      "runtime_or_specs": "cheap accessory to return putts to the golfer",
+      "tier_fit": "accessory, low cost"
+    },
+    {
+      "category": "putting_turf",
+      "product": "Carl's Place Golf Room Floor Tiles",
+      "price_usd": 459.99,
+      "url": "https://indoorgolfessentials.com/collections/putting-turf",
+      "capacity_or_size": "tile-based flooring system",
+      "runtime_or_specs": "single fixed price, modular tiles vs roll turf",
+      "tier_fit": "stance/flooring, mid budget"
+    },
+    {
+      "category": "battery_power_station",
+      "product": "Jackery Explorer 1000 v2",
+      "price_usd": 549,
+      "url": "https://www.jackery.com/products/jackery-explorer-1000-v2",
+      "capacity_or_size": "1070Wh capacity",
+      "runtime_or_specs": "1500W continuous output; 30dB noise (essentially silent); at 500W continuous draw \u22482.1 hrs runtime, at 700W \u22481.5 hrs; indoor-safe, zero emissions",
+      "tier_fit": "battery power, smaller/lighter option for short bookings"
+    },
+    {
+      "category": "battery_power_station",
+      "product": "Jackery Explorer 2000 v2",
+      "price_usd": 899,
+      "url": "https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station",
+      "capacity_or_size": "2042Wh capacity",
+      "runtime_or_specs": "2200W continuous / 4400W surge; <30dB noise; 39.5 lb; at 500W draw \u22484.1 hrs, at 700W \u22482.9 hrs, at 800W \u22482.6 hrs; on sale from $999.00; indoor-safe, zero emissions",
+      "tier_fit": "battery power, best balance of capacity/portability for multi-hour indoor or outdoor events"
+    },
+    {
+      "category": "battery_power_station",
+      "product": "EcoFlow Delta 3",
+      "price_usd": 629,
+      "url": "https://us.ecoflow.com/products/delta-3-portable-power-station",
+      "capacity_or_size": "1024Wh capacity",
+      "runtime_or_specs": "1800W continuous AC, 2200W with X-Boost, 3600W surge; on sale from $699.00; at 500W draw \u22482.0 hrs, at 700W \u22481.5 hrs, at 800W \u22481.3 hrs; indoor-safe, zero emissions; expandable with extra batteries",
+      "tier_fit": "battery power, current-gen EcoFlow entry (replaces discontinued Delta 2 on manufacturer's site)"
+    },
+    {
+      "category": "battery_power_station",
+      "product": "EcoFlow Delta 2 (1024Wh)",
+      "price_usd": 0,
+      "url": "https://us.ecoflow.com/products/delta-3-portable-power-station",
+      "capacity_or_size": "1024Wh (same class as Delta 3)",
+      "runtime_or_specs": "UNVERIFIED - product page now 404s/redirects to Delta 3 on EcoFlow's own US site, indicating discontinuation; third-party retailers (Home Depot, Walmart) show listings but none could be loaded this session to confirm a live price, so no price is reported. Treat Delta 3 as the current equivalent.",
+      "tier_fit": "likely discontinued; use Delta 3 instead"
+    },
+    {
+      "category": "quiet_generator",
+      "product": "Honda EU2200i (model EU2200ITAN)",
+      "price_usd": 1199,
+      "url": "https://powerequipment.honda.com/generators/models/eu2200i",
+      "capacity_or_size": "120V, 2200W max (18.3A) / 1800W rated (15A) AC output",
+      "runtime_or_specs": "MSRP shown on Honda's own site; noise 48dB(A) at 1/4 load to 57dB(A) at rated load; runtime 3.2 hrs at rated load to 8.1 hrs at 1/4 load on 0.95 gal tank; 47.4 lb dry weight; at a 500-600W (~30% load) simulator draw, expect roughly 6-7 hrs per tank; GASOLINE ONLY - outdoor use only, CO risk indoors, has CO-MINDER auto shutoff",
+      "tier_fit": "quiet gas generator, long outdoor events, industry benchmark for noise"
+    },
+    {
+      "category": "quiet_generator",
+      "product": "Predator 3500 Super Quiet Inverter Generator (CO SECURE, CA compliant model, item 72899)",
+      "price_usd": 749.97,
+      "url": "https://www.harborfreight.com/3500-watt-super-quiet-inverter-generator-with-co-secure-technology-california-compliant-72899.html",
+      "capacity_or_size": "3500W starting / 3000W running, 212cc engine",
+      "runtime_or_specs": "in-store price only per Harbor Freight listing; 56 dBA noise; runtime 'over 11 hours at 25% load' (~750W) on 2.3 gal tank - closely matches a 400-800W simulator+blower draw for a full outdoor event without refueling; 102 lb; GASOLINE ONLY - outdoor use only, CO risk indoors",
+      "tier_fit": "quiet gas generator, best runtime match for a full-day outdoor booking, cheaper than Honda"
+    }
+  ],
+  "sources": [
+    "https://golfsimdepot.com/products/sigpro-softy-4x7-hitting-mat",
+    "https://shopindoorgolf.com/products/sigpro-softy-hitting-strip",
+    "https://indoorgolfoutlet.com/products/sigpro-softy-lite-hitting-strip",
+    "https://365golfdesign.com/product/sigpro-softy-lite-4x5-hitting-mat/",
+    "https://fiberbuiltgolf.com/collections/player-preferred-series",
+    "https://fiberbuiltgolf.com/collections/all/studio-mats",
+    "https://fiberbuiltgolf.com/collections/performance-turf-series",
+    "https://www.intheholegolf.com/ts302-single/TrueStrike-Single-Golf-Mat.html",
+    "https://www.truestrike.com/truestrike-golf-mat/",
+    "https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure",
+    "https://indoorgolfessentials.com/collections/putting-turf",
+    "https://www.walmart.com/ip/GoSports-Golf-Hitting-Mat-ELITE-5-x-5-Size-15mm-Artificial-Turf-Mat-for-Indoor-Outdoor-Practice/1717799245",
+    "https://us.ecoflow.com/products/delta-3-portable-power-station",
+    "https://www.jackery.com/products/jackery-explorer-1000-v2",
+    "https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station",
+    "https://powerequipment.honda.com/generators/models/eu2200i",
+    "https://www.harborfreight.com/3500-watt-super-quiet-inverter-generator-with-co-secure-technology-california-compliant-72899.html",
+    "https://www.amazon.com/Inflatable-9-84x9-84x11-48FT-Practice-Simulator-Equipment/dp/B0D48HFLL6"
+  ]
+}

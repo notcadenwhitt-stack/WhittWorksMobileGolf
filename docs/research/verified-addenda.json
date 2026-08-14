@@ -1,0 +1,37 @@
+{
+  "summary": "Facts verified directly by the orchestrating session (not the Phase 2 agents), recorded here so every EQUIPMENT-TIERS.md line has an on-disk source. Also records the corrected AL SoS search method after the round-1 GET method was proven to no-op.",
+  "findings": [
+    {
+      "topic": "PopCaddie enclosure (fetched 2026-08-13, popcaddie.com/inflatable-enclosures/)",
+      "detail": "Inflatable Golf Simulator Enclosure, $2,998 including international shipping. Dimensions 14.99 ft D x 13.77 ft W x 10.82 ft H. Includes: electric air pump (US plug), double-layer impact screen, ceiling projector bracket, custom logo printing on 3 sides, removable side panels, repair patch kit, setup guide. Add-ons: peak roof +$500, front shade flaps +$200. Lead time 28-30 days via FedEx Air Courier; customs averages ~$130 collected separately. PopCaddie sells this enclosure product directly in addition to operating SoCal event rentals; both were verified on their site the same day.",
+      "url": "https://popcaddie.com/inflatable-enclosures/"
+    },
+    {
+      "topic": "Voice Caddie SC4 Pro sensing + placement (fetched 2026-08-13)",
+      "detail": "Doppler radar, K band 24 GHz. Placement: 5 ft behind the ball, same level as ball. Vendor recommends 10 ft from ball to net/screen for indoor simulator use. Inside the 14.99-ft-deep enclosure this fits at exactly spec: screen at front, ball 10 ft back, unit 5 ft behind the ball against the rear wall. Zero slack; note honestly in the tier doc and offer a camera-based alternate.",
+      "url": "https://voicecaddie.com/products/sc4-pro"
+    },
+    {
+      "topic": "BenQ AK700ST throw ratio (web search 2026-08-13, multiple golf-sim retailers)",
+      "detail": "Throw ratio 0.69-0.83 (1.2x zoom), 4K UHD, 4,000 ANSI lumens laser. A 120-inch (10-ft) 16:9 image projects from 6.0-7.2 ft; a ~12-ft-wide image from roughly 8.3-10 ft. Ceiling-mounted on the enclosure bracket this clears the golfer and fills the screen within the enclosure depth.",
+      "url": "https://www.playbetter.com/products/benq-ak700st-golf-simulator-projector"
+    },
+    {
+      "topic": "AL SoS entity search: corrected method (2026-08-13)",
+      "detail": "GET requests to arc-sos.state.al.us/cgi/corpname.mbr/output?search=... silently return 'No matches found.' for every query (proven with 'walmart'). Valid method: POST to /cgi/corpname.mbr/output with fields search, type=ALL, place=ALL, city=, stat=ALL. Round-1 shortlist SoS results were re-run with POST on 2026-08-13: Dixie Blue Golf, Fairway Blue Golf, Cerulean Golf, Navy Fairway, Roadshow Golf all genuinely CLEAR (walmart control query returned six real entities).",
+      "url": "https://arc-sos.state.al.us/cgi/corpname.mbr/input"
+    },
+    {
+      "topic": "MSI Cyborg 15 RAM caveat (from Opus tier review, 2026-08-13)",
+      "detail": "Best Buy SKU 6532164's URL slug reads 'with-8gb-ram'. GSPro's stated minimum is RTX 3060 with 16GB RAM. The tier doc therefore budgets $999.99 for a 16GB-configured RTX 4060 laptop (Cyborg 15 higher trim or Acer Nitro V 16GB class) and flags the exact SKU's RAM as a mandatory check at purchase. Best Buy blocks automated fetches; verify in person/browser.",
+      "url": "https://www.bestbuy.com/site/6532164.p"
+    }
+  ],
+  "sources": [
+    "https://popcaddie.com/inflatable-enclosures/",
+    "https://voicecaddie.com/products/sc4-pro",
+    "https://www.playbetter.com/products/benq-ak700st-golf-simulator-projector",
+    "https://rainorshinegolf.com/products/benq-ak700st-4k-golf-simulator-projector",
+    "https://arc-sos.state.al.us/cgi/corpname.mbr/input"
+  ]
+}

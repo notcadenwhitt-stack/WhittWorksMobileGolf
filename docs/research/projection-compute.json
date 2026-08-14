@@ -1,0 +1,168 @@
+{
+  "summary": "Researched current US retail prices (session date 2026-08-13) for golf-sim projectors, computers, and cabling/mounting gear. Key finding: the sub-$700 short-throw \"golf-sim-grade\" projector tier the brief assumed has effectively disappeared \u2014 Optoma's GT1080HDR/GT1080HDRx (the class example) were discontinued in 2023, and current dedicated golf-sim short-throw units (BenQ TH671ST, Optoma ZW350ST) now start around $909-950. A true sub-$700 option exists only if you drop the short-throw requirement (Optoma HD146X, standard throw, $599.99). Mid and high-end projector tiers are well populated and verified directly against a golf-sim retailer's live collection page. Computer prices for RTX 4060/4070 gaming laptops are confirmed via multiple converging retailer sources but several are deal-priced and can shift; refurb budget-laptop pricing could not be pinned to a single live page this session (site blocked direct fetch) so it's flagged unverified. Cabling/mounting prices are solid except the cable ramp, which is flagged unverified for the same reason (403 on direct fetch).",
+  "findings": [
+    {
+      "category": "projector-budget",
+      "product": "Optoma HD146X (1080p, 3600 lumens, STANDARD throw ~1.5:1 \u2014 not short throw)",
+      "price_usd": 599.99,
+      "url": "https://www.pcrichard.com/optoma-hd146x-1080p-home-theater-projector/HD146X.html",
+      "notes": "Only projector found in the $400-700 band. Not short-throw, so it needs real distance behind the hitting mat to fill a 13x10ft screen \u2014 workable in a garage bay or basement with depth, not in a tight enclosure footprint. The GT1080HDR/GT1080HDRx class the brief named as the budget benchmark was discontinued by Optoma in 2023 and is no longer sold new; secondary-market/open-box units were not reliably priced this session.",
+      "tier_fit": "budget ($400-700), with throw-distance caveat"
+    },
+    {
+      "category": "projector-budget-alt",
+      "product": "BenQ TH671ST (1080p, 3000 lumens, short throw 0.69-0.83:1) \u2014 closest short-throw option to budget",
+      "price_usd": 949.99,
+      "url": "https://www.bestbuy.com/site/benq-th671st-1080p-short-throw-gaming-projector-enhanced-game-mode-low-input-lag-3000-lumens-white/6171981.p?skuId=6171981",
+      "notes": "Priced consistently at $949 across three retailers checked this session (Best Buy $949.99, topshelfgolf.com $949, indoorgolfoutlet.com $949, marked down from $1,189 list). Marketed explicitly as BenQ's entry-level golf-sim projector, but ~$250-350 above the brief's $400-700 budget band \u2014 flagging this gap honestly rather than forcing a fit.",
+      "tier_fit": "budget-to-mid boundary; effectively today's cheapest true short-throw golf-sim projector"
+    },
+    {
+      "category": "projector-mid",
+      "product": "Optoma ZW350ST (WXGA 1024x768 native/enhanced, 3600 lumens, laser, short throw 0.496:1)",
+      "price_usd": 909,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch of a golf-sim retailer's live projector catalog this session. Sub-1080p native resolution (upscales), IP6X dust rated, 30,000hr laser light source \u2014 good fit for a frequently-transported rig since there's no lamp to break.",
+      "tier_fit": "mid ($800-1500)"
+    },
+    {
+      "category": "projector-mid",
+      "product": "Optoma GT2000HDR (1080p, 3500 lumens, laser, short throw 0.496:1, HDR10)",
+      "price_usd": 1199,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch same session/source. True 1080p, laser light source, good lumens for variable ambient light in an inflatable enclosure.",
+      "tier_fit": "mid ($800-1500)"
+    },
+    {
+      "category": "projector-mid",
+      "product": "Optoma GT2400HDR (short throw, HDR)",
+      "price_usd": 1299,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch same session/source. Newer than GT2000HDR in the same product family.",
+      "tier_fit": "mid ($800-1500), upper end"
+    },
+    {
+      "category": "projector-high-end",
+      "product": "Optoma ZK431ST-B (4K UHD, short throw, laser)",
+      "price_usd": 1799,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch this session. True 4K UHD input at the low end of the high-end band.",
+      "tier_fit": "high-end ($1500-3000)"
+    },
+    {
+      "category": "projector-high-end",
+      "product": "BenQ AH700ST (short throw, laser)",
+      "price_usd": 2299,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch this session, from the same golf-sim-specific retailer catalog.",
+      "tier_fit": "high-end ($1500-3000)"
+    },
+    {
+      "category": "projector-high-end",
+      "product": "BenQ AK700ST 4K Laser (short throw)",
+      "price_usd": 2899,
+      "url": "https://shopindoorgolf.com/collections/projectors",
+      "notes": "Verified via direct fetch this session. Top of the requested high-end band.",
+      "tier_fit": "high-end ($1500-3000), upper bound"
+    },
+    {
+      "category": "projector-high-end-reference",
+      "product": "BenQ LK936ST (4K, 5100 ANSI lumens, laser, 0.81-0.89:1 short throw) \u2014 the \"golf sim standard\" the brief named",
+      "price_usd": 4899,
+      "url": "https://topshelfgolf.com/products/benq-lk936st-5100-lumen-4k-laser-short-throw-golf-simulator-projector",
+      "notes": "Confirmed at the identical $4,899 price on two independent golf-sim retailers this session (topshelfgolf.com and shopindoorgolf.com's catalog), down from $5,849 MSRP. This is the industry-recognized golf-sim benchmark unit but it runs well above the $1500-3000 high-end band specified \u2014 flagging the mismatch rather than mislabeling it.",
+      "tier_fit": "exceeds high-end band; premium/reference tier"
+    },
+    {
+      "category": "computer-budget",
+      "product": "Refurbished Acer Nitro V (Ryzen 7 7735HS or similar, RTX 4060, 16GB RAM) via Target/eBay refurb channel",
+      "price_usd": null,
+      "url": "https://www.target.com/s?searchTerm=refurbished%20acer%20nitro%20v%20rtx%204060",
+      "notes": "UNVERIFIED as a live price this session \u2014 Target's specific refurb listing 404'd on direct fetch and the $549.99-$624.99 figures I found trace to Jan/Feb 2025 deal articles (PCWorld), so they are stale, not current-session prices. Refurb gaming-laptop inventory turns over fast; treat $600-750 as a directional budget-tier estimate only, and check the live Target/eBay/Amazon Renewed listing before quoting a number in the plan.",
+      "tier_fit": "budget \u2014 flagged unverified"
+    },
+    {
+      "category": "computer-mid",
+      "product": "RTX 4060 gaming laptop, new (MSI Cyborg 15 / Acer Nitro V class, 16GB RAM, RTX 4060)",
+      "price_usd": 899.99,
+      "url": "https://www.bestbuy.com/site/msi-cyborg-15-6-144hz-gaming-laptop-intel-core-i7-nvidia-geforce-rtx-4060-with-8gb-ram-and-512gb-ssd-black/6532164.p?skuId=6532164",
+      "notes": "Direct page fetch timed out (Best Buy blocks the fetch tool), but the $899-999 figure is corroborated across multiple independent sources found this session (Laptop Mag, PCWorld, Best Buy listing title/SKU). List price is typically $1,099; this class sits on/near sale pricing often. GSPro's own stated minimum for 1080p is an RTX 3060 w/16GB RAM, so an RTX 4060 laptop comfortably clears the bar with headroom for 1080p Ultra.",
+      "tier_fit": "mid gaming laptop, RTX 4060 class"
+    },
+    {
+      "category": "computer-high-end",
+      "product": "Lenovo Legion Slim 5 Gen 9 (AMD Ryzen 7 8845HS, RTX 4070, 16GB RAM, 16in WQXGA 165Hz)",
+      "price_usd": 1231,
+      "url": "https://www.lenovo.com/buy/us/en/rtx-4070-gpu-laptops-0alz00a",
+      "notes": "Direct fetch to the specific Lenovo product page returned 403 (bot-blocked); price sourced from a Laptop Mag deals roundup this session citing Lenovo.com directly, $538 off a $1,769 list. Deal pricing can expire \u2014 verify current price at the Lenovo RTX 4070 laptop category link before committing.",
+      "tier_fit": "high-end laptop, RTX 4070 class"
+    },
+    {
+      "category": "computer-high-end-alt",
+      "product": "ASUS ROG Zephyrus G16 (Intel Core Ultra 9, RTX 4070, 16GB RAM, 16in OLED 240Hz)",
+      "price_usd": 1474,
+      "url": "https://www.bestbuy.com/site/searchpage.jsp?browsedCategory=pcmcat287600050003&id=pcat17071&qp=graphicscardsv_facet%3DVideo+Card%7ENVIDIA+GeForce+RTX+4070&st=categoryid%24pcmcat287600050003",
+      "notes": "Sourced from a Laptop Mag deals roundup this session ($525 off $1,999 list at Best Buy); direct Best Buy product fetch timed out. Premium OLED panel makes this a strong high-end pick if display quality matters as much as the GSPro frame rate.",
+      "tier_fit": "high-end laptop, RTX 4070 class, premium display"
+    },
+    {
+      "category": "computer-high-end-alt",
+      "product": "ASUS ROG NUC mini PC (Core Ultra 9 185H, RTX 4070 laptop GPU, 8GB GDDR6)",
+      "price_usd": 2199,
+      "url": "https://www.notebookcheck.net/Asus-ROG-NUC-gaming-mini-PC-with-discrete-Nvidia-RTX-GPU-starts-at-1-629.816740.0.html",
+      "notes": "Mini-PC path the brief asked about as an alternative to a laptop. Price and existence confirmed via search this session on notebookcheck.net; not independently page-verified by direct fetch. Sits at the top of a reasonable high-end budget \u2014 a mini PC skips the built-in display/battery/keyboard cost of a laptop but needs its own monitor for setup/diagnostics away from the projector.",
+      "tier_fit": "high-end, RTX 4070+ mini PC alternative"
+    },
+    {
+      "category": "cabling",
+      "product": "Tripp Lite P568-050-BK-GRP High-Speed HDMI Cable, 50ft, gripping connectors",
+      "price_usd": 51.04,
+      "url": "https://www.newegg.com/Black-Tripp-Lite-50-ft-HDMI-Cables/p/N82E16886944155",
+      "notes": "Verified via direct page fetch this session (Newegg, seller TELeasy). Other marketplace sellers on the same listing ranged $56.99-$60.13. A reputable, known-durable brand for a cable that gets coiled/uncoiled repeatedly during transport.",
+      "tier_fit": "cabling/misc"
+    },
+    {
+      "category": "cabling",
+      "product": "J-Tech Digital Wireless HDMI Extender Kit, 1080p 60Hz, 200ft range (JTECH-WEX200V3)",
+      "price_usd": 169.99,
+      "url": "https://www.jtechdigital.com/products/wireless-hdmi-extender-1080p-wireless-hdmi-extender-kit-200ft",
+      "notes": "Verified via direct fetch of the manufacturer's own product page this session. Avoids running a 50ft HDMI cable across the enclosure floor every setup, at the cost of needing two more devices to pack/transport.",
+      "tier_fit": "cabling/misc, transport-convenience upgrade over a physical cable"
+    },
+    {
+      "category": "mounting",
+      "product": "APC SurgeArrest Essential PE625 \u2014 6-outlet surge protector, 25ft cord, 1080 Joules",
+      "price_usd": 28.88,
+      "url": "https://www.homedepot.com/p/APC-Black-SurgeArrest-25-ft-Surge-Protector-with-6-outlets-PE625/306702078",
+      "notes": "Price confirmed identically across two independent searches this session referencing the same Home Depot listing; direct page fetch was blocked (403) so this is search-tool-verified rather than raw-HTML-verified. 25ft cord is useful for a mobile rig where the nearest outlet position varies by venue.",
+      "tier_fit": "cabling/misc \u2014 power protection for projector + PC"
+    },
+    {
+      "category": "mounting",
+      "product": "Pyle Cable Ramp Protective Cover (2-channel, drop-over, ~2000lbs capacity) \u2014 representative cable ramp option",
+      "price_usd": null,
+      "url": "https://www.homedepot.com/p/Pyle-Cable-Protector-Cover-Ramp-PCBLCO102/313938074",
+      "notes": "UNVERIFIED \u2014 direct page fetch returned 403 on both Home Depot and B&H Photo this session, and search snippets showed inconsistent figures ($55.03 on one Home Depot listing page vs. $24-$39.99 for a different VEVOR 4-pack SKU with store-card discounts baked in). Budget $25-55 for a cable ramp depending on channel count and brand; confirm the exact SKU price live before including it in a budget line.",
+      "tier_fit": "cabling/misc \u2014 flagged unverified"
+    }
+  ],
+  "sources": [
+    "https://www.pcrichard.com/optoma-hd146x-1080p-home-theater-projector/HD146X.html",
+    "https://www.bestbuy.com/site/benq-th671st-1080p-short-throw-gaming-projector-enhanced-game-mode-low-input-lag-3000-lumens-white/6171981.p?skuId=6171981",
+    "https://topshelfgolf.com/products/benq-th671st-3000-lumen-1080p-short-throw-golf-simulator-projector",
+    "https://shopindoorgolf.com/collections/projectors",
+    "https://topshelfgolf.com/products/benq-lk936st-5100-lumen-4k-laser-short-throw-golf-simulator-projector",
+    "https://golfsimulatorsdirect.com/products/benq-lk936st-4k-hdr-short-throw-laser-golf-simulator-projector",
+    "https://www.target.com/s?searchTerm=refurbished%20acer%20nitro%20v%20rtx%204060",
+    "https://www.pcworld.com/article/2623508/snag-this-beloved-rtx-4060-gaming-laptop-for-just-625-while-you-can.html",
+    "https://www.bestbuy.com/site/msi-cyborg-15-6-144hz-gaming-laptop-intel-core-i7-nvidia-geforce-rtx-4060-with-8gb-ram-and-512gb-ssd-black/6532164.p?skuId=6532164",
+    "https://www.laptopmag.com/laptops/gaming-laptops-pcs/3-massive-rtx-4070-gaming-laptop-deals-slash-up-to-usd538-off-starting-at-just-usd879",
+    "https://www.lenovo.com/buy/us/en/rtx-4070-gpu-laptops-0alz00a",
+    "https://www.notebookcheck.net/Asus-ROG-NUC-gaming-mini-PC-with-discrete-Nvidia-RTX-GPU-starts-at-1-629.816740.0.html",
+    "https://www.newegg.com/Black-Tripp-Lite-50-ft-HDMI-Cables/p/N82E16886944155",
+    "https://www.jtechdigital.com/products/wireless-hdmi-extender-1080p-wireless-hdmi-extender-kit-200ft",
+    "https://www.homedepot.com/p/APC-Black-SurgeArrest-25-ft-Surge-Protector-with-6-outlets-PE625/306702078",
+    "https://www.homedepot.com/p/Pyle-Cable-Protector-Cover-Ramp-PCBLCO102/313938074",
+    "https://gspro.gitbook.io/gspro-knowledge-base/pc-requirements/what-specs-can-run-gspro"
+  ]
+}

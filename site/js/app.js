@@ -60,10 +60,12 @@
 
   function hideBanner() {
     if (banner) banner.classList.add("is-hidden");
+    document.body.classList.remove("has-banner");
   }
 
   function showBanner() {
     if (banner) banner.classList.remove("is-hidden");
+    document.body.classList.add("has-banner");
   }
 
   function applyConsent(value) {
@@ -104,6 +106,11 @@
   var form = document.getElementById("quoteForm");
   if (form) {
     var msg = document.getElementById("formMsg");
+    var submitBtn = form.querySelector('button[type="submit"]');
+
+    /* Past dates make no sense for an event booking */
+    var dateInput = document.getElementById("q-date");
+    if (dateInput) dateInput.min = new Date().toISOString().slice(0, 10);
 
     function setMsg(kind, text) {
       if (!msg) return;
@@ -128,9 +135,12 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      /* Honeypot: silently drop bot submissions */
+      /* Honeypot: drop bot submissions without tipping off the bot */
       var honey = form.querySelector('[name="_honey"]');
-      if (honey && honey.value) return;
+      if (honey && honey.value) {
+        if (window.console && console.debug) console.debug("honeypot tripped; submission dropped");
+        return;
+      }
 
       var name = document.getElementById("q-name");
       var email = document.getElementById("q-email");
@@ -153,7 +163,7 @@
       }
 
       if (bad) {
-        setMsg("err", "A few fields need attention — see the notes above.");
+        setMsg("err", "A few fields need attention. See the notes above.");
         var firstBad = form.querySelector('[aria-invalid="true"]');
         if (firstBad) firstBad.focus();
         return;
@@ -162,13 +172,14 @@
       if (!CFG.formEndpoint) {
         setMsg(
           "info",
-          "Online booking opens soon. Nothing was sent yet — check back shortly and we'll take your event details."
+          "Online booking opens soon. Nothing was sent yet. Check back shortly and we'll take your event details."
         );
         return;
       }
 
       var data = new FormData(form);
       setMsg("info", "Sending your request…");
+      if (submitBtn) submitBtn.disabled = true;
 
       fetch(CFG.formEndpoint, {
         method: "POST",
@@ -193,6 +204,9 @@
             "err",
             "Something went wrong sending your request. Please try again in a minute."
           );
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
         });
     });
   }

@@ -1,0 +1,269 @@
+{
+  "summary": "Brainstormed 24 candidates across four styles and deep-vetted 13 finalists (.com DNS + RDAP registration status, Alabama SoS entity search, and web search for common-law golf-business use). Five names came back fully clean on all three checks and are the top recommendations: Dixie Blue Golf Co., Fairway Blue Golf Co., Cerulean Golf Co., Navy Fairway Golf Co., and Roadshow Golf Co. Three names (Cotton State Golf Co., Cobalt Fairways, Azure Golf Co.) are legally available but carry moderate brand-adjacency or SEO friction. Four names should be avoided outright: Vulcan Golf Co. (collides with an established national golf-equipment brand), BlueTee Golf Co. (near-identical to the trademarked national brand \"Blue Tees Golf\"), Tailgate Golf Co. (an existing company, Tailgate USA, already runs mobile golf simulator rentals under that name), and Port City Golf Co. (an existing \"Port City Mini Golf\" already operates in Mobile, AL, the exact city the nickname refers to). All AL SoS results reflect the exact search string used and Verisign RDAP is authoritative for .com registration status as of 2026-08-13; nothing here is a substitute for a formal trademark clearance search before filing.",
+  "findings": [
+    {
+      "name": "Dixie Blue Golf Co.",
+      "style": "Alabama/Southern + Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "dixiebluegolf.com \u2014 DNS: no A/NS records; RDAP https://rdap.verisign.com/com/v1/domain/dixiebluegolf.com returned HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "curl https://arc-sos.state.al.us/cgi/corpname.mbr/output?search=Dixie%20Blue%20Golf returned 'No matches found.'",
+      "existing_use_notes": "No business by this exact name found. General 'Dixie' golf usage exists regionally (PGA Dixie Section covers AL/NW FL, Dixie Amateur tournament, Dixie Golf Club in Laurel MS) but none combine 'Dixie' + 'Blue' + 'Golf'.",
+      "fit_notes": "TOP PICK. Cleanest full match of the brief: tasteful Southern nod, direct blue-brand tie-in, short, spellable, no conflicts on any check.",
+      "recommendation": "recommend"
+    },
+    {
+      "name": "Fairway Blue Golf Co.",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "fairwaybluegolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Fairway Blue Golf' returned 'No matches found.'",
+      "existing_use_notes": "No exact-name business found. Tangential/unrelated hits only: 'Fairway Blues' (defunct 1980s-90s vintage apparel resold on Poshmark), 'FairWay Golf Tour' (OK/TX pro tour), 'Blue Tees Golf' (different name, see separate entry).",
+      "fit_notes": "TOP PICK. Clean, premium, on-brand, easy to say and spell, works well on signage/trailer wrap.",
+      "recommendation": "recommend"
+    },
+    {
+      "name": "Cerulean Golf Co.",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "ceruleangolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Cerulean Golf' returned 'No matches found.'",
+      "existing_use_notes": "No dedicated business found. 'Cerulean' only appears as a color name on individual golf apparel/cart SKUs (Bad Birdie polo, G/FORE shoes and sweater, Tee Trail golf cart) \u2014 descriptive use, not a brand name.",
+      "fit_notes": "TOP PICK. Distinctive, sophisticated blue word, low collision risk because it's an uncommon word for a business name (vs. common color words like Azure/Navy/Cobalt).",
+      "recommendation": "recommend"
+    },
+    {
+      "name": "Navy Fairway Golf Co.",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "navyfairway.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Navy Fairway' returned 'No matches found.'",
+      "existing_use_notes": "No exact-name conflict. Multiple literal U.S. Navy-operated golf courses exist nationwide (Cypress CA, San Diego, etc.) using 'Navy Golf Course' \u2014 different context (military branch), not a brand conflict, but could cause a first read of 'military golf' rather than the navy-blue color intent.",
+      "fit_notes": "Clean on all checks; solid blue-brand fit. Minor positioning risk that 'Navy' reads as military rather than color \u2014 worth a quick tagline to clarify (e.g., 'Navy Fairway \u2014 Alabama's Mobile Golf Simulator').",
+      "recommendation": "recommend"
+    },
+    {
+      "name": "Roadshow Golf Co.",
+      "style": "mobile/event energy",
+      "dotcom": "available",
+      "dotcom_checked": "roadshowgolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Roadshow Golf' returned 'No matches found.'",
+      "existing_use_notes": "No company uses this as a name. 'Roadshow' appears generically for golf marketing/education tours (Wales Golf Roadshows, R&A Roadshow, GolfBIC Roadshow, Gabby Golf Girl Roadshow at PGA Tour Superstore) \u2014 event-format language, not a business identity.",
+      "fit_notes": "Clean across all checks and directly communicates the traveling/event nature of the business.",
+      "recommendation": "recommend"
+    },
+    {
+      "name": "Cotton State Golf Co.",
+      "style": "Alabama/Southern",
+      "dotcom": "available",
+      "dotcom_checked": "cottonstategolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Cotton State Golf' returned 'No matches found.'",
+      "existing_use_notes": "No exact-name company, but 'The Cotton State Golf Trail' is an existing named multi-course tourism trail through Birmingham/Montgomery/Mobile AL (thegolfnexus.com) \u2014 same phrase, same state, same golf category, though a trail/tourism brand rather than a rental operator.",
+      "fit_notes": "Legally clear but the in-state trail-name overlap creates real risk of customer confusion and muddy SEO in Alabama specifically. Usable with caution; not the top pick given cleaner alternatives exist.",
+      "recommendation": "usable with caution"
+    },
+    {
+      "name": "Cobalt Fairways",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "cobaltfairways.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Cobalt Fairways' returned 'No matches found.'",
+      "existing_use_notes": "The two-word phrase is unclaimed, but 'Cobalt Golf' is an existing, active national golf-tech brand selling laser rangefinders and apparel (cobalt-golf.com, @cobaltgolf) \u2014 same broad golf-products category as a plain 'Cobalt' + golf pairing.",
+      "fit_notes": "Legally clear on the specific phrase but shares the root brand word with an established national golf company; moderate confusion/adjacency risk.",
+      "recommendation": "usable with caution"
+    },
+    {
+      "name": "Azure Golf Co.",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "available",
+      "dotcom_checked": "azuregolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Azure Golf' returned 'No matches found.'",
+      "existing_use_notes": "No dedicated 'Azure Golf' business found. Only tangential hit: PGA Tour's Microsoft-Azure-powered fan-content engine (unrelated cloud-computing use).",
+      "fit_notes": "Legally clear, but 'Azure' is globally dominated in search results by Microsoft Azure (cloud platform); organic SEO and even paid-search cost-per-click will fight that noise. Fine as a legal name, weak as an SEO-friendly one.",
+      "recommendation": "usable with caution"
+    },
+    {
+      "name": "Vulcan Golf Co.",
+      "style": "Alabama/Southern (Birmingham landmark)",
+      "dotcom": "taken (vulcangolf.com); vulcangolfco.com is available",
+      "dotcom_checked": "vulcangolf.com resolves (A records + Google/GiantPanda NS, RDAP HTTP 200 = registered); vulcangolfco.com \u2014 DNS empty, RDAP HTTP 404 (unregistered)",
+      "sos": "clear on exact string",
+      "sos_checked": "search 'Vulcan Golf' returned 'No matches found.' in Alabama entity records",
+      "existing_use_notes": "HIGH RISK \u2014 'Vulcan Golf' is an existing national golf equipment manufacturer (drivers, hybrids, irons; St. Charles, IL) with a 20+ year product history, plus an unrelated 'Vulcan Golf & Country Club' course in Alberta, Canada. Direct name collision in the same broad golf-products/services space.",
+      "fit_notes": "Strong Birmingham-icon appeal but real infringement/confusion exposure against an established golf equipment brand. Avoid unless counsel clears it.",
+      "recommendation": "avoid"
+    },
+    {
+      "name": "BlueTee Golf Co.",
+      "style": "premium/clean, Blue-brand pun",
+      "dotcom": "taken (blueteegolf.com); blueteegolfco.com is available",
+      "dotcom_checked": "blueteegolf.com resolves (A record + Onamae NS, RDAP HTTP 200 = registered); blueteegolfco.com \u2014 DNS empty, RDAP HTTP 404 (unregistered)",
+      "sos": "clear on exact string",
+      "sos_checked": "search 'BlueTee Golf' returned 'No matches found.'",
+      "existing_use_notes": "HIGH RISK \u2014 'Blue Tees Golf' is a well-established national golf-tech brand (rangefinders, GPS speakers, trademarked slogan 'Play Different\u00ae', 70K+ Instagram followers, sold at PGA Tour Superstore, Amazon). 'BlueTee' is phonetically near-identical to 'Blue Tees.'",
+      "fit_notes": "Strong wordplay but the closest name collision found in this whole set. Do not use \u2014 real trademark exposure.",
+      "recommendation": "avoid"
+    },
+    {
+      "name": "Tailgate Golf Co.",
+      "style": "mobile/event energy",
+      "dotcom": "taken/ambiguous (tailgategolf.com not directly re-tested; tailgategolfco.com is available)",
+      "dotcom_checked": "tailgategolfco.com \u2014 DNS empty, RDAP HTTP 404 (unregistered)",
+      "sos": "clear on exact string",
+      "sos_checked": "search 'Tailgate Golf' returned 'No matches found.'",
+      "existing_use_notes": "HIGH RISK \u2014 'Tailgate USA' already operates a mobile golf simulator rental business nationally under this exact niche (tailgateusa.net/mobile-golf-simulator), explicitly for 'sporting events, private parties, company gatherings, fundraisers, and festivals' \u2014 i.e., the identical service this business will offer.",
+      "fit_notes": "Direct common-law competitor conflict in the exact same industry. Strongly avoid.",
+      "recommendation": "avoid"
+    },
+    {
+      "name": "Port City Golf Co.",
+      "style": "Alabama/Southern (Mobile, AL nickname)",
+      "dotcom": "available",
+      "dotcom_checked": "portcitygolf.com \u2014 DNS: no A/NS records; RDAP HTTP 404 (unregistered)",
+      "sos": "clear on exact string",
+      "sos_checked": "search 'Port City Golf' returned 'No matches found.'",
+      "existing_use_notes": "HIGH RISK \u2014 'Port City Mini Golf' is a currently operating indoor mini-golf entertainment venue in downtown Mobile, Alabama (per local news coverage) \u2014 the exact city the 'Port City' nickname refers to, in the same golf-entertainment category. Also unrelated 'Port City Golf Club' social clubs exist in Charleston SC and Wilmington NC.",
+      "fit_notes": "Domain is technically free and SoS shows no formal entity, but the in-state common-law conflict with an existing Mobile business is the strongest same-state risk found. Avoid.",
+      "recommendation": "avoid"
+    },
+    {
+      "name": "Curbside Golf Co.",
+      "style": "mobile/event energy",
+      "dotcom": "taken as curbsidegolf.com; available as curbsidegolfco.com",
+      "dotcom_checked": "curbsidegolf.com resolves (A records + GoDaddy NS, RDAP HTTP 200 = registered, appears parked/unrelated retail use); curbsidegolfco.com \u2014 DNS empty, RDAP HTTP 404 (unregistered)",
+      "sos": "clear",
+      "sos_checked": "search 'Curbside Golf' returned 'No matches found.'",
+      "existing_use_notes": "No dedicated 'Curbside Golf' company found. 'Curbside pickup' is used generically by golf retailers (Dick's Sporting Goods, Golf Town) as a store feature, not a brand name.",
+      "fit_notes": "Usable, but 'curbside' connotes retail pickup more than 'we deliver a full event experience,' which slightly undersells the mobile-simulator concept versus the top 5 picks.",
+      "recommendation": "usable"
+    },
+    {
+      "name": "Yellowhammer Golf Co.",
+      "style": "Alabama/Southern (state bird)",
+      "dotcom": "taken",
+      "dotcom_checked": "yellowhammergolf.com resolves (Google Cloud DNS, RDAP HTTP 200); yellowhammergolfco.com also resolves (Google Cloud DNS, RDAP HTTP 200) \u2014 both registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Dropped before SoS/web vetting because both natural domain forms are already registered.",
+      "fit_notes": "Strong Alabama identity but no usable .com found in testing; would need SoS/trademark check only if pursuing a non-.com brand path.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Camellia Golf Co.",
+      "style": "Alabama/Southern (state flower)",
+      "dotcom": "taken",
+      "dotcom_checked": "camelliagolf.com resolves (Google Cloud DNS, RDAP HTTP 200 = registered)",
+      "sos": "unchecked",
+      "existing_use_notes": "Dropped before SoS/web vetting due to domain unavailability.",
+      "fit_notes": "Elegant, premium-feeling name; revisit only with a non-.com naming strategy.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Fore Wheels Golf",
+      "style": "golf pun (mobile)",
+      "dotcom": "taken",
+      "dotcom_checked": "forewheelsgolf.com resolves (GoDaddy/AWS-style NS, RDAP HTTP 200); forewheels.com also resolves (newvm.net NS, RDAP HTTP 200) \u2014 both registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Dropped before SoS/web vetting; both tested domain forms are taken.",
+      "fit_notes": "Good mobile-golf pun conceptually, but no available .com found.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Birdie Bus Golf Co.",
+      "style": "golf pun (mobile fleet)",
+      "dotcom": "taken",
+      "dotcom_checked": "birdiebusgolf.com resolves (GoDaddy NS, RDAP HTTP 200); birdiebus.com also resolves (GoDaddy NS, RDAP HTTP 200) \u2014 both registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Dropped before SoS/web vetting; both tested domain forms are taken.",
+      "fit_notes": "Fun fleet-branding pun, no usable .com found in testing.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Mulligan Golf Co.",
+      "style": "golf pun",
+      "dotcom": "taken",
+      "dotcom_checked": "mulligangolf.com resolves (octantis.ca NS, RDAP HTTP 200 = registered)",
+      "sos": "unchecked",
+      "existing_use_notes": "'Mulligan' is one of the most common golf-branded words nationally (equipment shops, apparel, bar/restaurant names); high collision risk beyond just this domain.",
+      "fit_notes": "Dropped \u2014 overused term in the golf industry generally, plus domain taken.",
+      "recommendation": "dropped \u2014 domain unavailable, generic term"
+    },
+    {
+      "name": "Rolling Green Golf Co.",
+      "style": "mobile/event energy",
+      "dotcom": "taken",
+      "dotcom_checked": "rollinggreengolf.com resolves (teeituphosting.com NS, RDAP HTTP 200); rollinggreens.com also resolves (GoDaddy NS, RDAP HTTP 200) \u2014 both registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Dropped before SoS/web vetting; both tested domain forms taken. Note: 'teeituphosting.com' nameserver on rollinggreengolf.com suggests it's already an active golf-industry site.",
+      "fit_notes": "Good 'always on the move' pun, but no usable .com found.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Southern Swing Golf Co.",
+      "style": "Alabama/Southern + golf pun",
+      "dotcom": "taken",
+      "dotcom_checked": "southernswinggolf.com resolves (Wix DNS, RDAP not separately re-confirmed but active site present) \u2014 registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Not deep-vetted beyond domain check.",
+      "fit_notes": "Dropped at domain-availability stage.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Bluebird Golf Co.",
+      "style": "premium/clean, Blue-brand pun (birdie homophone)",
+      "dotcom": "taken",
+      "dotcom_checked": "bluebirdgolf.com resolves (AWS + Namebright NS, RDAP not separately re-confirmed but active) \u2014 registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Not deep-vetted beyond domain check.",
+      "fit_notes": "Clever double meaning (blue + birdie) but domain unavailable.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Indigo Golf Co.",
+      "style": "premium/clean, Blue-brand",
+      "dotcom": "taken",
+      "dotcom_checked": "indigogolf.com resolves (multiple AWS Route53 NS entries \u2014 active, likely commercial site) \u2014 registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Not deep-vetted beyond domain check.",
+      "fit_notes": "Dropped at domain-availability stage.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Longleaf Golf Co.",
+      "style": "Alabama/Southern (longleaf pine)",
+      "dotcom": "taken",
+      "dotcom_checked": "longleafgolf.com resolves (Namecheap NS \u2014 active site) \u2014 registered",
+      "sos": "unchecked",
+      "existing_use_notes": "Not deep-vetted beyond domain check.",
+      "fit_notes": "Dropped at domain-availability stage.",
+      "recommendation": "dropped \u2014 domain unavailable"
+    },
+    {
+      "name": "Azalea Coast Golf / Heart of Dixie Golf Co. / Par Tee Golf Co. / Rough Draft Golf / Tee Rex Golf",
+      "style": "Alabama/Southern and golf-pun ideas generated but not deep-vetted",
+      "dotcom": "unchecked (Par Tee's base word 'partee.com' confirmed taken; others untested)",
+      "sos": "unchecked",
+      "existing_use_notes": "Part of the initial ~18-24 brainstorm; not carried into the 12-13 finalist deep-vet round because stronger, cleaner candidates were already found. Available to re-test on request.",
+      "fit_notes": "Kept for the record of the full brainstorm; no verified data to act on yet.",
+      "recommendation": "not vetted"
+    }
+  ],
+  "sources": [
+    "https://rdap.verisign.com/com/v1/domain/ (RDAP registration status checks, run 2026-08-13)",
+    "https://arc-sos.state.al.us/cgi/corpname.mbr/output (Alabama Secretary of State business entity search, run 2026-08-13)",
+    "https://thegolfnexus.com/tgn-golf-trail/alabama-i65-golf-trail (Cotton State Golf Trail)",
+    "https://thegolfwire.com/102591-2/ (Vulcan Golf equipment company)",
+    "https://www.golfvulcan.ca/ (Vulcan Golf & Country Club, Alberta)",
+    "https://blueteesgolf.com/ (Blue Tees Golf brand)",
+    "https://cobalt-golf.com/ (Cobalt Golf rangefinder brand)",
+    "https://tailgateusa.net/mobile-golf-simulator/ (Tailgate USA mobile golf simulator)",
+    "https://mynbc15.com/news/local/port-city-mini-golf-opens-in-downtown (Port City Mini Golf, Mobile AL)",
+    "https://dryvebox.com/ , https://wego.golf/ , https://fiveirongolf.com/en-us/events/mobile-simulators , https://thecaddywagon.com/ (existing mobile golf simulator competitors, for landscape awareness)"
+  ]
+}

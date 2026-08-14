@@ -15,5 +15,11 @@ find site -type f \( -name '*.html' -o -name '*.js' -o -name '*.xml' -o -name '*
   sed -i '' "s|$OLD_NAME|$NEW_NAME|g; s|$OLD_DOMAIN|$NEW_DOMAIN|g" "$f"
 done
 
+# Going live: drop the pre-launch noindex guard everywhere except the 404 page
+find site -type f -name '*.html' ! -name '404.html' | while read -r f; do
+  sed -i '' '/<meta name="robots" content="noindex">/d' "$f"
+done
+
 echo "Renamed '$OLD_NAME' -> '$NEW_NAME' and '$OLD_DOMAIN' -> '$NEW_DOMAIN'."
+echo "Removed the pre-launch noindex tag from every page except 404.html."
 echo "Still manual: og-image, favicon lettering if any, and the legal entity line if it changes."

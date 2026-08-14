@@ -1,0 +1,158 @@
+{
+  "summary": "Direct Alabama mobile golf-sim competitors are thin and mostly quote-only (Triangle Lawn Games, Clubhouse Golf) except one published price: Alabama Indoor Golf League's Birmingham DIY drop-off special at $299 for 24 hours (not a staffed party rate). WeGo Golf, the national operator serving Mobile/Huntsville/Montgomery, anchors the premium end with turnkey packages \"starting at $2,500.\" The Southeast reference market (Atlanta) runs $150-250/hr for inflatable-tier rigs, $250-450/hr for mid-tier regional pop-ups, and $350-500/hr (2-hr min) for premium operators like Dryvebox, whose day rates run $2,500-5,000. Comparable Alabama premium event rentals (photo booths $895-1,095 per 3-hr package, casino tables $349-849 per table for up to 3 hrs) cluster in the same $300-450/hr-equivalent band as the mid-to-premium golf-sim tier, which is the right positioning zone for a new Alabama entrant: above the AIGL bargain-DIY price and fixed-bay venues ($35-60/hr), below Atlanta big-market premium and WeGo's turnkey floor. Recommended launch anchor: \"Starting at $499\" (2-hr party minimum, ~$250/hr effective), building to an $849 four-hour package and a $1,599 full-day corporate package, all still well under both Dryvebox Atlanta and WeGo Golf's Alabama-serving price points.",
+  "findings": [
+    {
+      "kind": "competitor",
+      "who": "Alabama Indoor Golf League (AIGL)",
+      "area": "Birmingham, AL",
+      "price_structure": "\"Summer Simulator Studio Rental Special - Full Day only $299\" for 24 hours of simulator play; includes delivery, setup & breakdown",
+      "url": "https://alabamaindoorgolfleague.com/",
+      "notes": "Only Alabama-based mobile operator with a published price. Reads as a DIY/self-service drop-off deal (24-hr access), not a staffed 2-4hr party experience -- effectively the market floor, not a comparable service tier."
+    },
+    {
+      "kind": "competitor",
+      "who": "WeGo Golf",
+      "area": "Serves Mobile, Huntsville, and Montgomery, AL (national operator, 30+ states)",
+      "price_structure": "\"Full-service packages start at $2,500 -- turnkey from the first putt to the last\"",
+      "url": "https://wego.golf/mobile-golf-simulator-rentals-in-mobile/",
+      "notes": "No hourly rate published. Positions as premium/turnkey: delivery, professional install, Garmin Approach R50, on-site staff, full event management. This is the premium ceiling actually serving AL cities today."
+    },
+    {
+      "kind": "competitor",
+      "who": "Triangle Lawn Games",
+      "area": "Birmingham, Huntsville, Montgomery, AL",
+      "price_structure": "No price published; quote-only via partner mobile golf providers",
+      "url": "https://www.trianglelawngames.com/mobile-golf-simulator-in-birmingham-al/",
+      "notes": "Broker/partner model rather than owning equipment; also has dedicated Huntsville and Montgomery pages, all quote-only."
+    },
+    {
+      "kind": "competitor",
+      "who": "Clubhouse Golf",
+      "area": "Birmingham, AL (also TN)",
+      "price_structure": "No price published; \"REQUEST A QUOTE\" only",
+      "url": "https://clubhousegolfus.com/locations/birmingham/",
+      "notes": "Uses Foresight Sports tech; serves corporate, trade show, church, fundraiser, and house-party events in Birmingham."
+    },
+    {
+      "kind": "competitor",
+      "who": "North Alabama Mobile Golf Simulator Rentals",
+      "area": "North Alabama",
+      "price_structure": "unverified -- Instagram-only presence, no website or pricing page found",
+      "url": "https://www.instagram.com/northalmobilegolfsimrentals/",
+      "notes": "Flagged as a possible direct competitor but pricing could not be verified this session."
+    },
+    {
+      "kind": "comparable",
+      "who": "Dryvebox",
+      "area": "Atlanta, GA (Southeast reference market)",
+      "price_structure": "Premium tier: $350-500/hr, 2-hr minimum. Half day (4hr) ~$1,400-2,500. Full day (8hr) $2,500-5,000. Multi-day (3 days) $7,500-15,000+",
+      "url": "https://dryvebox.com/faq/simulator-cost",
+      "notes": "All-inclusive: delivery, setup/breakdown, trained host, premium clubs, TrackMan, climate control (trailer), A/V, $5M liability umbrella. Also confirmed on https://dryvebox.com/locations/atlanta ($350-500/hr, $2,500-5,000/day, all-inclusive)."
+    },
+    {
+      "kind": "comparable",
+      "who": "Market tier breakdown (aggregated, national incl. Southeast)",
+      "area": "Southeast / national",
+      "price_structure": "Budget inflatable: $150-250/hr. Mid-tier regional pop-up: $250-450/hr. Premium: $350-500/hr",
+      "url": "https://dryvebox.com/blog/mobile-golf-simulator-rental-cost",
+      "notes": "Day-rate version on same publisher: entry $800-1,500/day, mid $1,500-4,000/day, premium $2,500-5,000/day (https://dryvebox.com/faq/simulator-cost)."
+    },
+    {
+      "kind": "comparable",
+      "who": "NextGen Event Co",
+      "area": "Multi-market (incl. Southeast quotes)",
+      "price_structure": "\"Starting at $295/hr\"; FAQ states range \"$295hr-$595hr depending upon location, time of service, and features\"",
+      "url": "https://nextgeneventco.com/vr-golf-simulator-rental/",
+      "notes": "Same operator's Connecticut-specific landing page instead advertises \"Starting at $199/hour\" (https://nextgeneventco.com/golf-simulator-rental-ct/), showing they flex the headline number by local market -- useful precedent for an AL-specific low anchor."
+    },
+    {
+      "kind": "comparable",
+      "who": "Another Nine (fixed private simulator suite, not mobile)",
+      "area": "Montgomery, AL",
+      "price_structure": "$35.00 for 1 hour, per online reservation checkout",
+      "url": "https://anothernine.com/products/reservation-3",
+      "notes": "Not a mobile/event rental -- walk-in fixed bay with no delivery, staffing, or travel. Useful only as the absolute local price floor for \"golf simulator time\" in general, not a direct comp."
+    },
+    {
+      "kind": "comparable",
+      "who": "Eagle Golf Simulators (fixed bay, not mobile)",
+      "area": "Near Montgomery, AL",
+      "price_structure": "\"Starting at $60/hour per bay\", clubs included",
+      "url": "https://www.eaglegolfsim.com/",
+      "notes": "Fixed venue, same caveat as Another Nine -- price floor reference only."
+    },
+    {
+      "kind": "comparable",
+      "who": "Luxe Booth (photo booth rental)",
+      "area": "Birmingham, AL",
+      "price_structure": "3-hr packages: Lite \"From $895\", Premium \"From $995\", 360 \"From $1,095\"",
+      "url": "https://www.luxebooth.com/photo-booth-rental-birmingham/",
+      "notes": "Equates to roughly $298-365/hr for a 3-hr minimum premium experiential rental in the Birmingham market -- good anchor for what AL buyers already pay for a single premium activation."
+    },
+    {
+      "kind": "comparable",
+      "who": "JTM Productions (360 photo booth)",
+      "area": "Birmingham, AL",
+      "price_structure": "\"Starting at $500 per 4 hours or $150 per hour\"; +$75 after-hours fee after 7:30pm; 35% non-refundable retainer",
+      "url": "https://jtmproduction.com/book-the-360-photo-booth",
+      "notes": "Lower-tier photo booth comp, roughly $125/hr effective on the 4-hr package -- shows a budget-tier ceiling in the same experiential-rental category."
+    },
+    {
+      "kind": "comparable",
+      "who": "Casino Knight (casino night table rental)",
+      "area": "Alabama (statewide)",
+      "price_structure": "Blackjack $399, Poker/Hold'em $349, Roulette $449, Craps (12ft) $849, Mini-Craps (8ft) $449, LED Money Wheel $449, Slot machines $99 each (min. 3 + attendant), Three Card Poker $359, Ultimate Texas Hold'em $359, Mini Baccarat $359, Casino War $349 -- all for \"up to 3 hours of play time,\" delivery/setup/dealer included",
+      "url": "https://casino-knight.com/price-list/",
+      "notes": "Add $100 for orders of only 1-2 tables. A typical 3-4 table casino night in AL runs roughly $1,500-2,500 for 3 hours -- directly comparable order-of-magnitude to a premium 4-hr golf-sim event package."
+    },
+    {
+      "kind": "comparable",
+      "who": "Huntsville Casino Parties",
+      "area": "Huntsville / North Alabama (travels to Birmingham for a fee)",
+      "price_structure": "Blackjack $500, Roulette $600, Craps $800, 3 Card Poker $500, Money Wheel $500, Texas Hold'em $500, Pai Gow $500, Baccarat $500, Let It Ride $500, Skill Stopper Slots $400/pair; 10% off 10+ tables; 20% nonprofit discount",
+      "url": "https://www.huntsvillecasinoparties.com/pricing",
+      "notes": "Higher-priced AL casino comp than Casino Knight -- reinforces that AL buyers already pay $500-800 per single premium rental \"station\" for an evening."
+    },
+    {
+      "kind": "recommendation",
+      "who": "Recommended headline price",
+      "area": "Alabama launch (Birmingham/Huntsville/Montgomery/Mobile)",
+      "price_structure": "Starting at $499 (2-hour minimum, staffed single-bay setup) -- roughly $250/hr effective",
+      "url": "",
+      "notes": "Positioned above AIGL's $299 DIY/24-hr bargain special and above fixed-bay venues ($35-60/hr) which have no delivery or staffing, but below Southeast mid-tier ($250-450/hr) and well below Dryvebox Atlanta ($350-500/hr) and WeGo Golf's $2,500 turnkey floor. Matches the $250-365/hr-equivalent AL buyers already pay for photo booths and single casino tables, so it reads as a fair premium price, not a discount-bin one, while still undercutting every non-AIGL operator actually serving Alabama."
+    },
+    {
+      "kind": "recommendation",
+      "who": "3-package rate card suggestion",
+      "area": "Alabama launch",
+      "price_structure": "Package 1 \"Party\" -- 2 hrs, single bay, attendant: $499 flat (~$250/hr). Package 2 \"Event\" -- 4 hrs, single bay, attendant, up to ~30 guests: $849 flat (~$212/hr, volume discount). Package 3 \"Corporate/Full-Day\" -- 8 hrs, single bay (2nd bay optional add-on), attendant, leaderboard/branding options: $1,599 flat (~$200/hr, volume discount)",
+      "url": "",
+      "notes": "Full-day $1,599 sits comfortably under Dryvebox Atlanta's $2,500-5,000/day and under WeGo Golf's $2,500 turnkey starting point, giving a clear 'Alabama value' story against both in-state and reference-market comps. Per-hour discount ladder (250 -> 212 -> 200) mirrors how Dryvebox and Casino Knight both reward longer/multi-unit bookings. All three tiers still price meaningfully above AIGL's $299 DIY special to avoid a race-to-the-bottom self-comparison against the one in-state published price."
+    }
+  ],
+  "sources": [
+    "https://alabamaindoorgolfleague.com/",
+    "https://www.trianglelawngames.com/mobile-golf-simulator-in-birmingham-al/",
+    "https://www.trianglelawngames.com/mobile-golf-simulator-in-huntsville-al/",
+    "https://www.trianglelawngames.com/mobile-golf-simulator-in-montgomery-al/",
+    "https://wego.golf/mobile-golf-simulator-rentals-in-mobile/",
+    "https://wego.golf/mobile-golf-simulator-rentals-in-huntsville/",
+    "https://wego.golf/mobile-golf-simulator-rentals-in-montgomery/",
+    "https://clubhousegolfus.com/locations/birmingham/",
+    "https://www.instagram.com/northalmobilegolfsimrentals/",
+    "https://dryvebox.com/faq/simulator-cost",
+    "https://dryvebox.com/blog/mobile-golf-simulator-rental-cost",
+    "https://dryvebox.com/locations/atlanta",
+    "https://nextgeneventco.com/vr-golf-simulator-rental/",
+    "https://nextgeneventco.com/golf-simulator-rental-ct/",
+    "https://anothernine.com/products/reservation-3",
+    "https://www.eaglegolfsim.com/",
+    "https://www.luxebooth.com/photo-booth-rental-birmingham/",
+    "https://jtmproduction.com/book-the-360-photo-booth",
+    "https://casino-knight.com/price-list/",
+    "https://www.huntsvillecasinoparties.com/pricing",
+    "https://www.mobilegolfevents.net/golf-simulator-rentals.html",
+    "https://www.swingkingsimulators.com/",
+    "https://www.therangegolf.com/corporate-events"
+  ]
+}

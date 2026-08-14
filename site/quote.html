@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
 
-  <title>Get a Quote — Blue Fairway Golf</title>
+  <title>Get a Quote | Blue Fairway Golf</title>
   <meta name="description" content="Tell us about your Alabama event and we'll reply within one business day with availability and pricing for the mobile golf simulator.">
   <link rel="canonical" href="https://DOMAIN-TBD/quote.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://DOMAIN-TBD/quote.html">
-  <meta property="og:title" content="Get a Quote — Blue Fairway Golf">
+  <meta property="og:title" content="Get a Quote | Blue Fairway Golf">
   <meta property="og:description" content="Tell us about your Alabama event and we'll reply within one business day with availability and pricing for the mobile golf simulator.">
   <meta property="og:image" content="https://DOMAIN-TBD/assets/img/og-image.jpg">
   <meta property="og:image:alt" content="A golfer swings inside a lit inflatable golf simulator at an evening event">
@@ -48,22 +49,22 @@
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     <section class="section">
       <div class="wrap">
         <h1>Get a quote</h1>
-        <p>Tell us about your event and we'll reply by email within one business day with availability and pricing.</p>
+        <p>Tell us about your event. We reply by email with availability and pricing, typically within one business day.</p>
 
         <form id="quoteForm" class="form-grid" method="post">
           <div>
             <label for="q-name">Your name</label>
-            <input id="q-name" name="name" type="text" autocomplete="name" required>
+            <input id="q-name" name="name" type="text" autocomplete="name" required aria-describedby="q-name-error">
             <p class="field-error" id="q-name-error" aria-live="polite"></p>
           </div>
 
           <div>
             <label for="q-email">Email address</label>
-            <input id="q-email" name="email" type="email" autocomplete="email" required>
+            <input id="q-email" name="email" type="email" autocomplete="email" required aria-describedby="q-email-error">
             <p class="field-error" id="q-email-error" aria-live="polite"></p>
           </div>
 
@@ -75,13 +76,13 @@
 
           <div>
             <label for="q-date">Event date</label>
-            <input id="q-date" name="event_date" type="date" required>
+            <input id="q-date" name="event_date" type="date" required aria-describedby="q-date-error">
             <p class="field-error" id="q-date-error" aria-live="polite"></p>
           </div>
 
           <div>
             <label for="q-type">Event type</label>
-            <select id="q-type" name="event_type" required>
+            <select id="q-type" name="event_type" required aria-describedby="q-type-error">
               <option value="">Choose one…</option>
               <option value="corporate">Corporate or team event</option>
               <option value="private">Private party</option>
@@ -95,7 +96,7 @@
 
           <div>
             <label for="q-city">Event city or town</label>
-            <input id="q-city" name="city" type="text" autocomplete="address-level2" required>
+            <input id="q-city" name="city" type="text" autocomplete="address-level2" required aria-describedby="q-city-error">
             <p class="field-error" id="q-city-error" aria-live="polite"></p>
           </div>
 
