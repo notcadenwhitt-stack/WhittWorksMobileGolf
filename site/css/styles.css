@@ -59,6 +59,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Keeps anchor and skip-link targets clear of the fixed pill nav */
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -192,22 +194,36 @@ body.has-banner { padding-bottom: 14rem; }
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-body:has(.video-pin) .site-header {
+/* The header only hides where scripting can bring it back (html.js), so a
+   visitor without JavaScript always keeps working navigation. visibility
+   (not just opacity) takes the hidden links out of the tab order and the
+   accessibility tree, so nobody tabs through invisible controls. */
+html.js body.pinned-video .site-header {
   opacity: 0;
+  visibility: hidden;
   transform: translate(-50%, -0.6rem);
   pointer-events: none;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
 }
 
-body:has(.video-pin) .site-header.is-revealed {
+html.js body.pinned-video .site-header.is-revealed {
   opacity: 1;
+  visibility: visible;
   transform: translate(-50%, 0);
   pointer-events: auto;
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s;
 }
 
-/* Pages without the pinned video have nothing to reveal the header after,
-   so it's visible from the first paint; reserve room since it's fixed. */
-body:not(:has(.video-pin)) {
+/* The pill is fixed, so every page reserves room for it by default. The
+   pinned-video page takes that space back because its hero sits under the
+   pill on purpose. Reserving by default means a browser that fails to
+   apply one rule errs toward too much space, never a covered heading. */
+body {
   padding-top: 5.5rem;
+}
+
+body.pinned-video {
+  padding-top: 0;
 }
 
 .site-header .wrap {
@@ -263,6 +279,24 @@ body:not(:has(.video-pin)) {
 @media (max-width: 47.9rem) {
   .nav-toggle { display: inline-block; }
 
+  /* Keep the brand on one line so the pill never outgrows the space
+     reserved for it at narrow widths */
+  .brand {
+    font-size: var(--step-0);
+    white-space: nowrap;
+  }
+
+  /* On phones the island stays put at all times: it floats over the video
+     rather than waiting for the scroll past it. */
+  html.js body.pinned-video .site-header,
+  html.js body.pinned-video .site-header.is-revealed {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+    pointer-events: auto;
+  }
+
+
   .nav-links {
     display: none;
     position: absolute;
@@ -298,14 +332,14 @@ body:not(:has(.video-pin)) {
   color: var(--white);
 }
 
+/* No gradient here: .hero-scrim above it is the single legibility layer,
+   so the still fallback isn't darkened twice. */
 .video-pin-sticky {
   position: fixed;
   inset: 0;
   overflow: hidden;
   z-index: 0;
-  background:
-    linear-gradient(rgba(8, 28, 51, 0.55), rgba(8, 28, 51, 0.72)),
-    url("../assets/img/hero-poster.jpg") center center / cover no-repeat;
+  background: url("../assets/img/hero-poster-rot.jpg") center center / cover no-repeat;
 }
 
 /* Once the pinned block is behind us, stop compositing the video */
@@ -319,12 +353,18 @@ body:not(:has(.video-pin)) {
   z-index: 1;
 }
 
-/* Everything after the pinned block is opaque and rides above the video */
+/* Everything after the pinned block is opaque and rides above the video.
+   The last section carries the gap above the footer as padding: a margin
+   there would be a transparent strip the fixed video shows through. */
 main > .section,
 .site-footer {
   position: relative;
   z-index: 1;
   background-color: var(--white);
+}
+
+main > .section:last-of-type {
+  padding-bottom: calc(var(--space-5) * 2);
 }
 
 main > .section-alt { background-color: var(--sky-050); }
@@ -333,11 +373,20 @@ main > .section-sand { background-color: var(--sand-100); }
 /* Hero — real golf footage with a legibility overlay, not a color wash.
    The photo background on .video-pin-sticky doubles as the no-JS /
    reduced-motion / slow-network fallback. */
+/* Phones keep the island on screen at all times, so the slogan starts
+   below it. Declared after the base .hero rule so it actually wins. */
+@media (max-width: 47.9rem) {
+  .video-pin > .hero {
+    padding-top: 7.5rem;
+  }
+}
+
 /* Slogan sits high in the frame so the course fills the space below it */
 .hero {
   display: flex;
   align-items: flex-start;
   min-height: 100vh;
+  min-height: 100svh; /* mobile browser chrome shouldn't add dead space */
   color: var(--white);
   padding-top: clamp(3rem, 6vh, 4.5rem);
   padding-bottom: clamp(3rem, 8vh, 6rem);
@@ -349,19 +398,24 @@ main > .section-sand { background-color: var(--sand-100); }
   width: 100%;
 }
 
+/* Rotated a quarter turn so the mower travels up and down the frame,
+   water on the left, bunkers on the right. Width and height are swapped
+   before the rotation so the turned video still fills the viewport. */
 .hero-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  width: 100vh;
+  height: 100vw;
   object-fit: cover;
+  transform: translate(-50%, -50%) rotate(90deg);
   z-index: 0;
 }
 
 .hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(8, 28, 51, 0.55), rgba(8, 28, 51, 0.72));
+  background: linear-gradient(rgba(8, 28, 51, 0.62), rgba(8, 28, 51, 0.74));
   z-index: 1;
 }
 
@@ -378,6 +432,7 @@ main > .section-sand { background-color: var(--sand-100); }
   display: flex;
   align-items: center;
   min-height: 100vh;
+  min-height: 100svh;
   background: transparent;
   color: var(--white);
 }
@@ -602,7 +657,8 @@ textarea[aria-invalid="true"] {
   background: var(--navy-950);
   color: var(--blue-100);
   padding-block: var(--space-4);
-  margin-top: var(--space-5);
+  /* No top margin: a transparent strip here lets the fixed hero video
+     show through between the last section and the footer. */
 }
 
 .site-footer a,

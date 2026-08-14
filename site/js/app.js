@@ -4,6 +4,10 @@
 (function () {
   "use strict";
 
+  /* Marks that scripting is alive. The hero nav only hides itself behind
+     this class, so a visitor with JS disabled always keeps the navigation. */
+  document.documentElement.classList.add("js");
+
   var CFG = window.SITE_CONFIG || {};
   var CONSENT_KEY = "sdg-consent"; /* "accepted" | "declined" */
 
@@ -34,18 +38,22 @@
     if (href === here) a.setAttribute("aria-current", "page");
   });
 
-  /* ---------- Hero video: load only where it's welcome ----------
-     The 1080p loop is ~17MB, so it loads only on wide screens, when the
-     visitor hasn't asked for reduced motion, and when the connection
-     isn't flagged Save-Data. Everyone else keeps the photo background. */
+  /* ---------- Hero video ----------
+     Two encodes: 720p (~16MB) for wide screens, 540p (~1.5MB) for phones,
+     so a visitor on cell data isn't charged for footage sized for a
+     desktop. Skipped entirely for reduced-motion or Save-Data visitors,
+     who keep the still frame instead. */
   var heroVideo = document.querySelector(".hero-video[data-src]");
   if (heroVideo) {
     var wideEnough = window.matchMedia("(min-width: 48rem)").matches;
     var wantsMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var conn = navigator.connection || {};
     var savingData = conn.saveData === true;
-    if (wideEnough && wantsMotion && !savingData) {
-      heroVideo.src = heroVideo.getAttribute("data-src");
+    var smallSrc = heroVideo.getAttribute("data-src-small");
+    if (wantsMotion && !savingData) {
+      heroVideo.src = wideEnough || !smallSrc
+        ? heroVideo.getAttribute("data-src")
+        : smallSrc;
       heroVideo.playbackRate = 0.5; /* half speed: a calmer flyover */
       heroVideo.addEventListener("loadedmetadata", function () {
         heroVideo.playbackRate = 0.5;
@@ -66,27 +74,67 @@
   }
 
   /* ---------- Floating header reveal ----------
-     On pages with a hero (the homepage), the floating nav stays hidden
-     (see the body:has(.hero) rule in styles.css) while the hero video is
-     on screen. The hero's bottom edge is a hard line: scroll past it and
-     the island fades in and locks at the top; scroll back up above that
-     line and it hides again. Bound to live scroll position both ways,
-     not a one-time reveal. */
-  var videoBlock = document.querySelector(".video-pin") || document.querySelector(".hero");
+     On the pinned-video page the floating nav stays hidden (see the
+     body.pinned-video rules in styles.css) while the video is on screen.
+     The bottom edge of the pinned block is the line: scroll past it and
+     the island fades in and locks at the top; scroll back above it and
+     the island hides again.
+
+     The threshold is clamped to the furthest the page can actually
+     scroll. Without that clamp, a viewport taller than the content below
+     the block puts the threshold out of reach and the navigation never
+     appears at all. */
+  var videoBlock = document.querySelector(".video-pin");
   var siteHeader = document.querySelector(".site-header");
   var pinnedBackdrop = document.querySelector(".video-pin-sticky");
+
   if (videoBlock && siteHeader) {
-    var onScroll = function () {
-      var blockBottom = videoBlock.offsetTop + videoBlock.offsetHeight;
-      var past = window.scrollY >= blockBottom;
+    var wasPast = null;
+    var ticking = false;
+
+    var update = function () {
+      var blockTop = videoBlock.getBoundingClientRect().top + window.scrollY;
+      var blockBottom = blockTop + videoBlock.offsetHeight;
+      var maxScroll = Math.max(
+        0,
+        document.documentElement.scrollHeight - window.innerHeight
+      );
+      var threshold = Math.min(blockBottom, maxScroll);
+      var past = window.scrollY >= threshold - 1;
+
+      if (past === wasPast) return;
+      wasPast = past;
+
       siteHeader.classList.toggle("is-revealed", past);
-      /* The locked video is covered by the opaque sections below, but
-         hiding it stops the browser compositing footage nobody can see. */
       if (pinnedBackdrop) pinnedBackdrop.classList.toggle("is-past", past);
+
+      /* Stop decoding footage nobody can see; resume on the way back up */
+      if (heroVideo && heroVideo.src) {
+        if (past) {
+          heroVideo.pause();
+        } else {
+          heroVideo.play().catch(function () {
+            /* autoplay refused: the poster frame stands in */
+          });
+        }
+      }
     };
+
+    var onScroll = function () {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        ticking = false;
+        update();
+      });
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    onScroll();
+    window.addEventListener("resize", function () {
+      wasPast = null; /* geometry changed: re-evaluate from scratch */
+      onScroll();
+    });
+    update();
   }
 
   /* ---------- Footer year ---------- */
