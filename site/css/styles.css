@@ -246,6 +246,14 @@ body.pinned-video {
 
 .brand svg { flex: none; }
 
+/* Logo badge. The artwork is a dark disc, so it needs no plate behind it
+   on either the white header or the navy footer. */
+.brand-mark {
+  flex: none;
+  border-radius: 50%;
+  display: block;
+}
+
 .nav-toggle {
   display: none;
   background: transparent;
@@ -726,7 +734,7 @@ textarea[aria-invalid="true"] {
   color: var(--white);
 }
 
-.foot-logo svg { flex: none; }
+.foot-logo .brand-mark { flex: none; }
 .foot-logo:hover { text-decoration: none; }
 
 .foot-blurb {
