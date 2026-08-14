@@ -71,6 +71,27 @@ What that means for the setup:
 
 Cost is roughly $150 to $400 for a 10x10 or 10x20 pop-up with sidewalls, versus $1,349 to upgrade the Value tier's projector to 4,000 lumens. **Buy the canopy first.** It also gives guests shade and a rain plan, which is worth something on its own.
 
+### Candidate: Crown Shades 12x12 with one sidewall, $249.99
+
+[Product page](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall). 150D fabric, opaque, water and flame resistant (CPAI-84), UPF 50+, 112 in peak height, one detachable sidewall that mounts on any of the four sides. Six colors including black.
+
+Right type of product. Two fit gaps against a 13.77 x 10.82 ft enclosure opening:
+
+| | Enclosure | Canopy | Gap |
+|---|---|---|---|
+| Width | 13.77 ft | 12.0 ft | 1.77 ft total, about 0.9 ft each side |
+| Height | 10.82 ft | 9.33 ft at peak | 1.49 ft of opening sits above the canopy roof |
+
+That top strip is about 14% of the opening and it faces open sky, which is the brightest thing in the scene, so it leaks more than its share.
+
+**To make it work, budget roughly $330 to $370 total:**
+
+1. **Order it in black.** A white or beige top glows and throws light back down into the opening. This choice is free and matters.
+2. **Add sidewalls** (only one is included). You want the two long sides walled, leaving the enclosure side open and the far end as the guest entrance.
+3. **Close the top strip.** Hang a dark tarp or blackout curtain across the top 2 ft of the enclosure opening from the inside. Nobody walks through that band, and it kills the sky leak at its source for $20 to $40.
+
+Alternative worth pricing: a 10x20 canopy walls a longer entrance corridor, which deepens the light lock, though most pop-ups share the same roughly 9 to 11 ft peak so the top strip still needs closing.
+
 Residual honesty: in direct midday sun this makes daytime events workable rather than perfect. Morning, late afternoon, and overcast days will look markedly better than noon in July.
 
 ## Recommendation
