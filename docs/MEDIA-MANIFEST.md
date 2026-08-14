@@ -17,6 +17,7 @@ Pexels license: free for commercial use, no attribution required, modification a
 | site/assets/img/event-guests-celebrating.jpg | Gallery | https://www.pexels.com/photo/fun-office-party-with-colleagues-celebrating-36713386/ | Vitaly Gariev | Pexels | Pexels License | No |
 | site/assets/img/putting-green-hole-detail.jpg | Gallery | https://www.pexels.com/photo/a-golf-putter-and-ball-near-the-green-hole-6573259/ | Kindel Media | Pexels | Pexels License | No |
 | site/assets/img/golf-ball-turf-macro.jpg | Gallery | https://www.pexels.com/photo/a-golf-ball-on-the-artificial-turf-grass-6573709/ | Kindel Media | Pexels | Pexels License | No |
+| site/assets/img/about-founder.jpg | About page portrait | Supplied by the owner (IMG_3799.heic, converted) | Caden Whitt | Own photograph | Owned by the business | No |
 
 Pixabay license: free for commercial use, no attribution required, modification allowed (verified at pixabay.com/service/license-summary during the build).
 
