@@ -17,7 +17,7 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 5 | Projector | **BenQ AK700ST** 4K laser short throw, 4,000 lm | $2,899 | [PlayBetter](https://www.playbetter.com/products/benq-ak700st-golf-simulator-projector) |
 | 6 | Computer | **Already owned:** RTX 3060 Ti, Ryzen 5 5600G, 16 GB DDR4 | $0 | see notes |
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
-| 8 | Hitting mat | GoSports Elite 5'x5' octagon, 15 mm, 6 teeing positions | $200 | [Walmart](https://www.walmart.com/ip/1717799245) |
+| 8 | Hitting mat | **Bearwill 31 mm, 5'x5'**, 6 tee positions both handed, 150,000-hit rating | ~$230 | Amazon [B0DSFCNCMY](https://www.amazon.com/Bearwill-Golf-Mat-High-Elasticity-Artificial/dp/B0DSFCNCMY) (verify live price) |
 | 9 | Landing turf | Landing Pad Turf 10'1" x 5' | $290 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
 | 9b | Underlayment | Interlocking EVA foam tiles, 24"x24" 1/2", ~112 sq ft | $110 | see notes |
 | 9c | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
@@ -27,7 +27,7 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
-| | **Total** | | **$10,686** | |
+| | **Total** | | **$10,716** | |
 
 Deferred, not deleted: a battery station ($899) when a genuinely off-grid booking appears. See the power section.
 
@@ -77,6 +77,29 @@ One Jackery at 2,042 Wh (about 1,880 Wh usable) runs a sealed setup for **2.3 to
 ### Before you spend anything on power
 
 Put a **Kill A Watt meter ($25)** on the pump, the projector, and the PC during your first test setup. Twenty minutes of measuring replaces every estimate above with facts, and those facts tell you whether you need a battery at all.
+
+## Hitting mat: thickness is the spec that matters
+
+**The rule: 30 mm or thicker for daily commercial use.** Thinner mats transmit shock into wrists and elbows on fat shots and wear out faster. This is the number to shop on, not the price and not the tee count.
+
+That rules out the original pick. The GoSports Elite is 15 mm, which is half the threshold, and it was chosen when the budget mattered more than the duty cycle.
+
+**The choice: Bearwill 31 mm, 5'x5', roughly $230.**
+
+| Spec | Detail |
+|---|---|
+| Thickness | 31 mm total: 16 mm high-density turf, tear-resistant fiber interlayer, 15 mm high-elasticity EVA base |
+| Durability | Rated to 150,000 hits |
+| Tees | **Six tee positions serving both left and right handed golfers**, rubber tees included in multiple heights |
+| Size | 5'x5' gives room for a full stance either way round |
+
+Six positions means a lefty steps in and swings without anyone moving the mat, which matters when a line is waiting.
+
+**Verify the live price before ordering.** Amazon and Walmart both block automated price checks, so the ~$230 above is an estimate from listings rather than a figure read off the page. It sells in both 5'x4' and 5'x5'; take the 5'x5'.
+
+**Why this holds up to hard swings.** Most of your guests will hit driver off a rubber tee, and a teed driver barely touches the mat, so the wear comes from chunked irons rather than from people swinging hard. The 31 mm stack plus the foam tiles underneath is what keeps a fat shot from stinging someone's wrists, which is the thing that would actually end a guest's turn early.
+
+**Step-up options if you ever want more**, none of which are necessary now: Fiberbuilt Performance Turf Hourglass 5'x3' kit at $349 with a modular rubber base, or the Fiberbuilt Grass Series, guaranteed to 300,000 shots from the same divot area. Both are built for range-volume use rather than event-volume use.
 
 ## Flooring under the mat and turf
 
@@ -175,7 +198,7 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 | Bushnell Launch Pro $2,999 | Garmin Approach R50 $4,999 | What WeGo Golf runs. Matching your priciest competitor's hardware spend while charging a fifth of their rate is backwards. |
 | Owned RTX 3060 Ti desktop | Buying a laptop, ~$750 | The desktop already meets 1080p Ultra spec. A laptop would only buy easier transport and longer battery runtime. |
 | No peak roof | Peak roof, +$500 | Water runoff and headroom, neither needed for event-day work. |
-| GoSports mat $200 | SIGPRO Softy Lite $790 | Better feel, but guests hit a handful of shots each, not a range session. The octagon's 6 teeing positions serve left and right handers without moving the mat, which matters more at an event. |
+| Bearwill 31 mm $230 | SIGPRO Softy Lite $790, or GoSports Elite 15 mm $200 | The SIGPRO feels better and costs 3x. The GoSports is half the 30 mm thickness threshold for commercial use. The Bearwill clears the threshold, carries a 150,000-hit rating, and has six both-handed tee positions, for $30 over the thin mat. |
 | Landing turf 10'x5' $290 | 13'4" x 10' $670 | Less coverage, but also less to haul and lay out at every setup. |
 | Extension cord $70 | 2x Jackery $1,798, or EcoFlow Delta Pro 3 $3,699 | Most venues have outlets. Buying 4 kWh of battery for bookings you have not taken yet is dead capital. Require shore power, measure the real draw, buy a battery when a specific job needs one. |
 | Wired HDMI $51 | J-Tech wireless HDMI kit, $221 | A wireless link adds latency, another battery to charge, another pairing to fail, and another thing to troubleshoot with guests watching. The projector is a fixed distance from the PC at every setup, so a cable solves it permanently. |
