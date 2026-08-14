@@ -429,10 +429,13 @@ main > .section-sand { background-color: var(--sand-100); }
   }
 }
 
+/* Neutral black, not navy: a blue-tinted scrim washes the grass out and
+   makes the whole hero read blue. Black darkens for text contrast while
+   leaving the course its own colour. */
 .hero-scrim {
   position: absolute;
   inset: 0;
-  background: linear-gradient(rgba(8, 28, 51, 0.62), rgba(8, 28, 51, 0.74));
+  background: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.56));
   z-index: 1;
 }
 
@@ -464,7 +467,7 @@ main > .section-sand { background-color: var(--sand-100); }
 }
 
 .section.on-video .card {
-  background: rgba(8, 28, 51, 0.55);
+  background: rgba(0, 0, 0, 0.48);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-color: rgba(255, 255, 255, 0.25);
@@ -489,7 +492,7 @@ main > .section-sand { background-color: var(--sand-100); }
   line-height: 0.9;
   letter-spacing: 0.005em;
   text-align: left;
-  text-shadow: 0 2px 24px rgba(8, 28, 51, 0.45);
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.5);
   margin-bottom: var(--space-4);
 }
 
