@@ -18,16 +18,15 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 6 | Computer | **Already owned:** RTX 3060 Ti, Ryzen 5 5600G, 16 GB DDR4 | $0 | see notes |
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
 | 8 | Hitting mat | **Bearwill 31 mm, 5'x5'**, 6 tee positions both handed, 150,000-hit rating | $199 | Amazon [B0DSFCNCMY](https://www.amazon.com/Bearwill-Golf-Mat-High-Elasticity-Artificial/dp/B0DSFCNCMY) (price confirmed) |
-| 9 | Landing turf | Landing Pad Turf 10'1" x 5' | $290 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
-| 9b | Underlayment | Interlocking EVA foam tiles, 24"x24" 1/2", ~112 sq ft | $110 | see notes |
-| 9c | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
+| 9 | Flooring | Low-pile artificial turf, full interior, ~206 sq ft | $367 | Home Depot or Lowe's, cut to length |
+| 9b | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
 | 10 | Power | 100 ft 12-gauge outdoor extension cord + shore power required in quotes | $70 | see notes |
 | 10b | Power meter | Kill A Watt, to measure real draw before buying batteries | $25 | see notes |
 | 11 | Cabling | Tripp Lite 50 ft HDMI, gripping connectors | $51 | [Newegg](https://www.newegg.com/p/N82E16886944155) |
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
-| | **Total** | | **$10,685** | |
+| | **Total** | | **$10,652** | |
 
 Deferred, not deleted: a battery station ($899) when a genuinely off-grid booking appears. See the power section.
 
@@ -101,28 +100,39 @@ Six positions means a lefty steps in and swings without anyone moving the mat, w
 
 **Step-up options if you ever want more**, none of which are necessary now: Fiberbuilt Performance Turf Hourglass 5'x3' kit at $349 with a modular rubber base, or the Fiberbuilt Grass Series, guaranteed to 300,000 shots from the same divot area. Both are built for range-volume use rather than event-volume use.
 
-## Flooring under the mat and turf
+## Flooring: turf the whole interior
 
-Needed for four reasons, and the cheapest one is the one that protects the business: **you will be setting up on other people's floors.** A hitting mat directly on a gym court, a ballroom hardwood, or a brewery's polished concrete is how you end up paying for a floor.
+**Cover the full 206 sq ft in one material.** Mixed flooring, turf where balls land and foam tiles behind the golfer, looks exactly like what it is: a cheaper solution showing at the back of every photo. This business sells an experience, and the floor is in frame the whole time.
 
-**Coverage math:**
+### Why turf everywhere beats turf plus foam
 
-| Zone | Area |
-|---|---|
-| Hitting mat footprint | 25 sq ft |
-| Landing turf | 50 sq ft |
-| Stance and walking margin | 30 sq ft |
-| **Total** | **~106 sq ft** |
+| Option | Cost | Weight | Pieces to lay per event |
+|---|---|---|---|
+| **Turf everywhere, no foam** | **$367** | ~93 lb | 4 rolls |
+| Turf lane + foam behind | $244 | ~67 lb | 2 rolls plus 14 tiles |
+| Turf lane only, bare back | $189 | ~48 lb | 2 rolls |
 
-The enclosure floor is about 206 sq ft, but there is no reason to cover all of it. Cover the playing lane.
+Full turf costs $124 more than the mixed approach and weighs 26 lb more, and it wins anyway:
 
-**What to buy: interlocking EVA foam tiles, 24"x24", 1/2 inch thick.** They stack flat in a vehicle, assemble in a couple of minutes, cost little, and are the standard answer for portable gym flooring. A 25-piece kit covers 100 sq ft; add a 6-piece kit for margin, or buy 28 tiles. Budget about **$110** for roughly 112 sq ft. VEVOR, Yes4All, and store brands at Walmart and Target all sell the same format; buy on price.
+- **It looks like one finished space** rather than a golf bay with a gym floor stuck to the back of it.
+- **It sets up faster.** Rolling out four sections beats rolling two and then assembling fourteen interlocking tiles, twice per event, forever.
+- **It conforms to uneven ground.** Rigid foam tiles rock and separate on grass; turf lies down and stays put.
+- **The foam was solving a problem you no longer have.** Its main job was cushioning under the hitting mat, and the Bearwill mat has a 15 mm high-elasticity EVA base built into it.
 
-They do three jobs at once: protect the venue floor, level minor unevenness on grass or gravel, and add cushion under the hitting mat, which is easier on wrists and elbows than a mat laid on concrete.
+### What to buy
 
-**Plus a heavy ground sheet, about $35.** For grass and gravel setups it blocks moisture from wicking up into the foam and turf, and it keeps everything clean enough to pack away without hosing it down. Get one larger than the enclosure footprint. Note this is separate from the tarp bridging the canopy to the enclosure; you want both.
+**Low-pile artificial turf from Home Depot or Lowe's, around $1.78 per sq ft.** Turf sells in 5, 7, 10, and 15 ft widths and is cut to length, so buy widths that divide your 13.77 ft interior cleanly and cut sections you can actually carry.
 
-**One operational note:** foam tiles compress under a heavy hitting mat over time and can take a set. Rotate which tiles sit under the mat every few events and they will last far longer.
+- **Choose low pile.** It rolls tighter, weighs less, and lets balls roll back to you instead of sitting where they land.
+- **Avoid the cheapest utility grass.** It will not survive being rolled and unrolled at every event. Mid-grade at roughly $1.78 to $2.45 per sq ft is the right band.
+- **Cut it into 5 ft x 10 ft sections**, roughly 40 lb each, rather than wrestling one 206 sq ft piece.
+- Skip golf-branded "landing pad turf" entirely. It runs $5.74 per sq ft for the same job, which is a 3x markup for the word "golf."
+
+**Keep the ground sheet ($35)** under everything for grass and gravel setups. It blocks moisture from wicking into the turf backing and lets you pack away clean.
+
+### The tradeoff you are accepting
+
+About 93 lb of turf, in four sections, loaded and unloaded by you at every event. That is the real cost, not the $367. If it becomes the thing you hate about setup, cutting the rear section is a decision you can make later without rebuying anything.
 
 ## About the enclosure line
 
