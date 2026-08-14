@@ -1,3 +1,23 @@
+# AI training crawlers: blocked (content should not train models).
+# AI search/citation crawlers: allowed (AI answers citing us can send customers).
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
 User-agent: *
 Allow: /
 
