@@ -19,14 +19,15 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
 | 8 | Hitting mat | **Bearwill 31 mm, 5'x5'**, 6 tee positions both handed, 150,000-hit rating | $199 | Amazon [B0DSFCNCMY](https://www.amazon.com/Bearwill-Golf-Mat-High-Elasticity-Artificial/dp/B0DSFCNCMY) (price confirmed) |
 | 9 | Flooring | Low-pile artificial turf, full interior, ~206 sq ft | $367 | Home Depot or Lowe's, cut to length |
-| 9b | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
+| 9b | Floor protection | Interlocking EVA foam tiles, ~112 sq ft. **Indoor bookings only** | $110 | see notes |
+| 9c | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
 | 10 | Power | 100 ft 12-gauge outdoor extension cord + shore power required in quotes | $70 | see notes |
 | 10b | Power meter | Kill A Watt, to measure real draw before buying batteries | $25 | see notes |
 | 11 | Cabling | Tripp Lite 50 ft HDMI, gripping connectors | $51 | [Newegg](https://www.newegg.com/p/N82E16886944155) |
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
-| | **Total** | | **$10,652** | |
+| | **Total** | | **$10,762** | |
 
 Deferred, not deleted: a battery station ($899) when a genuinely off-grid booking appears. See the power section.
 
@@ -117,7 +118,20 @@ Full turf costs $124 more than the mixed approach and weighs 26 lb more, and it 
 - **It looks like one finished space** rather than a golf bay with a gym floor stuck to the back of it.
 - **It sets up faster.** Rolling out four sections beats rolling two and then assembling fourteen interlocking tiles, twice per event, forever.
 - **It conforms to uneven ground.** Rigid foam tiles rock and separate on grass; turf lies down and stays put.
-- **The foam was solving a problem you no longer have.** Its main job was cushioning under the hitting mat, and the Bearwill mat has a 15 mm high-elasticity EVA base built into it.
+- **Foam is no longer needed for cushioning.** That was its main job, and the Bearwill mat has a 15 mm high-elasticity EVA base built in. It still earns its place indoors for a different reason, below.
+
+### Foam still comes along, for indoor bookings only
+
+Turf alone does not protect a floor you did not pay for. Indoors, foam goes **under** the turf across the playing lane, about 112 sq ft:
+
+- **Grit is the real hazard.** Sand and dirt caught between a rubber turf backing and a finished floor turn the whole setup into sandpaper the moment anything slides.
+- **It spreads point loads** from the enclosure anchors, the pump, and the equipment feet, instead of concentrating them on hardwood.
+- **It absorbs ball impact** so struck balls do not transmit into a gym court.
+- **Venues ask.** Some gyms and event spaces require floor protection before they will let you set up at all, and "we lay protective foam under our turf" is a better answer than "our turf has a soft backing."
+
+A refinished gym floor costs more than several bookings earn. This is cheap insurance on the one risk in this build that could produce a bill instead of a repair.
+
+**It is conditional cargo.** Grass, gravel, and parking-lot setups do not need it, so it stays home and you haul roughly 39 lb less. Load it when the booking is indoors on a finished floor.
 
 ### What to buy
 
@@ -132,7 +146,7 @@ Full turf costs $124 more than the mixed approach and weighs 26 lb more, and it 
 
 ### The tradeoff you are accepting
 
-About 93 lb of turf, in four sections, loaded and unloaded by you at every event. That is the real cost, not the $367. If it becomes the thing you hate about setup, cutting the rear section is a decision you can make later without rebuying anything.
+About 93 lb of turf, in four sections, loaded and unloaded by you at every event, plus roughly 39 lb of foam on indoor bookings. That is the real cost, not the $367. If it becomes the thing you hate about setup, cutting the rear section is a decision you can make later without rebuying anything.
 
 ## About the enclosure line
 
