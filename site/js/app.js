@@ -61,6 +61,25 @@
     }
   }
 
+  /* ---------- Floating header reveal ----------
+     On pages with a hero (the homepage), the floating nav stays hidden
+     (see the body:has(.hero) rule in styles.css) until the visitor
+     scrolls past the hero video. It then fades in and stays revealed
+     for the rest of the visit: the listener detaches after the first
+     reveal, so scrolling back up never hides it again. */
+  var heroSection = document.querySelector(".hero");
+  var siteHeader = document.querySelector(".site-header");
+  if (heroSection && siteHeader) {
+    var revealHeader = function () {
+      if (window.scrollY > heroSection.offsetHeight - 80) {
+        siteHeader.classList.add("is-revealed");
+        window.removeEventListener("scroll", revealHeader);
+      }
+    };
+    window.addEventListener("scroll", revealHeader, { passive: true });
+    revealHeader();
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("footYear");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

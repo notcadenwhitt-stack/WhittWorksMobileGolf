@@ -158,14 +158,45 @@ body.has-banner { padding-bottom: 14rem; }
   padding-inline: var(--space-3);
 }
 
-/* Header + nav — white, so blue stays an accent rather than a wash */
+/* Header + nav — a floating "island" pill, not a full-width bar.
+   On the pages with a hero video it stays invisible during the video;
+   once the visitor scrolls past the hero, it fades in and stays locked
+   at the top of the viewport for the rest of the visit (see app.js). */
 .site-header {
-  background: var(--white);
-  color: var(--navy-900);
-  border-bottom: 1px solid var(--line);
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 1rem;
+  left: 50%;
   z-index: 50;
+  width: calc(100% - 2rem);
+  max-width: 64rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 214, 228, 0.7);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  color: var(--navy-900);
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+body:has(.hero) .site-header {
+  opacity: 0;
+  transform: translate(-50%, -0.6rem);
+  pointer-events: none;
+}
+
+body:has(.hero) .site-header.is-revealed {
+  opacity: 1;
+  transform: translate(-50%, 0);
+  pointer-events: auto;
+}
+
+/* Pages without a hero have no video to reveal the header after, so it's
+   visible and locked from the first paint; reserve room since it's fixed. */
+body:not(:has(.hero)) {
+  padding-top: 5.5rem;
 }
 
 .site-header .wrap {
@@ -173,7 +204,7 @@ body.has-banner { padding-bottom: 14rem; }
   align-items: center;
   justify-content: space-between;
   gap: var(--space-2);
-  min-height: 4.25rem;
+  min-height: 3.5rem;
 }
 
 .brand {
@@ -224,12 +255,18 @@ body.has-banner { padding-bottom: 14rem; }
   .nav-links {
     display: none;
     position: absolute;
-    inset: 4.25rem 0 auto 0;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 0.6rem;
     flex-direction: column;
     gap: 0;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     padding: var(--space-2) var(--space-3) var(--space-3);
-    border-top: 1px solid var(--line);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
     box-shadow: var(--shadow);
   }
 
@@ -281,14 +318,10 @@ body.has-banner { padding-bottom: 14rem; }
 
 .hero h1 {
   color: var(--white);
-  font-size: var(--step-4);
-  max-width: 22ch;
-}
-
-.hero p.lead {
-  font-size: var(--step-1);
-  color: var(--blue-100);
-  max-width: 46ch;
+  font-size: clamp(3rem, 2rem + 6vw, 6.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  max-width: 16ch;
 }
 
 .hero .cta-row {
