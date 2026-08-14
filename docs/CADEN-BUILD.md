@@ -19,14 +19,15 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
 | 8 | Hitting mat | GoSports Elite 5'x5' octagon, 15 mm, 6 teeing positions | $200 | [Walmart](https://www.walmart.com/ip/1717799245) |
 | 9 | Landing turf | Landing Pad Turf 10'1" x 5' | $290 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
+| 9b | Underlayment | Interlocking EVA foam tiles, 24"x24" 1/2", ~112 sq ft | $110 | see notes |
+| 9c | Ground sheet | Heavy tarp for grass and gravel setups | $35 | any hardware store |
 | 10 | Power | 100 ft 12-gauge outdoor extension cord + shore power required in quotes | $70 | see notes |
 | 10b | Power meter | Kill A Watt, to measure real draw before buying batteries | $25 | see notes |
-| 11 | Cabling | J-Tech wireless HDMI kit + 50 ft wired backup | $221 | [jtechdigital.com](https://www.jtechdigital.com/products/wireless-hdmi-extender-1080p-wireless-hdmi-extender-kit-200ft) |
+| 11 | Cabling | Tripp Lite 50 ft HDMI, gripping connectors | $51 | [Newegg](https://www.newegg.com/p/N82E16886944155) |
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
-| 15 | Transport case | Padded bin or hard case for the tower | ~$60 | see notes |
-| | **Total** | | **$10,771** | |
+| | **Total** | | **$10,686** | |
 
 Deferred, not deleted: a battery station ($899) when a genuinely off-grid booking appears. See the power section.
 
@@ -77,6 +78,29 @@ One Jackery at 2,042 Wh (about 1,880 Wh usable) runs a sealed setup for **2.3 to
 
 Put a **Kill A Watt meter ($25)** on the pump, the projector, and the PC during your first test setup. Twenty minutes of measuring replaces every estimate above with facts, and those facts tell you whether you need a battery at all.
 
+## Flooring under the mat and turf
+
+Needed for four reasons, and the cheapest one is the one that protects the business: **you will be setting up on other people's floors.** A hitting mat directly on a gym court, a ballroom hardwood, or a brewery's polished concrete is how you end up paying for a floor.
+
+**Coverage math:**
+
+| Zone | Area |
+|---|---|
+| Hitting mat footprint | 25 sq ft |
+| Landing turf | 50 sq ft |
+| Stance and walking margin | 30 sq ft |
+| **Total** | **~106 sq ft** |
+
+The enclosure floor is about 206 sq ft, but there is no reason to cover all of it. Cover the playing lane.
+
+**What to buy: interlocking EVA foam tiles, 24"x24", 1/2 inch thick.** They stack flat in a vehicle, assemble in a couple of minutes, cost little, and are the standard answer for portable gym flooring. A 25-piece kit covers 100 sq ft; add a 6-piece kit for margin, or buy 28 tiles. Budget about **$110** for roughly 112 sq ft. VEVOR, Yes4All, and store brands at Walmart and Target all sell the same format; buy on price.
+
+They do three jobs at once: protect the venue floor, level minor unevenness on grass or gravel, and add cushion under the hitting mat, which is easier on wrists and elbows than a mat laid on concrete.
+
+**Plus a heavy ground sheet, about $35.** For grass and gravel setups it blocks moisture from wicking up into the foam and turf, and it keeps everything clean enough to pack away without hosing it down. Get one larger than the enclosure footprint. Note this is separate from the tarp bridging the canopy to the enclosure; you want both.
+
+**One operational note:** foam tiles compress under a heavy hitting mat over time and can take a set. Rotate which tiles sit under the mat every few events and they will last far longer.
+
 ## About the enclosure line
 
 **What the $2,998 covers.** PopCaddie states the price "includes pump, impact screen, projector bracket, custom logo printing, and international shipping." Shipping is genuinely included; it arrives by FedEx Air Courier in 28 to 30 days.
@@ -125,7 +149,7 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 
 **You need a display to operate.** Simplest answer: use the projector itself as your screen, which is what you are watching anyway. A small portable monitor (~$80–120) makes setup and troubleshooting easier before the projector is aligned, but it is optional, not required.
 
-**It needs protecting in transit.** A tower bouncing in a truck bed is harder on components than a laptop in a bag. Budget roughly $60 for a padded bin or hard case, and check that the GPU is seated after each move.
+**It rides in a vehicle constantly.** No case is budgeted, which is fine: keep it upright, strap it so it cannot tip, and avoid the truck bed in rain. Worth checking the GPU is still seated if the machine ever fails to display after a rough drive, since a heavy card can work loose over many trips.
 
 **A quiet upside:** running the PC off the Jackery means it is effectively on a UPS. A venue power blip that would hard-reboot a desktop plugged into a wall will not touch it.
 
@@ -154,6 +178,9 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 | GoSports mat $200 | SIGPRO Softy Lite $790 | Better feel, but guests hit a handful of shots each, not a range session. The octagon's 6 teeing positions serve left and right handers without moving the mat, which matters more at an event. |
 | Landing turf 10'x5' $290 | 13'4" x 10' $670 | Less coverage, but also less to haul and lay out at every setup. |
 | Extension cord $70 | 2x Jackery $1,798, or EcoFlow Delta Pro 3 $3,699 | Most venues have outlets. Buying 4 kWh of battery for bookings you have not taken yet is dead capital. Require shore power, measure the real draw, buy a battery when a specific job needs one. |
+| Wired HDMI $51 | J-Tech wireless HDMI kit, $221 | A wireless link adds latency, another battery to charge, another pairing to fail, and another thing to troubleshoot with guests watching. The projector is a fixed distance from the PC at every setup, so a cable solves it permanently. |
+
+**One cabling note:** at 1080p output a passive 50 ft HDMI run is fine. If you ever decide to send the projector a true 4K signal, a 50 ft passive cable will struggle and you would need an active optical cable (roughly $80 to $150). Since the plan is to render at 1080p and let the AK700ST upscale, the $51 cable is the right buy.
 | Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 ## Sources
