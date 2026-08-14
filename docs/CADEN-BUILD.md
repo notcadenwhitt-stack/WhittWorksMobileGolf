@@ -10,12 +10,12 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 
 | # | Item | Choice | Price | Where |
 |---|---|---|---|---|
-| 1 | Enclosure | PopCaddie inflatable + front shade flaps | $3,198 | [popcaddie.com](https://popcaddie.com/inflatable-enclosures/) |
-| 2 | Import | Customs on delivery (average) | ~$130 | collected by carrier |
+| 1 | Enclosure | PopCaddie inflatable ($2,998) + front shade flaps ($200). **No peak roof.** | $3,198 | [popcaddie.com](https://popcaddie.com/inflatable-enclosures/) |
+| 2 | Import | Customs and duties, billed by FedEx after delivery | ~$130 | see notes |
 | 3 | Launch monitor | **Bushnell Launch Pro** (Foresight GC3 hardware) | $2,999 | [PlayBetter](https://www.playbetter.com/products/bushnell-launch-pro-launch-monitor) |
 | 4 | Monitor plan, year 1 | Bushnell Silver | $200 | same |
 | 5 | Projector | **BenQ AK700ST** 4K laser short throw, 4,000 lm | $2,899 | [PlayBetter](https://www.playbetter.com/products/benq-ak700st-golf-simulator-projector) |
-| 6 | Computer | Refurbished RTX 3060 laptop, **16 GB** | ~$750 | Newegg recertified, see notes |
+| 6 | Computer | **Already owned:** RTX 3060 Ti, Ryzen 5 5600G, 16 GB DDR4 | $0 | see notes |
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
 | 8 | Hitting mat | SIGPRO Softy Lite 4'x5' (shipping included) | $790 | [365golfdesign.com](https://365golfdesign.com/product/sigpro-softy-lite-4x5-hitting-mat/) |
 | 9 | Landing turf | Landing Pad Turf 13'4" x 10' | $670 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
@@ -24,11 +24,22 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
-| | **Total** | | **$13,235** | |
+| 15 | Transport case | Padded bin or hard case for the tower | ~$60 | see notes |
+| | **Total** | | **$12,545** | |
 
 **Recurring: $200/yr** (Bushnell Silver). No other required subscription.
 
 ---
+
+## About the enclosure line
+
+**What the $2,998 covers.** PopCaddie states the price "includes pump, impact screen, projector bracket, custom logo printing, and international shipping." Shipping is genuinely included; it arrives by FedEx Air Courier in 28 to 30 days.
+
+**What the ~$130 is.** It is not a PopCaddie charge. The enclosure ships internationally, and their page states plainly: *"Import duties, customs fees, taxes, and tariffs are not included in the purchase price."* Those are US government import charges that **FedEx fronts at the border and then bills you after delivery**, and PopCaddie reports "most customers" see "customs-related charges averaging around $130 USD."
+
+So: budget it, but expect it as a separate FedEx invoice arriving days after the enclosure does, not as part of your order total. It is an average, not a quote, and tariff rates move.
+
+**Peak roof: correctly skipped.** The +$500 upgrade "adds a peaked roof structure to improve water runoff and create additional headroom." It is optional and it is not in your build. Water runoff matters most for multi-day outdoor installs in rain; for event-day work you can reschedule or move indoors. The extra headroom is nice for ball flight but the standard 10.82 ft ceiling is workable. If you later find yourself doing wet-weather outdoor events regularly, it is an add-on you can request on a future order.
 
 ## Order in this sequence
 
@@ -39,13 +50,38 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 
 ---
 
-## Three things that will bite you if you skip them
+## The computer: you already own it
 
-**Confirm the laptop has 16 GB.** Many retail RTX 4060 machines ship 8 GB, which is under GSPro's floor. Read the actual SKU spec, not the model name.
+Your desktop is **RTX 3060 Ti, Ryzen 5 5600G, 16 GB DDR4**. Against GSPro's published tiers that is not merely adequate, it is the exact 1080p Ultra reference spec:
 
-**Check the Yoga before buying anything.** Press Windows, type `dxdiag`, Enter, open the **Display** tab. If the Name field shows an RTX 4050 or better *and* the machine has 16 GB, you may not need to buy a computer at all. If it shows Intel Iris Xe or UHD Graphics, buy the refurb laptop. Most Yogas are ultrabooks with integrated graphics and soldered memory, so plan on buying.
+| GSPro target | Required | Yours |
+|---|---|---|
+| 1080p High | RTX 3060 / 4060, i5 or Ryzen 5, 16 GB | exceeds |
+| **1080p Ultra** | **RTX 3060 Ti / 3070 / 4060 Ti, i5 or Ryzen 5, 16 GB** | **exact match** |
+| 4K Ultra | RTX 3080+, i7 or Ryzen 7, 32 GB | below, and not needed |
 
-**The MacBook M3 is not an event machine.** GSPro is Windows only. E6 Connect's own App Store listing states M1 devices are not supported. Both can be forced through CrossOver or Parallels, and that is fine for practice, but not with a paying client watching.
+You never need 4K Ultra, because the AK700ST upscales a 1080p render internally. **Buy no computer. That is $750 saved.**
+
+The other two machines stay home: the MacBook M3 cannot run GSPro or E6 natively (both are Windows-first, and E6's App Store listing states M1 is unsupported), and the Yoga is almost certainly integrated graphics.
+
+### What a desktop changes for mobile work
+
+Three practical consequences, none of them dealbreakers:
+
+**Power draw is higher.** Estimated total load, and therefore Jackery runtime:
+
+| Setup | Total draw | Runtime on Jackery 2000 v2 |
+|---|---|---|
+| Desktop (3060 Ti) | ~810–1,200 W | 1.6–2.3 hrs |
+| Laptop equivalent | ~620–950 W | 2.0–3.0 hrs |
+
+A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore power for any booking longer than two hours, or plan to run the generator. Verify the real numbers with a Kill A Watt meter once the gear arrives; the figures above are estimates.
+
+**You need a display to operate.** Simplest answer: use the projector itself as your screen, which is what you are watching anyway. A small portable monitor (~$80–120) makes setup and troubleshooting easier before the projector is aligned, but it is optional, not required.
+
+**It needs protecting in transit.** A tower bouncing in a truck bed is harder on components than a laptop in a bag. Budget roughly $60 for a padded bin or hard case, and check that the GPU is seated after each move.
+
+**A quiet upside:** running the PC off the Jackery means it is effectively on a UPS. A venue power blip that would hard-reboot a desktop plugged into a wall will not touch it.
 
 ---
 
@@ -67,7 +103,8 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 |---|---|---|
 | Bushnell Launch Pro $2,999 | Uneekor EYE MINI Lite $1,999 | Saves ~$1,000 and guests could not tell the difference. Genuinely defensible if cash is tight at launch; the Launch Pro wins on brand credibility with corporate buyers and on resale. |
 | Bushnell Launch Pro $2,999 | Garmin Approach R50 $4,999 | What WeGo Golf runs. Matching your priciest competitor's hardware spend while charging a fifth of their rate is backwards. |
-| RTX 3060 laptop ~$750 | RTX 4070+ for native 4K | Roughly $1,000 more to render at a resolution nobody in the enclosure can resolve. |
+| Owned RTX 3060 Ti desktop | Buying a laptop, ~$750 | The desktop already meets 1080p Ultra spec. A laptop would only buy easier transport and longer battery runtime. |
+| No peak roof | Peak roof, +$500 | Water runoff and headroom, neither needed for event-day work. |
 | Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 ## Sources
