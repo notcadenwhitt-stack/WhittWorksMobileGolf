@@ -5,8 +5,8 @@
 /* Display face for the hero slogan. Self-hosted (no Google connection, no
    visitor IPs leaving the site, and font-src 'self' covers it in the CSP). */
 @font-face {
-  font-family: "Oswald";
-  src: url("../assets/fonts/oswald-bold.woff2") format("woff2");
+  font-family: "Antonio";
+  src: url("../assets/fonts/antonio-bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -410,25 +410,26 @@ main > .section-sand { background-color: var(--sand-100); }
 /* Slogan: display face, left aligned, with the short top line set larger
    so its width balances the longer line beneath it. */
 .hero h1 {
-  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Antonio", "Helvetica Neue", Arial, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
   line-height: 0.9;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
   text-align: left;
   text-shadow: 0 2px 24px rgba(8, 28, 51, 0.45);
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
 }
 
 .hero h1 .line-lead {
   display: block;
-  font-size: clamp(3rem, 0.8rem + 6.6vw, 6.25rem);
+  font-size: clamp(3.1rem, 0.85rem + 7vw, 6.6rem);
 }
 
 .hero h1 .line-follow {
   display: block;
-  font-size: clamp(2.25rem, 0.6rem + 4.9vw, 4.625rem);
+  margin-top: 0.28em; /* breathing room between the two lines */
+  font-size: clamp(2.3rem, 0.6rem + 5.1vw, 4.875rem);
   opacity: 0.93;
 }
 
