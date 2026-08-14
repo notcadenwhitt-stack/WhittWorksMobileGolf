@@ -339,7 +339,7 @@ main > .section-sand { background-color: var(--sand-100); }
   align-items: flex-start;
   min-height: 100vh;
   color: var(--white);
-  padding-top: clamp(6rem, 16vh, 11rem);
+  padding-top: clamp(4.5rem, 10vh, 7rem);
   padding-bottom: clamp(3rem, 8vh, 6rem);
 }
 
@@ -423,13 +423,13 @@ main > .section-sand { background-color: var(--sand-100); }
 
 .hero h1 .line-lead {
   display: block;
-  font-size: clamp(3.1rem, 0.85rem + 7vw, 6.6rem);
+  font-size: clamp(3.6rem, 0.9rem + 8.6vw, 8.25rem);
 }
 
 .hero h1 .line-follow {
   display: block;
-  margin-top: 0.28em; /* breathing room between the two lines */
-  font-size: clamp(2.3rem, 0.6rem + 5.1vw, 4.875rem);
+  margin-top: 0.24em; /* breathing room between the two lines */
+  font-size: clamp(2.7rem, 0.7rem + 6.3vw, 6.1rem);
   opacity: 0.93;
 }
 
