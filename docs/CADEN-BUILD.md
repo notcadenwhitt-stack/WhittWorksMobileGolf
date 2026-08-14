@@ -19,56 +19,63 @@ The three template tiers in `EQUIPMENT-TIERS.md` remain as reference. This build
 | 7 | Sun control | Crown Shades 12x12 pop-up, **black**, 1 sidewall | $250 | [crown-outdoor.com](https://crown-outdoor.com/products/12x12-pop-up-canopy-with-1-sidewall) |
 | 8 | Hitting mat | GoSports Elite 5'x5' octagon, 15 mm, 6 teeing positions | $200 | [Walmart](https://www.walmart.com/ip/1717799245) |
 | 9 | Landing turf | Landing Pad Turf 10'1" x 5' | $290 | [shopindoorgolf.com](https://shopindoorgolf.com/products/landing-pad-turf-for-commercial-golf-simulator-enclosure) |
-| 10 | Power | Jackery Explorer 2000 v2 x2, indoor-safe, near-silent | $1,798 | [jackery.com](https://www.jackery.com/products/jackery-explorer-2000-v2-portable-power-station) |
+| 10 | Power | 100 ft 12-gauge outdoor extension cord + shore power required in quotes | $70 | see notes |
+| 10b | Power meter | Kill A Watt, to measure real draw before buying batteries | $25 | see notes |
 | 11 | Cabling | J-Tech wireless HDMI kit + 50 ft wired backup | $221 | [jtechdigital.com](https://www.jtechdigital.com/products/wireless-hdmi-extender-1080p-wireless-hdmi-extender-kit-200ft) |
 | 12 | Surge protection | APC SurgeArrest PE625, 25 ft | $29 | [Home Depot](https://www.homedepot.com/p/306702078) |
 | 13 | Bridging tarp | Already owned | $0 | — |
 | 14 | Misc | Balls, tees, storage bins, box fan, gaffer tape | $200 | allowance |
 | 15 | Transport case | Padded bin or hard case for the tower | ~$60 | see notes |
-| | **Total** | | **$12,474** | |
+| | **Total** | | **$10,771** | |
+
+Deferred, not deleted: a battery station ($899) when a genuinely off-grid booking appears. See the power section.
 
 **Recurring: $200/yr** (Bushnell Silver). No other required subscription.
 
 ---
 
-## Power: two batteries, no gas
+## Power: buy an extension cord, not a battery
 
-**Requirement: silent, no fumes, and enough to run everything including the desktop.** Battery only. Gas generators are outdoor-only for carbon monoxide reasons anyway, which rules them out for indoor bookings.
+I oversold this. Here is the corrected reasoning.
 
-**What you have to feed** (estimates; verify with a Kill A Watt meter once the gear lands):
+### Question the requirement first
 
-| Load | Draw |
+**Most events already have power.** Corporate venues, country clubs, breweries, wedding venues, gyms, and school gyms all have outlets. A backyard party has a house 60 ft away. Genuinely off-grid bookings, meaning a field or festival with no building in reach, are the exception, not the rule.
+
+Standard practice among rental operators is to **make shore power a booking requirement**, the same way a bounce-house company does. Put one line in the quote: *"Client provides access to a standard 15-amp outlet within 100 ft, or notify us in advance."* That single sentence removes the need to buy anything.
+
+**Buy this instead:** a 100 ft 12-gauge outdoor extension cord, roughly **$60 to $80**. Twelve gauge matters; thinner 16-gauge cord drops voltage over that distance and can make the projector misbehave.
+
+### The load is probably smaller than I said
+
+Two of my three estimates need checking before you spend on batteries:
+
+**The pump may not run continuously.** Sealed PVC enclosures are heat-welded and airtight: you inflate once, close the valve, and disconnect the pump entirely. Continuous-airflow enclosures made of stitched Oxford fabric need the blower running the whole time. PopCaddie's is described as "heavy-duty PVC tarpaulin and Oxford fabric" and calls the accessory an "Electric Air Pump," and their page does not state either way. **Ask them directly before buying power.** If it seals, 250 to 400 W of continuous draw disappears from the budget.
+
+**Blowers draw less than I assumed anyway.** Industry figures put typical inflatable blowers at around 250 W continuous, not the 400 W top of my range.
+
+Revised load:
+
+| Scenario | Draw |
 |---|---|
-| Enclosure blower, continuous | 250–400 W |
-| BenQ AK700ST projector | 280–400 W |
-| Desktop, RTX 3060 Ti | 280–400 W |
-| **Total** | **810–1,200 W** |
+| Sealed enclosure, pump disconnected | **560–800 W** |
+| Continuous airflow | 810–1,050 W |
 
-**Why two Jackery Explorer 2000 v2 rather than one big unit:**
+### What to actually buy
 
-| | 2x Jackery 2000 v2 | 1x EcoFlow Delta Pro 3 |
+| Stage | Buy | Cost |
 |---|---|---|
-| Capacity | 4,084 Wh | 4,096 Wh |
-| Price | **$1,798** | $3,699 |
-| Weight | 39.5 lb each, 79 lb total | **115 lb in one piece** |
-| One-person carry | Yes, one at a time | No, it ships with wheels because it isn't carryable |
-| Redundancy | A failure costs you half your power | A failure ends the event |
+| **Now** | 100 ft 12-gauge extension cord, and require shore power in quotes | **$70** |
+| When a real off-grid booking appears | One Jackery Explorer 2000 v2, or rent a unit for that event | $899 |
+| Only if off-grid becomes routine | A second unit | $899 |
 
-Same capacity, **half the price, and you can actually lift it.** EcoFlow fits the Delta Pro 3 with a wheel-and-handle system precisely because 115 lb is not a one-person carry, and you will be loading this into a vehicle alone at 7am.
+One Jackery at 2,042 Wh (about 1,880 Wh usable) runs a sealed setup for **2.3 to 3.4 hours**, which covers the 2-hour Party package on its own. Two units were sized for a worst case you may never book.
 
-**Runtime with two units at 4,084 Wh (about 3,760 Wh usable after inverter loss):**
+**Cheaper battery brands worth pricing when that day comes:** Bluetti AC200L and EcoFlow Delta 2 Max both sit near 2,000 Wh and frequently discount below Jackery. Renting is also legitimate for one-off festival gigs; charging the rental to the client as a site fee is normal.
 
-| Load | Runtime |
-|---|---|
-| 810 W (best case) | ~4.6 hrs |
-| 1,000 W (likely) | ~3.8 hrs |
-| 1,200 W (worst case) | ~3.1 hrs |
+### Before you spend anything on power
 
-That covers the 2-hour Party package with a wide margin and reaches most of a 4-hour Event package. Full-day corporate bookings should assume shore power, which venues of that size have.
-
-**How to run them:** split the loads rather than daisy-chaining. Put the blower on one unit and the projector plus PC on the other. That halves each unit's draw, keeps both inverters well inside their limits, and means a single failure leaves you partially running instead of dark.
-
-**If you want to spend less at launch:** buy one now ($899) and require shore power for anything over two hours, then add the second when off-grid bookings justify it. Same eventual cost, later. That brings the build to **$11,575**.
+Put a **Kill A Watt meter ($25)** on the pump, the projector, and the PC during your first test setup. Twenty minutes of measuring replaces every estimate above with facts, and those facts tell you whether you need a battery at all.
 
 ## About the enclosure line
 
@@ -146,7 +153,7 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 | No peak roof | Peak roof, +$500 | Water runoff and headroom, neither needed for event-day work. |
 | GoSports mat $200 | SIGPRO Softy Lite $790 | Better feel, but guests hit a handful of shots each, not a range session. The octagon's 6 teeing positions serve left and right handers without moving the mat, which matters more at an event. |
 | Landing turf 10'x5' $290 | 13'4" x 10' $670 | Less coverage, but also less to haul and lay out at every setup. |
-| 2x Jackery $1,798 | EcoFlow Delta Pro 3 $3,699 | Same capacity, twice the price, and 115 lb in a single piece you cannot carry alone. |
+| Extension cord $70 | 2x Jackery $1,798, or EcoFlow Delta Pro 3 $3,699 | Most venues have outlets. Buying 4 kWh of battery for bookings you have not taken yet is dead capital. Require shore power, measure the real draw, buy a battery when a specific job needs one. |
 | Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 ## Sources
