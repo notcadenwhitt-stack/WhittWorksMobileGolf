@@ -159,9 +159,10 @@ body.has-banner { padding-bottom: 14rem; }
 }
 
 /* Header + nav — a floating "island" pill, not a full-width bar.
-   On the pages with a hero video it stays invisible during the video;
-   once the visitor scrolls past the hero, it fades in and stays locked
-   at the top of the viewport for the rest of the visit (see app.js). */
+   On the pages with a hero video it's invisible while the video is on
+   screen; scroll past its bottom edge and the island fades in and locks
+   at the top, scroll back up above that line and it hides again (see
+   the bidirectional toggle in app.js). */
 .site-header {
   position: fixed;
   top: 1rem;
