@@ -631,6 +631,52 @@ main > .section-sand { background-color: var(--sand-100); }
   padding: 0 var(--space-3) var(--space-2);
 }
 
+/* Service-area panel on the quote page */
+.service-area {
+  background: var(--sky-050);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--blue-600);
+  border-radius: var(--radius);
+  padding: var(--space-3);
+  margin-bottom: var(--space-4);
+  max-width: 38rem;
+}
+
+.service-area h2 {
+  font-size: var(--step-1);
+  margin-bottom: var(--space-1);
+}
+
+.service-area p { margin-bottom: var(--space-2); }
+.service-area p:last-child { margin-bottom: 0; }
+
+.area-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  gap: 0.3rem var(--space-2);
+  list-style: none;
+  margin: 0 0 var(--space-2);
+  padding: 0;
+}
+
+.area-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
+.area-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--blue-600);
+}
+
 /* Forms */
 .form-grid {
   display: grid;
