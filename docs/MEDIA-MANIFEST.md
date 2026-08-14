@@ -24,3 +24,7 @@ Pixabay license: free for commercial use, no attribution required, modification 
 | site/assets/video/hero-golf.mp4 | Home hero background video (desktop, motion-allowed, non-Save-Data visitors only) | https://www.pexels.com/video/3140211/ | per Pexels video page (downloaded by Caden from Pexels, 2026-08-13) | Pexels | Pexels License | No |
 
 More rows land here from the media research brief (background video loops still pending; no video was added in the gallery image pass).
+
+## Parked: licensed stock library
+
+The gallery page was removed on 2026-08-13 until real event photographs exist. Showing stock images of other people's events implies a track record the business does not yet have. The eleven licensed images the gallery used are preserved in `docs/stock-library/`, with their licences unchanged, and can be restored at any time. Their rows above remain accurate as to source and licence; only the file location changed.
