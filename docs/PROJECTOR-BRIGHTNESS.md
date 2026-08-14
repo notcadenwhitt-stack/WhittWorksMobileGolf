@@ -48,7 +48,34 @@ For daytime outdoor bookings:
 
 **Daytime indoors (gyms, ballrooms, warehouses): fine at any tier**, since you can kill the lights.
 
+## The canopy fix (cheapest real solution)
+
+The sides and roof of the enclosure already block sun. The front opening is the only significant leak, so shading that opening attacks the actual problem instead of paying for lumens.
+
+Measured data backs this up. A peer-reviewed illuminance study ([PLOS One, 2021](https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0254027)) recorded:
+
+| Location | Illuminance |
+|---|---|
+| Open playground | 9,300 lux (range 4,100–16,825) |
+| Under **translucent** artificial shade | 8,180 lux (range 4,200–13,300) |
+| Under a solid **canopy** | **under 1,000 lux**, described as similar to indoor locations |
+
+**The material decides everything.** A translucent or light fabric canopy only cut the light by about 12%, which is useless here. A solid, opaque canopy dropped it by roughly 90%, into indoor territory.
+
+What that means for the setup:
+
+- **Buy an opaque canopy, ideally dark underneath.** White or translucent tops glow and re-radiate light straight into the opening.
+- **Add sidewalls.** A bare roof still lets in skylight and ground bounce from the sides. Roof plus two or three walls turns the entrance into a light lock, which is what gets the screen under the 125 lux target.
+- **Butt the canopy against the enclosure opening** so there's no bright gap between them.
+- Expect roughly 300 to 500 lux at the screen with a canopy roof alone (visible but washed), and something in the low hundreds with sidewalls added (genuinely usable).
+
+Cost is roughly $150 to $400 for a 10x10 or 10x20 pop-up with sidewalls, versus $1,349 to upgrade the Value tier's projector to 4,000 lumens. **Buy the canopy first.** It also gives guests shade and a rain plan, which is worth something on its own.
+
+Residual honesty: in direct midday sun this makes daytime events workable rather than perfect. Morning, late afternoon, and overcast days will look markedly better than noon in July.
+
 ## Recommendation
+
+**Start with an opaque canopy and sidewalls at the entrance (see above).** It costs a fraction of a projector upgrade and attacks the real variable. Only if that proves insufficient is brightness worth buying.
 
 If daytime outdoor events will be a real part of the business, **4,000 lumens is the sensible floor**, which is the Premium tier's AK700ST. Two cheaper ways to get there:
 
