@@ -1,6 +1,6 @@
-# WhittWorks Mobile Golf
+# Southern Drive Golf Co (WhittWorks Mobile Golf)
 
-Mobile golf simulator rentals serving Alabama. Business name TBD (see docs/ for the shortlist).
+Mobile golf simulator rentals serving Alabama. Business name: Southern Drive Golf Co (domain southerndrivegolf.com, purchase pending).
 
 - `site/` — static marketing + booking website (no framework, ADA-first)
 - `docs/` — internal business documents: equipment tier builds, name shortlist, media manifest

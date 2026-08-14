@@ -47,7 +47,7 @@
     });
   }
 
-  window.BFG_ANALYTICS = {
+  window.SDG_ANALYTICS = {
     enable: function () {
       loadPostHog();
       if (loaded && window.posthog && window.posthog.opt_in_capturing) {

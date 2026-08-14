@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- DOMAIN-TBD is swapped by tools/rename-brand.sh at go-live -->
+<!-- southerndrivegolf.com is swapped by tools/rename-brand.sh at go-live -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://DOMAIN-TBD/</loc></url>
-  <url><loc>https://DOMAIN-TBD/events.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/gallery.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/faq.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/quote.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/about.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/privacy.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/terms.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/cookies.html</loc></url>
-  <url><loc>https://DOMAIN-TBD/accessibility.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/</loc></url>
+  <url><loc>https://southerndrivegolf.com/events.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/gallery.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/faq.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/quote.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/about.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/privacy.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/terms.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/cookies.html</loc></url>
+  <url><loc>https://southerndrivegolf.com/accessibility.html</loc></url>
 </urlset>

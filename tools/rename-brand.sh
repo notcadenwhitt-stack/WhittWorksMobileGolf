@@ -1,25 +1,19 @@
 #!/bin/sh
-# Swap the placeholder brand and domain across the whole site.
-# Usage: tools/rename-brand.sh "Real Brand Name" "realdomain.com"
-# Run from the repo root. Safe to run more than once.
+# Go-live script for Southern Drive Golf Co.
+# The brand and domain are already applied site-wide (2026-08-13).
+# Running this at launch removes the pre-launch noindex guard from every
+# page except 404.html. Run from the repo root.
 
 set -eu
 
-NEW_NAME="${1:?usage: rename-brand.sh \"New Name\" \"domain.com\"}"
-NEW_DOMAIN="${2:?usage: rename-brand.sh \"New Name\" \"domain.com\"}"
-
-OLD_NAME="Blue Fairway Golf"
-OLD_DOMAIN="DOMAIN-TBD"
-
-find site -type f \( -name '*.html' -o -name '*.js' -o -name '*.xml' -o -name '*.txt' \) | while read -r f; do
-  sed -i '' "s|$OLD_NAME|$NEW_NAME|g; s|$OLD_DOMAIN|$NEW_DOMAIN|g" "$f"
-done
-
-# Going live: drop the pre-launch noindex guard everywhere except the 404 page
 find site -type f -name '*.html' ! -name '404.html' | while read -r f; do
   sed -i '' '/<meta name="robots" content="noindex">/d' "$f"
 done
 
-echo "Renamed '$OLD_NAME' -> '$NEW_NAME' and '$OLD_DOMAIN' -> '$NEW_DOMAIN'."
 echo "Removed the pre-launch noindex tag from every page except 404.html."
-echo "Still manual: og-image, favicon lettering if any, and the legal entity line if it changes."
+echo "Go-live checklist beyond this script:"
+echo "  1. Buy southerndrivegolf.com and point DNS per docs/HOSTING-HEADERS.md (DNS first, then host)."
+echo "  2. Create the Formspree form and set formEndpoint in site/js/config.js."
+echo "  3. Set posthogKey in site/js/config.js."
+echo "  4. Apply the security headers block for the chosen host (docs/HOSTING-HEADERS.md)."
+echo "  5. Uncomment the Sitemap line in site/robots.txt."

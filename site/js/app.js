@@ -1,11 +1,11 @@
-/* Blue Fairway Golf — site behavior.
+/* Southern Drive Golf Co — site behavior.
    External file by design: keeps CSP at script-src 'self'. No inline handlers. */
 
 (function () {
   "use strict";
 
   var CFG = window.SITE_CONFIG || {};
-  var CONSENT_KEY = "bfg-consent"; /* "accepted" | "declined" */
+  var CONSENT_KEY = "sdg-consent"; /* "accepted" | "declined" */
 
   /* ---------- Mobile nav ---------- */
   var toggle = document.querySelector(".nav-toggle");
@@ -71,11 +71,11 @@
   function applyConsent(value) {
     setConsent(value);
     hideBanner();
-    if (value === "accepted" && window.BFG_ANALYTICS) {
-      window.BFG_ANALYTICS.enable();
+    if (value === "accepted" && window.SDG_ANALYTICS) {
+      window.SDG_ANALYTICS.enable();
     }
-    if (value === "declined" && window.BFG_ANALYTICS) {
-      window.BFG_ANALYTICS.disable();
+    if (value === "declined" && window.SDG_ANALYTICS) {
+      window.SDG_ANALYTICS.disable();
     }
   }
 
@@ -87,8 +87,8 @@
 
     if (getConsent() === null) {
       showBanner();
-    } else if (getConsent() === "accepted" && window.BFG_ANALYTICS) {
-      window.BFG_ANALYTICS.enable();
+    } else if (getConsent() === "accepted" && window.SDG_ANALYTICS) {
+      window.SDG_ANALYTICS.enable();
     }
   }
 
@@ -193,8 +193,8 @@
             "ok",
             "Request received. We'll reply by email within one business day to confirm details and pricing."
           );
-          if (window.BFG_ANALYTICS) {
-            window.BFG_ANALYTICS.capture("quote_form_submitted", {
+          if (window.SDG_ANALYTICS) {
+            window.SDG_ANALYTICS.capture("quote_form_submitted", {
               event_type: data.get("event_type") || "unknown"
             });
           }

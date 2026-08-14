@@ -1,10 +1,9 @@
-/* Central brand + integration config.
-   PLACEHOLDER BRAND: "Blue Fairway Golf" — swap with tools/rename-brand.sh
-   once the real name is picked. Everything operational is set here so no
-   other file needs editing at go-live. */
+/* Central brand + integration config for Southern Drive Golf Co.
+   Everything operational is set here so no other file needs editing at
+   go-live: form endpoint, PostHog key, and the public starting price. */
 
 window.SITE_CONFIG = {
-  brandName: "Blue Fairway Golf",
+  brandName: "Southern Drive Golf Co",
   legalEntity: "WhittWorks Studios LLC",
   serviceArea: "Alabama",
 

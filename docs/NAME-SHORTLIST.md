@@ -1,5 +1,7 @@
 # Business Name Shortlist
 
+> **DECIDED 2026-08-13: Southern Drive Golf Co.** Domain southerndrivegolf.com unregistered at decision time (buy it promptly). Chosen with eyes open on one caveat: DriveSouth (drivesouthbama.com), an indoor Trackman club in Prattville, uses the reversed word order in the same industry and state. No exact-name business exists anywhere; four non-golf "Southern Drive" entities sit in the AL SoS registry, so file the LLC as "Southern Drive Golf Co LLC" for distinguishability. A USPTO clearance by an attorney is still recommended before filing.
+
 Two vetting rounds, 2026-08-13. Checks per name: .com registration via Verisign RDAP (404 = unregistered = available), Alabama Secretary of State entity search, and a web sweep for existing businesses. This is availability vetting, not a formal trademark clearance; run the winner past counsel before filing.
 
 **Method correction:** round one queried the AL SoS with GET, which that endpoint silently ignores (it returns "No matches found" for anything, including "walmart"). Every SoS result below has since been re-verified with the working POST method, sanity-checked against Walmart's six live Alabama entities. All availability claims below are from the corrected method.
