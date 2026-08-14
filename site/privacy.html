@@ -181,7 +181,7 @@
         </div>
 
         <h3>3.3 Hosting logs</h3>
-        <p>Our hosting provider serves these pages and may keep standard server logs as part of delivering and securing the Site. Such logs typically record information including without limitation the requesting IP address, the time of the request, the page requested, and the browser user agent. These logs are a function of web hosting rather than of anything we have configured for marketing, and we do not use them to build profiles of visitors.</p>
+        <p>Netlify, our hosting provider, serves these pages and may keep standard server logs as part of delivering and securing the Site. Such logs typically record information including without limitation the requesting IP address, the time of the request, the page requested, and the browser user agent. These logs are a function of web hosting rather than of anything we have configured for marketing, and we do not use them to build profiles of visitors.</p>
 
         <h2>4. Purposes of Processing</h2>
         <p>We process the information described above for the following purposes:</p>
@@ -206,7 +206,7 @@
         <h3>6.1 Service providers</h3>
         <ul>
           <li><strong>Formspree, our form processor.</strong> The form transmits quote request submissions to Formspree, which delivers them to our email inbox. The form endpoint is not yet configured. While it remains unconfigured, the form displays a notice and transmits nothing.</li>
-          <li><strong>Our hosting provider.</strong> The provider serves the pages of the Site and may keep the server logs described in section 3.3.</li>
+          <li><strong>Netlify, our hosting provider.</strong> Netlify serves the pages of the Site and may keep the server logs described in section 3.3.</li>
           <li><strong>PostHog, our analytics processor.</strong> PostHog receives usage data only after you accept analytics on the cookie banner, and receives nothing before that point.</li>
         </ul>
         <p>These providers process information to supply their service to us. They are not authorized to use your information for their own marketing.</p>
@@ -231,6 +231,10 @@
 
         <h3>9.1 California notice</h3>
         <p>We post this policy in accordance with the California Online Privacy Protection Act, which requires an operator of a commercial website to post a policy identifying the categories of information collected and the categories of third parties with whom it is shared. Sections 2, 3, and 6 provide those disclosures.</p>
+
+        <h3>9.2 Browser privacy signals</h3>
+        <p>Some browsers and extensions send a universal opt-out signal on your behalf. The Site honours two of them: Global Privacy Control, transmitted as the <code>Sec-GPC</code> header and the <code>navigator.globalPrivacyControl</code> property, and the older Do Not Track signal.</p>
+        <p>Where either signal is present, the Site treats it as a decision already made. Analytics is not loaded, no analytics cookie or storage entry is created, and the consent banner does not appear, because there is nothing further to ask. This behaviour applies whether or not you have previously accepted analytics, and it cannot be overridden from within the Site.</p>
 
         <h2>10. Children's Privacy</h2>
         <p>The Site is not directed to children under 13, and we do not knowingly collect personal information from anyone under 13. If you believe a child under 13 has submitted information to us, submit a request through the <a href="quote.html">quote request form</a> and we will delete it.</p>

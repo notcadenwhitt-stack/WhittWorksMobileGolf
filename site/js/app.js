@@ -188,19 +188,41 @@
     if (accept) accept.addEventListener("click", function () { applyConsent("accepted"); });
     if (decline) decline.addEventListener("click", function () { applyConsent("declined"); });
 
-    if (getConsent() === null) {
+    /* A Global Privacy Control or Do Not Track signal is already an answer.
+       Asking again would be asking someone to repeat themselves. */
+    if (window.SDG_SIGNAL_OPT_OUT) {
+      hideBanner();
+    } else if (getConsent() === null) {
       showBanner();
     } else if (getConsent() === "accepted" && window.SDG_ANALYTICS) {
       window.SDG_ANALYTICS.enable();
     }
   }
 
-  /* Footer "Cookie preferences" reopens the banner on any page */
+  /* Footer "Cookie preferences" reopens the banner on any page. Where the
+     browser sends an opt-out signal there is nothing to choose, so the
+     banner explains that instead of offering a button that would do
+     nothing. */
   var prefBtn = document.getElementById("cookiePrefs");
   if (prefBtn) {
     prefBtn.addEventListener("click", function () {
-      showBanner();
       var accept2 = document.getElementById("consentAccept");
+      var decline2 = document.getElementById("consentDecline");
+
+      if (window.SDG_SIGNAL_OPT_OUT) {
+        var msg = banner && banner.querySelector("p");
+        if (msg) {
+          msg.textContent =
+            "Your browser is sending a Do Not Track or Global Privacy Control signal, so analytics is switched off and nothing is stored. No further choice is needed.";
+        }
+        if (accept2) accept2.classList.add("is-hidden");
+        if (decline2) decline2.textContent = "Got it";
+        showBanner();
+        if (decline2) decline2.focus();
+        return;
+      }
+
+      showBanner();
       if (accept2) accept2.focus();
     });
   }

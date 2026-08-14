@@ -14,8 +14,25 @@
   var CFG = window.SITE_CONFIG || {};
   var loaded = false;
 
+  /* Universal opt-out signals. Global Privacy Control is the one with legal
+     weight (California and ten other states treat it as a binding opt-out);
+     Do Not Track is the older voluntary signal. We honour both, and we treat
+     either as a final answer: analytics never loads and the consent banner
+     never appears, because there is nothing left to ask. */
+  function optedOutBySignal() {
+    try {
+      if (navigator.globalPrivacyControl === true) return true;
+      var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      return dnt === "1" || dnt === 1 || dnt === "yes";
+    } catch (e) {
+      return false;
+    }
+  }
+
+  window.SDG_SIGNAL_OPT_OUT = optedOutBySignal();
+
   function loadPostHog() {
-    if (loaded || !CFG.posthogKey) return;
+    if (loaded || !CFG.posthogKey || optedOutBySignal()) return;
     loaded = true;
 
     /* Official PostHog snippet (verbatim loader) */
