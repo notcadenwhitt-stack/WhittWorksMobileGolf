@@ -13,7 +13,7 @@ window.SITE_CONFIG = {
 
   /* PostHog project API key (publishable, starts with "phc_").
      Empty = analytics never loads. Loading also requires cookie consent. */
-  posthogKey: "",
+  posthogKey: "phc_vYnZPGSe2BsqmGJyf6TrdAJT5YXw2N847aQxHPsG33YU",
   posthogHost: "https://us.i.posthog.com",
 
   /* Shown on the site once confirmed, e.g. "750". Empty hides price mentions. */
