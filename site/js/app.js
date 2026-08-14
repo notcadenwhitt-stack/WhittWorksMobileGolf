@@ -34,6 +34,33 @@
     if (href === here) a.setAttribute("aria-current", "page");
   });
 
+  /* ---------- Hero video: load only where it's welcome ----------
+     The 1080p loop is ~17MB, so it loads only on wide screens, when the
+     visitor hasn't asked for reduced motion, and when the connection
+     isn't flagged Save-Data. Everyone else keeps the photo background. */
+  var heroVideo = document.querySelector(".hero-video[data-src]");
+  if (heroVideo) {
+    var wideEnough = window.matchMedia("(min-width: 48rem)").matches;
+    var wantsMotion = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var conn = navigator.connection || {};
+    var savingData = conn.saveData === true;
+    if (wideEnough && wantsMotion && !savingData) {
+      heroVideo.src = heroVideo.getAttribute("data-src");
+      var tryPlay = function () {
+        if (heroVideo.paused) {
+          heroVideo.play().catch(function () {
+            /* autoplay refused: poster/photo background stands in */
+          });
+        }
+      };
+      tryPlay();
+      heroVideo.addEventListener("loadeddata", tryPlay);
+      document.addEventListener("visibilitychange", function () {
+        if (!document.hidden) tryPlay();
+      });
+    }
+  }
+
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById("footYear");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());

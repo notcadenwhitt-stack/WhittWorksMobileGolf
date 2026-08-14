@@ -20,4 +20,6 @@ Pexels license: free for commercial use, no attribution required, modification a
 
 Pixabay license: free for commercial use, no attribution required, modification allowed (verified at pixabay.com/service/license-summary during the build).
 
+| site/assets/video/hero-golf.mp4 | Home hero background video (desktop, motion-allowed, non-Save-Data visitors only) | https://www.pexels.com/video/3140211/ | per Pexels video page (downloaded by Caden from Pexels, 2026-08-13) | Pexels | Pexels License | No |
+
 More rows land here from the media research brief (background video loops still pending; no video was added in the gallery image pass).
