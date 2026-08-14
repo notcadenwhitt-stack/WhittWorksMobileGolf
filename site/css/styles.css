@@ -305,7 +305,7 @@ body:not(:has(.video-pin)) {
   z-index: 0;
   background:
     linear-gradient(rgba(8, 28, 51, 0.55), rgba(8, 28, 51, 0.72)),
-    url("../assets/img/hero-golf.jpg") center 30% / cover no-repeat;
+    url("../assets/img/hero-poster.jpg") center center / cover no-repeat;
 }
 
 /* Once the pinned block is behind us, stop compositing the video */
