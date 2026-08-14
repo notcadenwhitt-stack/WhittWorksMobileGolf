@@ -251,6 +251,11 @@
       var type = document.getElementById("q-type");
       var city = document.getElementById("q-city");
 
+      /* Privacy and accessibility requests are not bookings, so the event
+         fields do not apply. The policies route those requests here, and
+         demanding an event date for a deletion request would be absurd. */
+      var isNonEvent = type.value === "privacy_request";
+
       var bad = false;
       bad = fieldError(name, name.value.trim() ? "" : "Please enter your name.") || bad;
       bad = fieldError(
@@ -260,9 +265,15 @@
           : "Please enter a valid email address."
       ) || bad;
       bad = fieldError(type, type.value ? "" : "Please choose an event type.") || bad;
-      bad = fieldError(city, city.value.trim() ? "" : "Please enter the event city or town.") || bad;
-      if (date) {
-        bad = fieldError(date, date.value ? "" : "Please pick an event date (best guess is fine).") || bad;
+
+      if (isNonEvent) {
+        fieldError(city, "");
+        if (date) fieldError(date, "");
+      } else {
+        bad = fieldError(city, city.value.trim() ? "" : "Please enter the event city or town.") || bad;
+        if (date) {
+          bad = fieldError(date, date.value ? "" : "Please pick an event date (best guess is fine).") || bad;
+        }
       }
 
       if (bad) {

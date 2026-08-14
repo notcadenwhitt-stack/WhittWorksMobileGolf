@@ -53,13 +53,26 @@
     <section class="section">
       <div class="wrap legal-body">
         <h1>Cookie Policy</h1>
-        <p><strong>Last updated:</strong> August 13, 2026</p>
+        <p><strong>Effective date:</strong> 13 August 2026</p>
+        <p><strong>Last updated:</strong> 13 August 2026</p>
 
-        <h2>What cookies are</h2>
-        <p>Cookies and localStorage are small pieces of data a website stores in your browser. Cookies get sent back to the server with each request; localStorage stays in the browser and is read only by scripts on the site that set it. Both let a site remember something between visits, like a choice you made or an anonymous ID.</p>
+        <h2>1. Purpose of This Policy</h2>
+        <p>Southern Drive Golf Co ("we", "us", "our"), a trade name of WhittWorks Studios LLC, operates this website (the "Site") and rents a mobile golf simulator for events throughout the State of Alabama. This policy explains the cookies and similar browser storage technologies the Site uses, who sets them, what they do, and how you ("you", "your") control them.</p>
+        <p>This policy addresses storage technologies only. Our <a href="privacy.html">Privacy Policy</a> governs the information you submit through the quote request form and how we handle it. Read the two documents together. Where this policy describes a storage technology in detail, that description controls over any shorter summary of the same technology elsewhere on the Site.</p>
 
-        <h2>What this site stores</h2>
-        <p>Once you make a choice on the consent banner, this site stores two localStorage entries so it can remember that decision. If you never respond to the banner, nothing is stored at all. It sets PostHog's analytics cookie and localStorage entries only if you click Accept on the consent banner. If you decline, or never respond, PostHog never loads and none of its entries get created.</p>
+        <h2>2. What Cookies and Similar Technologies Are</h2>
+        <p>A cookie is a small text file that a website asks your browser to store. Your browser returns that file to the server it came from with each subsequent request to the same domain, which allows the server to recognize a returning browser.</p>
+        <p>Browser local storage (technically the Web Storage API, and referred to below as "local storage") holds named values in your browser. Unlike a cookie, local storage is not attached to network requests. Only scripts served from the same website can read it, and it persists until a script or you remove it.</p>
+        <p>Both technologies store data on your device rather than on our servers, and neither grants access to files, contacts, or hardware on your device. This policy refers to them together as "storage technologies".</p>
+
+        <h2>3. Our Approach to Consent</h2>
+        <p><strong>No analytics technology loads on the Site before you accept it.</strong> The PostHog analytics script is not requested, downloaded, or executed until you click "Accept analytics" on the consent banner. Until that moment, your browser makes no connection to PostHog, and no analytics cookie or local storage entry exists.</p>
+        <p>If you decline, or if you close or ignore the banner without answering, the result is the same: the script is never requested and PostHog sets nothing.</p>
+        <p>This approach is stricter than the common alternative, in which a site loads an analytics library on every page and then instructs it not to collect data. Under that arrangement the third-party script still runs in your browser and still contacts the vendor's servers. On this Site the script is never fetched at all unless you accept.</p>
+        <p>No general United States law requires cookie consent for a business of this type, and the Site serves visitors in the United States. We operate the banner as a voluntary practice.</p>
+
+        <h2>4. Technologies Used on This Site</h2>
+        <p>The Site writes the two consent records below once you answer the banner, and only then. If you never answer, the Site stores nothing. The two PostHog entries exist only if you accept analytics. In the names below, &lt;project_api_key&gt; stands for the public project identifier of our PostHog project.</p>
 
         <div class="table-scroll">
           <table>
@@ -75,73 +88,120 @@
             <tbody>
               <tr>
                 <td>sdg-consent</td>
-                <td>localStorage</td>
-                <td>This site (after you choose)</td>
-                <td>Remembers whether you accepted or declined analytics</td>
-                <td>Until you clear it or change your choice</td>
+                <td>Browser local storage</td>
+                <td>This Site</td>
+                <td>Records your consent choice, so the banner does not ask again on every page</td>
+                <td>Persists until you clear it or change your choice</td>
               </tr>
               <tr>
                 <td>sdg-consent-at</td>
-                <td>localStorage</td>
-                <td>This site (after you choose)</td>
-                <td>Records the date and time of your consent choice</td>
-                <td>Until you clear it or change your choice</td>
+                <td>Browser local storage</td>
+                <td>This Site</td>
+                <td>Records the date and time of that choice, as an ISO timestamp</td>
+                <td>Persists until you clear it or change your choice</td>
               </tr>
               <tr>
-                <td>ph_&lt;project-id&gt;_posthog</td>
+                <td>ph_&lt;project_api_key&gt;_posthog</td>
                 <td>Cookie</td>
-                <td>PostHog (only after you accept)</td>
-                <td>Stores an anonymous distinct ID and session ID so repeat visits can be recognized</td>
+                <td>PostHog</td>
+                <td>Holds a distinct identifier and a session identifier, which let the analytics service count visits and follow a path through the Site</td>
                 <td>365 days</td>
               </tr>
               <tr>
-                <td>ph_&lt;project-id&gt;_posthog</td>
-                <td>localStorage</td>
-                <td>PostHog (only after you accept)</td>
-                <td>Stores feature flag state, session data, and analytics configuration</td>
-                <td>Until you clear them or decline analytics; declining deletes PostHog's stored entries</td>
+                <td>ph_&lt;project_api_key&gt;_posthog entries</td>
+                <td>Browser local storage</td>
+                <td>PostHog</td>
+                <td>Hold feature flag state and analytics configuration under the same name prefix</td>
+                <td>Persist until you clear them or withdraw consent</td>
               </tr>
             </tbody>
           </table>
         </div>
 
-        <p>We don't use advertising or retargeting cookies, and we don't allow other companies to set cookies on this site for their own purposes.</p>
+        <p>We use PostHog on its US Cloud service for product analytics: which pages visitors view, how they move through the Site, and whether they reach the quote request form.</p>
 
-        <h2>How to change your choice</h2>
-        <p>You can accept or decline analytics at any time using the "Cookie preferences" button in the footer of every page. Declining stops PostHog from loading on future visits and deletes any entries it stored earlier.</p>
-        <p>You can also control cookies and localStorage directly through your browser settings, which let you block, clear, or get notified about site storage. Blocking storage entirely may affect how the consent banner remembers your choice, since that itself relies on localStorage.</p>
+        <h2>5. Technologies We Do Not Use</h2>
+        <p>The Site does not use, and does not permit any third party to place:</p>
+        <ul>
+          <li>Advertising or retargeting cookies.</li>
+          <li>Third-party marketing or conversion pixels.</li>
+          <li>Cross-site or cross-device tracking of any kind.</li>
+          <li>Session recording, session replay, or capture of your keystrokes or screen.</li>
+          <li>Authentication or payment cookies, because the Site has no accounts, no logins, no passwords, and no payment processing.</li>
+        </ul>
+        <p>We do not sell, rent, or trade your personal information or analytics data, and we do not permit other companies to set storage technologies on the Site for their own purposes.</p>
+
+        <h2>6. Managing Your Choices</h2>
+
+        <h3>6.1 The cookie preferences control</h3>
+        <p>The "Cookie preferences" control in the footer of every page reopens the consent banner, so you may change your answer at any time and as often as you wish.</p>
+        <p>If you withdraw consent, PostHog does not load on that page or on later visits, and the Site deletes the PostHog cookie and local storage entries it previously set.</p>
+
+        <h3>6.2 Your browser controls</h3>
+        <p>Your browser can block, inspect, and clear cookies and local storage for any website, including this one. The settings sit under privacy or site data in most browsers, and each browser's help documentation explains the exact steps.</p>
+
+        <h3>6.3 Effect of clearing storage</h3>
+        <p>Clearing site data removes the sdg-consent and sdg-consent-at records along with everything else, so the Site no longer knows what you chose and the banner appears again on your next visit. Blocking storage entirely produces the same result on every visit, since the record of your choice cannot persist.</p>
+
+        <h2>7. Changes to This Policy</h2>
+        <p>We may revise this policy as the Site or the technologies it uses change. The effective date and the last updated date at the top of this page identify the current version, which supersedes any earlier version. We will post a material change here before it takes effect.</p>
+
+        <h2>8. Contact</h2>
+        <p>Direct any question about this policy through the <a href="quote.html">quote request form</a> on the Site. We do not publish an email address or telephone number, so the form is the route to us. Select "Not an event: a privacy or accessibility request" as the event type, and we will handle it accordingly.</p>
+        <p>The form transmits through Formspree, a third-party form processor, which delivers messages to our inbox. If the form is not configured to transmit, it displays a notice on the page and sends nothing.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <h2>Southern Drive Golf Co</h2>
-          <p>Mobile golf simulator rentals for parties, corporate events, and fundraisers across Alabama. We bring the course to you.</p>
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="foot-logo" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <rect width="64" height="64" rx="14" fill="#1B5FAA"/>
+              <circle cx="26" cy="38" r="14" fill="#FFFFFF"/>
+              <rect x="42" y="10" width="3" height="34" rx="1.5" fill="#FFFFFF"/>
+              <path d="M45 12 L58 17 L45 22 Z" fill="#DCEAF7"/>
+            </svg>
+            <span>Southern Drive Golf Co</span>
+          </a>
+          <p class="foot-blurb">A premium golf simulator, delivered and staffed, for parties, corporate events, and fundraisers across Alabama.</p>
+          <p class="foot-area"><span aria-hidden="true">&#9679;</span> Serving all of Alabama</p>
         </div>
-        <div>
-          <h2>Explore</h2>
-          <ul>
-            <li><a href="events.html">Events we serve</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="quote.html">Get a quote</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Legal</h2>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="cookies.html">Cookie Policy</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><button type="button" class="linklike" id="cookiePrefs">Cookie preferences</button></li>
-          </ul>
-        </div>
+
+        <nav class="foot-nav" aria-label="Footer">
+          <div class="foot-col">
+            <h2>Explore</h2>
+            <ul>
+              <li><a href="events.html">Events we serve</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="foot-col">
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><button type="button" class="linklike" id="cookiePrefs">Cookie preferences</button></li>
+            </ul>
+          </div>
+          <div class="foot-col foot-cta">
+            <h2>Book your date</h2>
+            <p>Tell us about your event and we'll be in touch.</p>
+            <a class="btn btn-primary" href="quote.html">Get a quote</a>
+          </div>
+        </nav>
       </div>
-      <p>&copy; <span id="footYear">2026</span> Southern Drive Golf Co, operated by WhittWorks Studios LLC. Serving all of Alabama.</p>
+
+      <div class="foot-bottom">
+        <p class="foot-legal">&copy; <span id="footYear">2026</span> Southern Drive Golf Co. Operated by WhittWorks Studios LLC.</p>
+        <p class="foot-built">Mobile golf simulator rentals, Alabama</p>
+      </div>
     </div>
   </footer>
 

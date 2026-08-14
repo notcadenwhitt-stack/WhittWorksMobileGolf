@@ -43,7 +43,11 @@
     window.posthog.init(CFG.posthogKey, {
       api_host: CFG.posthogHost || "https://us.i.posthog.com",
       defaults: "2026-05-30",
-      person_profiles: "identified_only"
+      person_profiles: "identified_only",
+      /* The Cookie Policy and Privacy Policy both state that this site does
+         not record sessions. Enforce that here rather than relying on a
+         project-level setting that could be toggled elsewhere. */
+      disable_session_recording: true
     });
   }
 
@@ -74,11 +78,21 @@
           if (key && key.indexOf("ph_") === 0) doomed.push(key);
         }
         doomed.forEach(function (k) { localStorage.removeItem(k); });
+        /* PostHog sets its cookie against the registered domain, so expiring
+           it only on the exact host leaves it behind on www vs apex. Expire
+           it on the host and on each parent domain. */
+        var hostParts = location.hostname.split(".");
+        var scopes = [""];
+        for (var h = 0; h < hostParts.length - 1; h++) {
+          scopes.push("; domain=." + hostParts.slice(h).join("."));
+        }
         document.cookie.split(";").forEach(function (c) {
           var name = c.split("=")[0].trim();
-          if (name.indexOf("ph_") === 0) {
-            document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
-          }
+          if (name.indexOf("ph_") !== 0) return;
+          scopes.forEach(function (scope) {
+            document.cookie =
+              name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/" + scope;
+          });
         });
       } catch (e) {
         /* storage unavailable; nothing persisted anyway */

@@ -6,13 +6,13 @@
   <meta name="robots" content="noindex">
 
   <title>Accessibility Statement | Southern Drive Golf Co</title>
-  <meta name="description" content="Our accessibility commitment, the WCAG 2.2 AA checks this site was built and tested against, and how to reach us if something isn't working for you.">
+  <meta name="description" content="Our accessibility commitment, the WCAG 2.1 Level AA standard this site is designed against, and how to reach us if something isn't working for you.">
   <link rel="canonical" href="https://southerndrivegolf.com/accessibility.html">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://southerndrivegolf.com/accessibility.html">
   <meta property="og:title" content="Accessibility Statement | Southern Drive Golf Co">
-  <meta property="og:description" content="Our accessibility commitment, the WCAG 2.2 AA checks this site was built and tested against, and how to reach us if something isn't working for you.">
+  <meta property="og:description" content="Our accessibility commitment, the WCAG 2.1 Level AA standard this site is designed against, and how to reach us if something isn't working for you.">
   <meta property="og:image" content="https://southerndrivegolf.com/assets/img/og-image.jpg">
   <meta property="og:image:alt" content="A golfer swings inside a lit inflatable golf simulator at an evening event">
   <meta name="twitter:card" content="summary_large_image">
@@ -53,66 +53,171 @@
     <section class="section">
       <div class="wrap legal-body">
         <h1>Accessibility Statement</h1>
-        <p><strong>Last updated:</strong> August 13, 2026</p>
+        <p><strong>Effective date:</strong> 13 August 2026</p>
+        <p><strong>Last updated:</strong> 13 August 2026</p>
 
-        <h2>Our commitment</h2>
-        <p>We want anyone visiting this site, including people using a keyboard, a screen reader, or assistive technology, to be able to find our services and submit a quote request without running into barriers. Accessibility is something we build in, not a step we add at the end.</p>
+        <p>Southern Drive Golf Co ("we", "us", "our"), a trade name of WhittWorks Studios LLC, publishes this statement for this website (the "Site"). It sets out the accessibility standard we design against, the measures we have taken, the limitations we know of, and how you ("you", "your") can report a barrier or ask for assistance.</p>
 
-        <h2>Target standard</h2>
-        <p>We built this site to meet the Web Content Accessibility Guidelines (WCAG) 2.2 at Level AA. That standard covers things like color contrast, keyboard access, clear labeling, and compatibility with screen readers.</p>
+        <h2>1. Our Commitment</h2>
+        <p>We intend the Site to be usable by the widest practicable audience, including visitors who navigate by keyboard alone, use a screen reader, magnify the page, rely on speech input, or use other assistive technology. We build accessibility in during design and check it before launch.</p>
+        <p>Southern Drive Golf Co rents mobile golf simulators for events throughout the State of Alabama. We transport the equipment to the client's venue, set it up, staff it with an attendant, and remove it afterward. We do not operate a fixed venue, so the Site is the main way a prospective client learns what we offer and starts a booking. We give the quote request path priority in accessibility work, and hold the remaining pages to the same standard.</p>
 
-        <h2>What we checked</h2>
-        <p>Before launch, we checked this site for:</p>
+        <h2>2. Conformance Target</h2>
+        <p>We design and build the Site against the Web Content Accessibility Guidelines (WCAG) 2.1 at Level AA. That standard is our benchmark for contrast, keyboard operability, labeling, page structure, and compatibility with assistive technology.</p>
+        <p>We do not claim full conformance with WCAG 2.1 Level AA, for two reasons. First, automated testing detects only a portion of accessibility barriers: a scanner can measure a contrast ratio or find a missing label, but it cannot judge whether a heading describes the content beneath it, or whether a task still makes sense when it is announced aloud rather than seen. Second, manual testing cannot cover every combination of assistive technology, browser, operating system, and device in use. A conformance claim would assert more than we have verified, so we state our target and our measures instead.</p>
+
+        <h2>3. Measures Taken</h2>
+        <p>We built and checked the following. We reviewed each item by hand rather than accepting a scanner's word for it.</p>
+
+        <h3>Structure and navigation</h3>
         <ul>
-          <li><strong>Keyboard navigation:</strong> every link, button, and form field can be reached and used without a mouse.</li>
-          <li><strong>Visible focus:</strong> the element you've tabbed to is clearly outlined so you always know where you are.</li>
-          <li><strong>Color contrast:</strong> text and interface elements meet WCAG 2.2 AA contrast ratios against their backgrounds.</li>
-          <li><strong>Alt text:</strong> images carry descriptive alternative text, or are marked decorative when they add no information.</li>
-          <li><strong>Form labels:</strong> every field on the quote form has a clear, programmatically associated label.</li>
-          <li><strong>Reduced motion:</strong> visitors who set a reduced-motion preference in their operating system see fewer or no animations.</li>
-          <li><strong>Screen-reader landmarks:</strong> the page uses proper heading structure and landmark regions (header, main, footer, navigation) so screen-reader users can jump between sections.</li>
+          <li>Semantic HTML landmarks on every page (banner, navigation, main content, footer) so assistive technology can move between regions.</li>
+          <li>One heading of the highest level per page, and a heading order that descends without skipping a level.</li>
+          <li>A skip-to-content link as the first focusable element on every page, revealed when it receives focus.</li>
+          <li>Keyboard operability throughout: every link, button, menu control, and form field can be reached and used without a pointing device.</li>
+          <li>Visible focus indicators on every interactive element, including elements placed over photography and inside the consent banner, where a default outline would be hard to see.</li>
+          <li>The current page marked programmatically in the main navigation, and the mobile menu closable with the Escape key, which returns focus to the control that opened it.</li>
         </ul>
 
-        <h2>Known limitations</h2>
-        <p>We tested this site carefully, but no site is perfect. Areas that haven't had a full manual review with assistive technology include the photo gallery at every viewport size, and the quote form's behavior across every screen reader and browser pairing beyond the ones we checked. If you find something that doesn't work well with your setup, we want to know so we can fix it.</p>
+        <h3>Forms and error messages</h3>
+        <ul>
+          <li>Every field on the quote request form carries a visible label that is programmatically associated with its control.</li>
+          <li>Optional fields say so in the label text, so the requirement is clear whether the label is read on screen or announced.</li>
+          <li>Validation messages appear inline beneath the field they concern, are linked to that field, are announced through a polite live region, and mark the field as invalid.</li>
+          <li>Where a submission fails validation, focus moves to the first field that needs attention.</li>
+          <li>Submission status messages appear in a live status region rather than in a pop-up or an alert dialog.</li>
+          <li>The hidden anti-spam field is removed from the tab order and hidden from assistive technology, so it cannot trap or mislead a visitor.</li>
+        </ul>
 
-        <h2>Automated checks only go so far</h2>
-        <p>We ran automated accessibility scans as part of building this site, but automated tools catch a limited slice of real accessibility problems. They can't tell us whether a screen reader announces something in a sensible order, or whether a workflow actually makes sense for someone using assistive technology. Because of that gap, we don't claim full conformance with WCAG 2.2 AA. What we can say is that we built with these standards as the target and checked against them by hand, not just with a scanner.</p>
+        <h3>Presentation and media</h3>
+        <ul>
+          <li>Text and interface colors checked against WCAG Level AA contrast ratios for their backgrounds.</li>
+          <li>Alternative text on informative images. Decorative graphics, including the brand mark and icon shapes, are hidden from assistive technology so they are not announced.</li>
+          <li>Support for the operating system reduced-motion preference: animation and transitions are suppressed, and background video is neither loaded nor played, for visitors who set that preference.</li>
+          <li>Images declare their intrinsic dimensions, so text does not shift position while a page loads.</li>
+          <li>A responsive layout that reflows down to small screen widths without horizontal scrolling, with wide content such as tables placed in a container that scrolls on its own.</li>
+        </ul>
 
-        <h2>Report a problem</h2>
-        <p>If you run into an accessibility barrier anywhere on this site, tell us through the <a href="quote.html">quote form</a>. Describe the page, what you were trying to do, and what happened, and we'll look into it.</p>
+        <h2>4. Known Limitations</h2>
+        <p>We report the following rather than wait until each is resolved.</p>
+
+        <div class="table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Area</th>
+                <th scope="col">Known limitation</th>
+                <th scope="col">Present state</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Photo gallery</td>
+                <td>It has not had a full manual review at every viewport size with every assistive technology.</td>
+                <td>Images carry alternative text and the page is operable by keyboard. Systematic review across viewports and assistive technology remains outstanding.</td>
+              </tr>
+              <tr>
+                <td>Quote request form</td>
+                <td>We tested it with a limited set of screen reader and browser pairings, not the full range in use.</td>
+                <td>Labels, focus order, inline errors, and status messages were reviewed by hand in the pairings we tested. Wider coverage remains outstanding.</td>
+              </tr>
+              <tr>
+                <td>Third-party services</td>
+                <td>Code we neither write nor control.</td>
+                <td>The Site uses Formspree to process form submissions and PostHog for analytics. Neither renders a visible interface on the Site, and PostHog does not load unless you accept analytics on the consent banner.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>The quote request form is not yet connected to its processing endpoint. Until that connection is made, the form validates your entries and then displays a notice on the page, and transmits nothing.</p>
+
+        <h2>5. Feedback and Assistance</h2>
+        <p>If any part of the Site presents a barrier, tell us through the <a href="quote.html">quote request form</a>. Include as much of the following as you can:</p>
+        <ul>
+          <li>The page you were on.</li>
+          <li>What you were trying to do.</li>
+          <li>What happened instead.</li>
+          <li>Your browser and operating system.</li>
+          <li>Your assistive technology and its version, if you use one.</li>
+        </ul>
+        <p>We review the reports we receive and reply to the contact details you supply. We treat barriers on the quote request path as the priority, because that path is how a booking starts.</p>
+        <p>You do not have to use the Site to book with us. Where the Site presents a barrier, we will arrange an alternative: tell us through the quote request form and we will arrange another way to take your details and complete the booking, at no disadvantage in price or availability. If you give us a telephone number we can call you to finish the process. The telephone field on the quote request form is optional. If you give us a number, you agree that we may call or text you about that event booking and its coordination. Consent is not required to request a quote, message and data rates may apply, and replying STOP opts you out. We do not send marketing messages.</p>
+        <p>However it reaches us, a quote request is a request and not a confirmed booking. We hold a date with a signed agreement and a deposit, arranged during the quote process, with the balance due closer to the event date.</p>
+
+        <h2>6. Legal Context</h2>
+        <p>No controlling federal regulation currently prescribes a technical accessibility standard for private commercial websites in the United States, and the Eleventh Circuit, whose jurisdiction includes Alabama, has not established controlling precedent that fixes one. We do not read that absence as permission. We adopt WCAG 2.1 Level AA as the appropriate practical benchmark, because it is the most widely used technical description of what an accessible site does, and because a visitor blocked by a barrier is blocked regardless of which rule does or does not apply.</p>
+        <p>This section describes our approach. It is not legal advice, and it states nothing about the obligations of any other party.</p>
+
+        <h2>7. Assessment Approach</h2>
+        <p>We assessed the Site by manual review during development, supported by automated checks. The manual review covered:</p>
+        <ul>
+          <li>Keyboard-only passes through every page, and through the quote request form including its error states.</li>
+          <li>Inspection of landmark regions and heading order on every page.</li>
+          <li>Measurement of text and interface contrast against WCAG Level AA ratios.</li>
+          <li>Review of each image's alternative text against what that image conveys.</li>
+          <li>Confirmation that the reduced-motion preference suppresses animation and prevents video from loading.</li>
+          <li>Layout checks at small, medium, and large screen widths.</li>
+        </ul>
+        <p>We ran automated accessibility scans as a supplement to that review, not as the review itself. We have not commissioned a third-party accessibility audit, we hold no accessibility certification or accreditation, and we make no claim that any external party has evaluated the Site. We reassess when we add pages, change page structure, or change the quote request form.</p>
+
+        <h2>8. Contact</h2>
+        <p>Send accessibility feedback, requests for assistance, and questions about this statement through the <a href="quote.html">quote request form</a>. We do not publish an email address or telephone number on the Site, so the form is the route for reaching us.</p>
+        <p>We update this statement when we change the Site, or when we learn of a barrier and address it. The dates at the top of this page reflect the current version.</p>
+        <p>Southern Drive Golf Co, a trade name of WhittWorks Studios LLC. Mobile golf simulator rental for events throughout the State of Alabama.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <div class="foot-grid">
-        <div>
-          <h2>Southern Drive Golf Co</h2>
-          <p>Mobile golf simulator rentals for parties, corporate events, and fundraisers across Alabama. We bring the course to you.</p>
+      <div class="foot-top">
+        <div class="foot-brand">
+          <a class="foot-logo" href="index.html">
+            <svg width="34" height="34" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+              <rect width="64" height="64" rx="14" fill="#1B5FAA"/>
+              <circle cx="26" cy="38" r="14" fill="#FFFFFF"/>
+              <rect x="42" y="10" width="3" height="34" rx="1.5" fill="#FFFFFF"/>
+              <path d="M45 12 L58 17 L45 22 Z" fill="#DCEAF7"/>
+            </svg>
+            <span>Southern Drive Golf Co</span>
+          </a>
+          <p class="foot-blurb">A premium golf simulator, delivered and staffed, for parties, corporate events, and fundraisers across Alabama.</p>
+          <p class="foot-area"><span aria-hidden="true">&#9679;</span> Serving all of Alabama</p>
         </div>
-        <div>
-          <h2>Explore</h2>
-          <ul>
-            <li><a href="events.html">Events we serve</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="quote.html">Get a quote</a></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Legal</h2>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="cookies.html">Cookie Policy</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><button type="button" class="linklike" id="cookiePrefs">Cookie preferences</button></li>
-          </ul>
-        </div>
+
+        <nav class="foot-nav" aria-label="Footer">
+          <div class="foot-col">
+            <h2>Explore</h2>
+            <ul>
+              <li><a href="events.html">Events we serve</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div>
+          <div class="foot-col">
+            <h2>Legal</h2>
+            <ul>
+              <li><a href="privacy.html">Privacy Policy</a></li>
+              <li><a href="terms.html">Terms of Service</a></li>
+              <li><a href="cookies.html">Cookie Policy</a></li>
+              <li><a href="accessibility.html">Accessibility</a></li>
+              <li><button type="button" class="linklike" id="cookiePrefs">Cookie preferences</button></li>
+            </ul>
+          </div>
+          <div class="foot-col foot-cta">
+            <h2>Book your date</h2>
+            <p>Tell us about your event and we'll be in touch.</p>
+            <a class="btn btn-primary" href="quote.html">Get a quote</a>
+          </div>
+        </nav>
       </div>
-      <p>&copy; <span id="footYear">2026</span> Southern Drive Golf Co, operated by WhittWorks Studios LLC. Serving all of Alabama.</p>
+
+      <div class="foot-bottom">
+        <p class="foot-legal">&copy; <span id="footYear">2026</span> Southern Drive Golf Co. Operated by WhittWorks Studios LLC.</p>
+        <p class="foot-built">Mobile golf simulator rentals, Alabama</p>
+      </div>
     </div>
   </footer>
 
