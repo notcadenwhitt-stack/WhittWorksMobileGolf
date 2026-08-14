@@ -46,6 +46,10 @@
     var savingData = conn.saveData === true;
     if (wideEnough && wantsMotion && !savingData) {
       heroVideo.src = heroVideo.getAttribute("data-src");
+      heroVideo.playbackRate = 0.5; /* half speed: a calmer flyover */
+      heroVideo.addEventListener("loadedmetadata", function () {
+        heroVideo.playbackRate = 0.5;
+      });
       var tryPlay = function () {
         if (heroVideo.paused) {
           heroVideo.play().catch(function () {
@@ -68,15 +72,21 @@
      the island fades in and locks at the top; scroll back up above that
      line and it hides again. Bound to live scroll position both ways,
      not a one-time reveal. */
-  var heroSection = document.querySelector(".hero");
+  var videoBlock = document.querySelector(".video-pin") || document.querySelector(".hero");
   var siteHeader = document.querySelector(".site-header");
-  if (heroSection && siteHeader) {
-    var toggleHeader = function () {
-      siteHeader.classList.toggle("is-revealed", window.scrollY >= heroSection.offsetHeight);
+  var pinnedBackdrop = document.querySelector(".video-pin-sticky");
+  if (videoBlock && siteHeader) {
+    var onScroll = function () {
+      var blockBottom = videoBlock.offsetTop + videoBlock.offsetHeight;
+      var past = window.scrollY >= blockBottom;
+      siteHeader.classList.toggle("is-revealed", past);
+      /* The locked video is covered by the opaque sections below, but
+         hiding it stops the browser compositing footage nobody can see. */
+      if (pinnedBackdrop) pinnedBackdrop.classList.toggle("is-past", past);
     };
-    window.addEventListener("scroll", toggleHeader, { passive: true });
-    window.addEventListener("resize", toggleHeader);
-    toggleHeader();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    onScroll();
   }
 
   /* ---------- Footer year ---------- */

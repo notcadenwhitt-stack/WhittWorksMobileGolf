@@ -2,6 +2,16 @@
    Blue-first palette. Every text/background pair targets WCAG AA
    (4.5:1 normal, 3:1 large). Contrast validated in the a11y pass. */
 
+/* Display face for the hero slogan. Self-hosted (no Google connection, no
+   visitor IPs leaving the site, and font-src 'self' covers it in the CSP). */
+@font-face {
+  font-family: "Oswald";
+  src: url("../assets/fonts/oswald-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Palette */
   --navy-950: #081C33;
@@ -182,21 +192,21 @@ body.has-banner { padding-bottom: 14rem; }
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-body:has(.hero) .site-header {
+body:has(.video-pin) .site-header {
   opacity: 0;
   transform: translate(-50%, -0.6rem);
   pointer-events: none;
 }
 
-body:has(.hero) .site-header.is-revealed {
+body:has(.video-pin) .site-header.is-revealed {
   opacity: 1;
   transform: translate(-50%, 0);
   pointer-events: auto;
 }
 
-/* Pages without a hero have no video to reveal the header after, so it's
-   visible and locked from the first paint; reserve room since it's fixed. */
-body:not(:has(.hero)) {
+/* Pages without the pinned video have nothing to reveal the header after,
+   so it's visible from the first paint; reserve room since it's fixed. */
+body:not(:has(.video-pin)) {
   padding-top: 5.5rem;
 }
 
@@ -279,17 +289,64 @@ body:not(:has(.hero)) {
   }
 }
 
-/* Hero — real golf footage with a legibility overlay, not a color wash.
-   The photo background doubles as the no-JS / reduced-motion / slow-network
-   fallback; the video layers over it when present and allowed. */
-.hero {
+/* Pinned video backdrop — the footage is locked to the viewport while the
+   hero slogan and the How-it-works section scroll over it. Everything
+   after this block is opaque and sits on a higher layer, so it slides up
+   and covers the video instead of the video scrolling away. */
+.video-pin {
   position: relative;
+  color: var(--white);
+}
+
+.video-pin-sticky {
+  position: fixed;
+  inset: 0;
   overflow: hidden;
+  z-index: 0;
   background:
     linear-gradient(rgba(8, 28, 51, 0.55), rgba(8, 28, 51, 0.72)),
     url("../assets/img/hero-golf.jpg") center 30% / cover no-repeat;
+}
+
+/* Once the pinned block is behind us, stop compositing the video */
+.video-pin-sticky.is-past {
+  visibility: hidden;
+}
+
+.video-pin > .hero,
+.video-pin > .section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Everything after the pinned block is opaque and rides above the video */
+main > .section,
+.site-footer {
+  position: relative;
+  z-index: 1;
+  background-color: var(--white);
+}
+
+main > .section-alt { background-color: var(--sky-050); }
+main > .section-sand { background-color: var(--sand-100); }
+
+/* Hero — real golf footage with a legibility overlay, not a color wash.
+   The photo background on .video-pin-sticky doubles as the no-JS /
+   reduced-motion / slow-network fallback. */
+/* Slogan sits high in the frame so the course fills the space below it */
+.hero {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
   color: var(--white);
-  padding-block: clamp(5rem, 14vw, 9rem);
+  padding-top: clamp(6rem, 16vh, 11rem);
+  padding-bottom: clamp(3rem, 8vh, 6rem);
+}
+
+/* Without this the wrap shrinks to its content and centers itself,
+   pulling the slogan off the left edge. */
+.hero > .wrap {
+  width: 100%;
 }
 
 .hero-video {
@@ -313,16 +370,66 @@ body:not(:has(.hero)) {
   z-index: 2;
 }
 
+/* A section riding over the pinned video: transparent, light type,
+   frosted cards so the footage reads through without eating the text.
+   A full viewport tall so it gets its own moment over the footage
+   rather than flashing past. */
+.section.on-video {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: transparent;
+  color: var(--white);
+}
+
+.section.on-video > .wrap {
+  width: 100%;
+}
+
+.section.on-video h2,
+.section.on-video h3 {
+  color: var(--white);
+}
+
+.section.on-video .card {
+  background: rgba(8, 28, 51, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+.section.on-video .card p {
+  color: var(--blue-100);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-video { display: none; }
 }
 
+/* Slogan: display face, left aligned, with the short top line set larger
+   so its width balances the longer line beneath it. */
 .hero h1 {
+  font-family: "Oswald", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
   color: var(--white);
-  font-size: clamp(3rem, 2rem + 6vw, 6.5rem);
-  line-height: 1.05;
-  letter-spacing: -0.01em;
-  max-width: 16ch;
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-align: left;
+  text-shadow: 0 2px 24px rgba(8, 28, 51, 0.45);
+  margin-bottom: var(--space-3);
+}
+
+.hero h1 .line-lead {
+  display: block;
+  font-size: clamp(3rem, 0.8rem + 6.6vw, 6.25rem);
+}
+
+.hero h1 .line-follow {
+  display: block;
+  font-size: clamp(2.25rem, 0.6rem + 4.9vw, 4.625rem);
+  opacity: 0.93;
 }
 
 .hero .cta-row {

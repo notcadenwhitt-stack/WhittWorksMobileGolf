@@ -20,6 +20,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <meta name="theme-color" content="#0A2540">
 
+  <link rel="preload" href="assets/fonts/oswald-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -50,37 +51,42 @@
   </header>
 
   <main id="main" tabindex="-1">
-    <section class="hero">
-      <video class="hero-video" data-src="assets/video/hero-golf.mp4" autoplay muted loop playsinline preload="none" poster="assets/img/hero-golf.jpg" aria-hidden="true" tabindex="-1"></video>
-      <div class="hero-scrim" aria-hidden="true"></div>
-      <div class="wrap">
-        <h1>The Drive<br>Comes To You</h1>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="quote.html">Get a quote</a>
-          <a class="btn btn-secondary" href="events.html">See our events</a>
-        </div>
+    <div class="video-pin">
+      <div class="video-pin-sticky">
+        <video class="hero-video" data-src="assets/video/hero-golf.mp4" autoplay muted loop playsinline preload="none" poster="assets/img/hero-golf.jpg" aria-hidden="true" tabindex="-1"></video>
+        <div class="hero-scrim" aria-hidden="true"></div>
       </div>
-    </section>
 
-    <section class="section">
-      <div class="wrap">
-        <h2>How it works</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>1. Pick your date</h3>
-            <p>Tell us when, where, and roughly how many guests. We travel to every corner of Alabama, indoors or out.</p>
-          </div>
-          <div class="card">
-            <h3>2. We build the course</h3>
-            <p>Enclosure, screen, launch monitor, sound: our crew handles setup and breakdown, usually in under an hour each way.</p>
-          </div>
-          <div class="card">
-            <h3>3. Your guests play</h3>
-            <p>A trained attendant runs the simulator from first swing to last. Real courses and games for every skill level, we host, you enjoy.</p>
+      <section class="hero">
+        <div class="wrap">
+          <h1><span class="line-lead">The Drive</span><span class="line-follow">Comes To You</span></h1>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="quote.html">Get a quote</a>
+            <a class="btn btn-secondary" href="events.html">See our events</a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="section on-video">
+        <div class="wrap">
+          <h2>How it works</h2>
+          <div class="grid-3">
+            <div class="card">
+              <h3>1. Pick your date</h3>
+              <p>Tell us when, where, and roughly how many guests. We travel to every corner of Alabama, indoors or out.</p>
+            </div>
+            <div class="card">
+              <h3>2. We build the course</h3>
+              <p>Enclosure, screen, launch monitor, sound: our crew handles setup and breakdown, usually in under an hour each way.</p>
+            </div>
+            <div class="card">
+              <h3>3. Your guests play</h3>
+              <p>A trained attendant runs the simulator from first swing to last. Real courses and games for every skill level, we host, you enjoy.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <section class="section section-sand">
       <div class="wrap">
