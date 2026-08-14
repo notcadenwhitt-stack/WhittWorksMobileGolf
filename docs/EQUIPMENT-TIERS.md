@@ -7,6 +7,7 @@ Internal purchasing document, revised 2026-08-13 after an independent line-by-li
 - The enclosure includes: electric pump, double-layer impact screen, ceiling projector bracket, custom logo printing on 3 sides, removable side panels, repair kit. Interior: 14.99 ft deep, 13.77 ft wide, 10.82 ft tall.
 - Battery power is indoor-safe and near-silent. Gas generators are outdoor-only (carbon monoxide). The enclosure blower is the dominant continuous draw; runtime math assumes 500 to 800W total.
 - **Laptop RAM rule: GSPro requires 16GB. Some retail RTX 4060 SKUs ship 8GB (the Best Buy Cyborg 15 SKU 6532164 slug says 8GB). Only buy a 16GB configuration; both tiers below budget for it.**
+- **Daytime outdoor events change the projector choice.** Every tier here is bright enough indoors or after sunset. In daylight the enclosure's light blocking matters far more than lumens, and 4,000 is the sensible floor if daytime outdoor work is a real part of the business. Full math and upgrade options: `docs/PROJECTOR-BRIGHTNESS.md`.
 
 ---
 
