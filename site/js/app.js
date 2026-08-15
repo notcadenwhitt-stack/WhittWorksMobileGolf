@@ -4,36 +4,46 @@
 (function () {
   "use strict";
 
-  /* Marks that scripting is alive. The hero nav only hides itself behind
-     this class, so a visitor with JS disabled always keeps the navigation. */
-  document.documentElement.classList.add("js");
-
   var CFG = window.SITE_CONFIG || {};
   var CONSENT_KEY = "sdg-consent"; /* "accepted" | "declined" */
 
-  /* ---------- Mobile nav ---------- */
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("primaryNav");
+  /* ---------- Menu ----------
+     The markup is <details>/<summary>, so the panel already opens and
+     closes with scripting switched off, and the browser handles the
+     button semantics and keyboard activation. Everything here is
+     enhancement: close on Escape, on a click outside, and after a link is
+     taken, none of which <details> does on its own. */
+  var navMenu = document.getElementById("navMenu");
 
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    });
+  if (navMenu) {
+    var closeMenu = function (refocus) {
+      if (!navMenu.open) return;
+      navMenu.open = false;
+      if (refocus) {
+        var summary = navMenu.querySelector("summary");
+        if (summary) summary.focus();
+      }
+    };
 
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && nav.classList.contains("is-open")) {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-        toggle.focus();
-      }
+      if (e.key === "Escape") closeMenu(true);
+    });
+
+    document.addEventListener("click", function (e) {
+      if (navMenu.open && !navMenu.contains(e.target)) closeMenu(false);
+    });
+
+    /* A same-page anchor navigates without a reload, which would leave the
+       panel hanging open over the destination. */
+    navMenu.addEventListener("click", function (e) {
+      if (e.target.closest && e.target.closest("a")) closeMenu(false);
     });
   }
 
   /* ---------- Current-page nav marker (relative links, compare last segment) ---------- */
   var segs = location.pathname.split("/");
   var here = segs[segs.length - 1] || "index.html";
-  document.querySelectorAll(".nav-links a").forEach(function (a) {
+  document.querySelectorAll(".nav-panel a").forEach(function (a) {
     var href = a.getAttribute("href") || "";
     if (href === here) a.setAttribute("aria-current", "page");
   });
@@ -73,68 +83,30 @@
     }
   }
 
-  /* ---------- Floating header reveal ----------
-     On the pinned-video page the floating nav stays hidden (see the
-     body.pinned-video rules in styles.css) while the video is on screen.
-     The bottom edge of the pinned block is the line: scroll past it and
-     the island fades in and locks at the top; scroll back above it and
-     the island hides again.
-
-     The threshold is clamped to the furthest the page can actually
-     scroll. Without that clamp, a viewport taller than the content below
-     the block puts the threshold out of reach and the navigation never
-     appears at all. */
+  /* ---------- Pinned video: stop working once it is off screen ----------
+     The backdrop is position: fixed, so it keeps compositing after the
+     visitor has scrolled past it. Hiding it and pausing the footage saves
+     that work. An observer on the pinned block reports the crossing
+     directly, with no scroll handler and no geometry to keep in step. */
   var videoBlock = document.querySelector(".video-pin");
-  var siteHeader = document.querySelector(".site-header");
   var pinnedBackdrop = document.querySelector(".video-pin-sticky");
 
-  if (videoBlock && siteHeader) {
-    var wasPast = null;
-    var ticking = false;
+  if (videoBlock && window.IntersectionObserver) {
+    new IntersectionObserver(function (entries) {
+      var onScreen = entries[0].isIntersecting;
 
-    var update = function () {
-      var blockTop = videoBlock.getBoundingClientRect().top + window.scrollY;
-      var blockBottom = blockTop + videoBlock.offsetHeight;
-      var maxScroll = Math.max(
-        0,
-        document.documentElement.scrollHeight - window.innerHeight
-      );
-      var threshold = Math.min(blockBottom, maxScroll);
-      var past = window.scrollY >= threshold - 1;
+      if (pinnedBackdrop) pinnedBackdrop.classList.toggle("is-past", !onScreen);
 
-      if (past === wasPast) return;
-      wasPast = past;
-
-      siteHeader.classList.toggle("is-revealed", past);
-      if (pinnedBackdrop) pinnedBackdrop.classList.toggle("is-past", past);
-
-      /* Stop decoding footage nobody can see; resume on the way back up */
       if (heroVideo && heroVideo.src) {
-        if (past) {
-          heroVideo.pause();
-        } else {
+        if (onScreen) {
           heroVideo.play().catch(function () {
             /* autoplay refused: the poster frame stands in */
           });
+        } else {
+          heroVideo.pause();
         }
       }
-    };
-
-    var onScroll = function () {
-      if (ticking) return;
-      ticking = true;
-      window.requestAnimationFrame(function () {
-        ticking = false;
-        update();
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", function () {
-      wasPast = null; /* geometry changed: re-evaluate from scratch */
-      onScroll();
-    });
-    update();
+    }).observe(videoBlock);
   }
 
   /* ---------- Footer year ---------- */

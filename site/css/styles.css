@@ -59,8 +59,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* Keeps anchor and skip-link targets clear of the fixed pill nav */
-  scroll-padding-top: 6rem;
+  /* Keeps anchor and skip-link targets clear of the fixed menu button */
+  scroll-padding-top: 5rem;
 }
 
 body {
@@ -107,8 +107,12 @@ video {
   border-radius: 2px;
 }
 
-/* Dark surfaces need a light indicator to hold 3:1 non-text contrast */
+/* Dark surfaces need a light indicator to hold 3:1 non-text contrast.
+   The blue ring all but disappears against navy or a scrimmed photograph. */
 .hero :focus-visible,
+.page-hero :focus-visible,
+.spec-band :focus-visible,
+.cta-band :focus-visible,
 .site-footer :focus-visible,
 .consent-banner :focus-visible {
   outline-color: var(--white);
@@ -170,166 +174,175 @@ body.has-banner { padding-bottom: 14rem; }
   padding-inline: var(--space-3);
 }
 
-/* Header + nav — a floating "island" pill, not a full-width bar.
-   On the pages with a hero video it's invisible while the video is on
-   screen; scroll past its bottom edge and the island fades in and locks
-   at the top, scroll back up above that line and it hides again (see
-   the bidirectional toggle in app.js). */
+/* Header — one square button pinned to the top right. Opening it drops the
+   menu underneath. Built on <details>/<summary>, so it opens and closes
+   with scripting switched off; the script only adds Escape and click-away.
+   There is no brand in here any more: the mark and wordmark sit in the
+   page itself (see .brand-lockup), which is why this is a button and not
+   a bar. */
 .site-header {
   position: fixed;
   top: 1rem;
-  left: 50%;
+  right: 1rem;
   z-index: 50;
-  width: calc(100% - 2rem);
-  max-width: 64rem;
-  background: rgba(255, 255, 255, 0.92);
+}
+
+/* Every page reserves room for the button. Pages that open on a hero take
+   that space back, because their artwork is meant to reach the top edge. */
+body { padding-top: 4.5rem; }
+body.pinned-video { padding-top: 0; }
+
+.nav-menu { position: relative; }
+
+.nav-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem; /* 48px, clear of the 44px touch target floor */
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--navy-900);
+  border: 1px solid rgba(201, 214, 228, 0.85);
+  border-radius: 0.55rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  list-style: none; /* Firefox draws a disclosure triangle without this */
+}
+
+/* Safari uses its own pseudo-element for the same triangle */
+.nav-toggle::-webkit-details-marker { display: none; }
+.nav-toggle::marker { content: ""; }
+
+.nav-toggle:hover { background: var(--white); }
+
+/* Three bars from one element, so the markup stays a single span */
+.nav-toggle-bars,
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  display: block;
+  width: 1.3rem;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+}
+
+.nav-toggle-bars {
+  position: relative;
+  transition: background-color 0.18s ease;
+}
+
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: transform 0.18s ease, top 0.18s ease;
+}
+
+.nav-toggle-bars::before { top: -0.4rem; }
+.nav-toggle-bars::after { top: 0.4rem; }
+
+/* Open: the bars fold into an X so the button reads as "close" */
+.nav-menu[open] .nav-toggle-bars { background: transparent; }
+.nav-menu[open] .nav-toggle-bars::before { top: 0; transform: rotate(45deg); }
+.nav-menu[open] .nav-toggle-bars::after { top: 0; transform: rotate(-45deg); }
+
+/* Driven off [open] rather than left to the browser's own hiding of
+   <details> content. Engines disagree on the mechanism — some use
+   display: none on the children, newer Chrome uses content-visibility on
+   ::details-content — and where it is display, this rule's own
+   display: flex would override it and leave the panel showing while
+   closed. Setting both states here is the same behaviour everywhere, and
+   still needs no JavaScript: the browser toggles [open] itself. */
+.nav-panel { display: none; }
+
+.nav-menu[open] .nav-panel {
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  min-width: 13rem;
+  padding: var(--space-1) var(--space-2);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(201, 214, 228, 0.7);
-  border-radius: 999px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
-  color: var(--navy-900);
-  opacity: 1;
-  transform: translate(-50%, 0);
-  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* The header only hides where scripting can bring it back (html.js), so a
-   visitor without JavaScript always keeps working navigation. visibility
-   (not just opacity) takes the hidden links out of the tab order and the
-   accessibility tree, so nobody tabs through invisible controls. */
-html.js body.pinned-video .site-header {
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -0.6rem);
-  pointer-events: none;
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s linear 0.35s;
-}
-
-html.js body.pinned-video .site-header.is-revealed {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(-50%, 0);
-  pointer-events: auto;
-  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0s;
-}
-
-/* The pill is fixed, so every page reserves room for it by default. The
-   pinned-video page takes that space back because its hero sits under the
-   pill on purpose. Reserving by default means a browser that fails to
-   apply one rule errs toward too much space, never a covered heading. */
-body {
-  padding-top: 5.5rem;
-}
-
-body.pinned-video {
-  padding-top: 0;
-}
-
-.site-header .wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-2);
-  min-height: 3.5rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  color: var(--navy-900);
+.nav-panel a {
+  color: var(--navy-800);
   text-decoration: none;
-  font-weight: 700;
-  font-size: var(--step-1);
+  white-space: nowrap;
+  padding: 0.75rem 0.25rem;
+  border-bottom: 1px solid var(--line);
 }
 
-.brand svg { flex: none; }
+.nav-panel a:last-child { border-bottom: 0; }
+
+.nav-panel a:hover,
+.nav-panel a[aria-current="page"] {
+  color: var(--navy-900);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.nav-panel a[aria-current="page"] { font-weight: 700; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle-bars,
+  .nav-toggle-bars::before,
+  .nav-toggle-bars::after {
+    transition: none;
+  }
+}
 
 /* Logo badge. The artwork is a dark disc, so it needs no plate behind it
-   on either the white header or the navy footer. */
+   on either a white page or the navy footer. */
 .brand-mark {
   flex: none;
   border-radius: 50%;
   display: block;
 }
 
-.nav-toggle {
-  display: none;
-  background: transparent;
+/* Brand lockup — with the header reduced to a button, the mark and
+   wordmark live in the page. Same display face as the footer signature so
+   the two read as one brand. */
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: "Antonio", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+  font-size: var(--step-1);
   color: var(--navy-900);
-  border: 2px solid var(--navy-900);
-  border-radius: var(--radius);
-  padding: 0.45rem 0.8rem;
-  font: inherit;
-  cursor: pointer;
-}
-
-.nav-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-}
-
-.nav-links a {
-  color: var(--navy-800);
   text-decoration: none;
-  padding: 0.35rem 0.15rem;
-  border-bottom: 2px solid transparent;
+  margin: 0;
 }
 
-.nav-links a:hover,
-.nav-links a[aria-current="page"] {
-  border-bottom-color: var(--blue-600);
+.brand-lockup:hover {
   color: var(--navy-900);
+  text-decoration: underline;
+  text-underline-offset: 0.22em;
 }
 
-@media (max-width: 47.9rem) {
-  .nav-toggle { display: inline-block; }
-
-  /* Keep the brand on one line so the pill never outgrows the space
-     reserved for it at narrow widths */
-  .brand {
-    font-size: var(--step-0);
-    white-space: nowrap;
-  }
-
-  /* On phones the island stays put at all times: it floats over the video
-     rather than waiting for the scroll past it. */
-  html.js body.pinned-video .site-header,
-  html.js body.pinned-video .site-header.is-revealed {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, 0);
-    pointer-events: auto;
-  }
-
-
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin-top: 0.6rem;
-    flex-direction: column;
-    gap: 0;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: var(--space-2) var(--space-3) var(--space-3);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-  }
-
-  .nav-links.is-open { display: flex; }
-
-  .nav-links a {
-    padding: 0.75rem 0;
-    border-bottom: 1px solid var(--line);
-  }
+/* Over a photograph: white, carrying the same shadow as the hero type */
+.brand-lockup.on-dark {
+  color: var(--white);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.5);
 }
+
+.brand-lockup.on-dark:hover { color: var(--white); }
+
+/* Interior pages wear it as a masthead line above the heading */
+.page-masthead { margin-bottom: var(--space-4); }
 
 /* Pinned video backdrop — the footage is locked to the viewport while the
    hero slogan and the How-it-works section scroll over it. Everything
@@ -381,8 +394,8 @@ main > .section-sand { background-color: var(--sand-100); }
 /* Hero — real golf footage with a legibility overlay, not a color wash.
    The photo background on .video-pin-sticky doubles as the no-JS /
    reduced-motion / slow-network fallback. */
-/* Phones keep the island on screen at all times, so the slogan starts
-   below it. Declared after the base .hero rule so it actually wins. */
+/* Phones give the brand lockup more room below the menu button before the
+   slogan starts. Declared after the base .hero rule so it actually wins. */
 @media (max-width: 47.9rem) {
   .video-pin > .hero {
     padding-top: 7.5rem;
@@ -658,16 +671,16 @@ main > .section-sand { background-color: var(--sand-100); }
 }
 
 /* Interior page hero — a photo band for pages that need more presence than
-   a bare heading. The island is fixed, so this page gives back the top
-   padding every other page reserves and clears the pill itself instead. */
+   a bare heading. The menu button is fixed, so this page gives back the top
+   padding every other page reserves and clears the button itself instead. */
 body.has-page-hero { padding-top: 0; }
 
 .page-hero {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  min-height: 27rem;
-  padding-top: 9.5rem; /* clears the floating island */
+  align-items: stretch;
+  min-height: 30rem;
+  padding-top: 6.5rem; /* clears the fixed menu button */
   padding-bottom: var(--space-4);
   color: var(--white);
   background-color: var(--navy-950); /* holds the frame while the photo loads */
@@ -683,20 +696,39 @@ body.has-page-hero { padding-top: 0; }
   z-index: 0;
 }
 
-/* Neutral black for the same reason as the home hero: a blue scrim washes
-   the grass out. Weighted to the bottom, where the type sits. */
+/* Neutral black, for the same reason as the home hero: a blue scrim washes
+   the grass out.
+
+   Close to even rather than a light-topped ramp. Type now runs from the
+   brand lockup at 26% of the band down to the button near the bottom, so
+   there is no quiet strip to keep bright — and the 768px crop puts bright
+   sky behind the lockup, where a light top measured 3.15:1. Darkening the
+   whole frame is the honest trade: the photograph is a backdrop to a band
+   that is mostly words. */
 .page-hero-scrim {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(rgba(0, 0, 0, 0.26), rgba(0, 0, 0, 0.68));
+  background: linear-gradient(180deg,
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.62) 30%,
+    rgba(0, 0, 0, 0.74) 100%);
 }
 
+/* Brand at the top of the frame, headline at the bottom, photograph
+   between them. Bottom-aligning the whole stack instead would bunch the
+   lockup, the eyebrow and the heading into one clump. */
 .page-hero > .wrap {
   position: relative;
   z-index: 2;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-4);
 }
+
+.page-hero .brand-lockup { align-self: flex-start; }
 
 .page-hero h1 {
   color: var(--white);
