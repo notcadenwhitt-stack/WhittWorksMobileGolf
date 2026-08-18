@@ -1,0 +1,101 @@
+/* Edit mode only. Loaded by js/edit.js when the URL carries ?edit, so a
+   normal visitor never downloads it. External file, because the site runs
+   style-src 'self' and inline <style> would be blocked. */
+
+.sdg-edit-on [data-copy] {
+  outline: 2px dashed rgba(27, 95, 170, 0.55);
+  outline-offset: 3px;
+  border-radius: 2px;
+  cursor: text;
+}
+
+.sdg-edit-on [data-copy]:hover { outline-color: var(--blue-600, #1B5FAA); }
+
+.sdg-edit-on [data-copy]:focus {
+  outline: 3px solid var(--blue-600, #1B5FAA);
+  background: rgba(255, 241, 173, 0.35);
+}
+
+/* Text that lives on more than one page gets a warmer ring, and the bar
+   spells out what that means when it is being edited. */
+.sdg-edit-on [data-copy^="site."] { outline-color: rgba(180, 120, 20, 0.6); }
+.sdg-edit-on [data-copy^="site."]:hover,
+.sdg-edit-on [data-copy^="site."]:focus { outline-color: #A9700F; }
+
+.sdg-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 1rem;
+  transform: translateX(-50%);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  max-width: calc(100vw - 2rem);
+  padding: 0.6rem 0.9rem;
+  background: #0A2540;
+  color: #fff;
+  border-radius: 999px;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.4);
+  font: 700 0.9rem/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sdg-bar button {
+  font: inherit;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.5rem 0.95rem;
+  cursor: pointer;
+  background: #fff;
+  color: #0A2540;
+}
+
+.sdg-bar button[disabled] { opacity: 0.45; cursor: default; }
+.sdg-bar button.ghost { background: transparent; color: #DCEAF7; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.4); }
+.sdg-bar .sdg-status { color: #DCEAF7; font-weight: 400; }
+.sdg-bar .sdg-status.warn { color: #FFD9A0; }
+.sdg-bar .sdg-status.err { color: #FFB3B0; }
+.sdg-bar .sdg-status.ok { color: #A9E5C0; }
+
+.sdg-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 28, 51, 0.72);
+}
+
+.sdg-modal form {
+  background: #fff;
+  color: #16222F;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  width: min(24rem, calc(100vw - 2rem));
+  font: 400 1rem/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.sdg-modal h2 { margin: 0 0 0.5rem; font-size: 1.2rem; color: #0A2540; }
+.sdg-modal p { margin: 0 0 1rem; font-size: 0.9rem; color: #3D4A5C; }
+.sdg-modal input {
+  width: 100%;
+  font: inherit;
+  padding: 0.6rem;
+  border: 2px solid #C9D6E4;
+  border-radius: 0.4rem;
+  margin-bottom: 0.75rem;
+}
+.sdg-modal .row { display: flex; gap: 0.5rem; justify-content: flex-end; }
+.sdg-modal button {
+  font: inherit; font-weight: 700; border: 0; cursor: pointer;
+  padding: 0.55rem 1rem; border-radius: 0.4rem;
+  background: #0A2540; color: #fff;
+}
+.sdg-modal button.ghost { background: transparent; color: #14538C; }
+.sdg-modal .err { color: #B4231F; font-size: 0.85rem; min-height: 1.2em; margin: 0 0 0.5rem; }
+
+@media (max-width: 34rem) {
+  .sdg-bar { font-size: 0.8rem; gap: 0.5rem; padding: 0.5rem 0.6rem; }
+  .sdg-bar button { padding: 0.45rem 0.7rem; }
+}

@@ -7,6 +7,17 @@
   var CFG = window.SITE_CONFIG || {};
   var CONSENT_KEY = "sdg-consent"; /* "accepted" | "declined" */
 
+  /* ---------- Edit mode ----------
+     The owner's in-place editor is a separate file fetched only when the URL
+     asks for it, so a normal visitor pays nothing for it. Same origin, so
+     script-src 'self' covers it with no CSP change. */
+  if (/[?&]edit(=|&|$)/.test(location.search)) {
+    var editor = document.createElement("script");
+    editor.src = "js/edit.js";
+    editor.defer = true;
+    document.head.appendChild(editor);
+  }
+
   /* ---------- Menu ----------
      The markup is <details>/<summary>, so the panel already opens and
      closes with scripting switched off, and the browser handles the

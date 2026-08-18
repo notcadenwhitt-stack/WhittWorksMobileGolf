@@ -1,0 +1,42 @@
+# Netlify build + headers. The published directory is dist/, produced by
+# build.js from site/ plus content/copy.json — never edit dist/ by hand.
+
+[build]
+  command = "node build.js"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Security headers, per docs/HOSTING-HEADERS.md. All JS and CSS is external
+# and same-origin, so script-src 'self' needs no hashes and no maintenance.
+# The editor calls /.netlify/functions/*, which is same-origin and already
+# covered by connect-src 'self'.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self'; script-src 'self' https://us-assets.i.posthog.com; connect-src 'self' https://us.i.posthog.com https://us-assets.i.posthog.com https://formspree.io; form-action 'self' https://formspree.io; font-src 'self'; upgrade-insecure-requests"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Cross-Origin-Opener-Policy = "same-origin"
+    Cross-Origin-Resource-Policy = "same-site"
+
+# The editor reads this to know which keys exist; it must never be stale.
+[[headers]]
+  for = "/content/copy.json"
+  [headers.values]
+    Cache-Control = "no-store"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/*"
+  status = 404
+  to = "/404.html"

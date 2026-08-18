@@ -226,9 +226,9 @@ A 2-hour Party booking on battery alone is tight with the desktop. Confirm shore
 | Landing turf 10'x5' $290 | 13'4" x 10' $670 | Less coverage, but also less to haul and lay out at every setup. |
 | Extension cord $70 | 2x Jackery $1,798, or EcoFlow Delta Pro 3 $3,699 | Most venues have outlets. Buying 4 kWh of battery for bookings you have not taken yet is dead capital. Require shore power, measure the real draw, buy a battery when a specific job needs one. |
 | Wired HDMI $51 | J-Tech wireless HDMI kit, $221 | A wireless link adds latency, another battery to charge, another pairing to fail, and another thing to troubleshoot with guests watching. The projector is a fixed distance from the PC at every setup, so a cable solves it permanently. |
+| Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 **One cabling note:** at 1080p output a passive 50 ft HDMI run is fine. If you ever decide to send the projector a true 4K signal, a 50 ft passive cable will struggle and you would need an active optical cable (roughly $80 to $150). Since the plan is to render at 1080p and let the AK700ST upscale, the $51 cable is the right buy.
-| Canopy $250 | Brighter projector, +$1,349 | Lumens cannot beat daylight; light control can. |
 
 ## Sources
 
