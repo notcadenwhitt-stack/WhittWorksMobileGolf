@@ -72,10 +72,6 @@ function main() {
     report.files++;
   }
 
-  // The editor needs the key list to know what it may write to.
-  fs.mkdirSync(path.join(OUT, "content"), { recursive: true });
-  fs.writeFileSync(path.join(OUT, "content", "copy.json"), JSON.stringify(copy, null, 2) + "\n");
-
   const unused = Object.keys(copy).filter((k) => !report.used.has(k));
 
   console.log(`built ${report.pages} pages, ${report.files} files -> dist/`);
